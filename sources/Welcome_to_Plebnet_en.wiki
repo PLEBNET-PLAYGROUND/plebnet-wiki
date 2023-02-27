@@ -1,0 +1,143 @@
+<span id="welcome-to-plebneten"></span>
+= Welcome to Plebnet/en =
+
+<div class="mw-pt-translate-header noprint" dir="ltr" lang="en">
+
+[[Special_Translate_amp_group_page_Welcome_to_Plebnet_amp_language_en_amp_action_page_amp_filter_.html|Translate this page]]
+
+</div>
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+[[/plebnet.wiki/wiki/Welcome_to_Plebnet|English]] • ‎[[/plebnet.wiki/wiki/Welcome_to_Plebnet/es|español]] • ‎[[/plebnet.wiki/wiki/Welcome_to_Plebnet/fr|français]]
+
+</div>
+
+</div>
+Hopefully this can be a guide for people wondering where to start, and what really is plebnet? First, plebnet, this crazy awesome community, was started by a group of selfless, generous plebs working together to onboard people to the bitcoin lightning network! Constantly evolving, the goal remains: bring people together to understand and support the lightning network, learn from each other the basics of running a node or using a lightning wallet, and bridge the gap that remains between the tech/cyber world and the everyday user.
+
+More on the plebnet infrastructure will be addressed below, but first I will attempt to answer some of the common questions people pose to the group when first joining, as well with some important tips.
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#PLEB_TIPS_THAT_EVERYONE_SHOULD_KNOW|<span class="tocnumber">1</span> <span class="toctext">PLEB TIPS THAT EVERYONE SHOULD KNOW</span>]]
+* [[#How_did_I_get_here.3F|<span class="tocnumber">2</span> <span class="toctext">How did I get here?</span>]]
+* [[#Can_I_become_a_node_operator.3F|<span class="tocnumber">3</span> <span class="toctext">Can I become a node operator?</span>]]
+* [[#How_much_money_can_I_make_running_a_lightning_node.3F_How_much_are_you_making_weekly.3F|<span class="tocnumber">4</span> <span class="toctext">How much money can I make running a lightning node? How much are you making weekly?</span>]]
+* [[#Can_I_open_a_channel_with_someone_for_X_amount_of_sats.3F_What_is_the_best_amount_of_sats_to_open_a_channel_with.3F|<span class="tocnumber">5</span> <span class="toctext">Can I open a channel with someone for X amount of sats? What is the best amount of sats to open a channel with?</span>]]
+* [[#Resources|<span class="tocnumber">6</span> <span class="toctext">Resources</span>]]
+* [[#Please_contribute_if_you_are_able|<span class="tocnumber">7</span> <span class="toctext">Please contribute if you are able</span>]]
+* [[#PlebNet_infrastructure|<span class="tocnumber">8</span> <span class="toctext">PlebNet infrastructure</span>]]
+
+
+</div>
+<span id="pleb-tips-that-everyone-should-know"></span>
+== <span id="PLEB_TIPS_THAT_EVERYONE_SHOULD_KNOW" class="mw-headline">PLEB TIPS THAT EVERYONE SHOULD KNOW</span> ==
+
+TRUST NO ONE
+
+THERE ARE RISKS WITH RUNNING A LIGHTNING NODE
+
+DO YOUR OWN RESEARCH
+
+LEARN FROM MISTAKES AND HELP OTHERS
+
+RUNNING A NODE IS NOT THE SAME AS MINING BITCOIN
+
+<span id="how-did-i-get-here"></span>
+== <span id="How_did_I_get_here?"></span><span id="How_did_I_get_here.3F" class="mw-headline">How did I get here?</span> ==
+
+I am unable to answer that question for you, but maybe you clicked on one of our links on Twitter? You may have also typed in kycjelly.com after hearing Walton’s wonderful voice proclaim it on Clubhouse... but really that is for you to figure out.
+
+<span id="can-i-become-a-node-operator"></span>
+== <span id="Can_I_become_a_node_operator?"></span><span id="Can_I_become_a_node_operator.3F" class="mw-headline">Can I become a node operator?</span> ==
+
+I can speak with experience here - anyone can learn to operate a lightning node. This does not mean that anyone can do it with ease, or that you will be able to run your node successfully and without risk. You must be able to do your own research and actually do your own work. Instead of posing questions like the one I am responding to here, maybe try asking: Can someone point me to the best resources for someone interested in lightning, or interested in running a lightning node?
+
+<span id="how-much-money-can-i-make-running-a-lightning-node-how-much-are-you-making-weekly"></span>
+== <span id="How_much_money_can_I_make_running_a_lightning_node?_How_much_are_you_making_weekly?"></span><span id="How_much_money_can_I_make_running_a_lightning_node.3F_How_much_are_you_making_weekly.3F" class="mw-headline">How much money can I make running a lightning node? How much are you making weekly?</span> ==
+
+Questions along these lines are tricky to answer and depend on too many variables for it to get a response. Many of us running nodes are not currently profitable. Our main purpose is learning, supporting the network, and refining ways to operate a healthy node not at a loss. If you see a future on a bitcoin standard, there is a good chance everyone will be transacting on lightning. Some people see their good channels and connections as an investment for years in the future. There is no guarantee though that any node will be profitable now or at another time. This answer is not meant to deter anyone, and we do have node runners that have become profitable recently, but they have put a serious amount of time, accounting, strategy, and capital in their nodes to get to where they are. Instead of looking at how much money you can make, you must understand your costs and income. To operate a node your costs are:
+
+* Capital Expense of purchasing hardware. You should probably write it off over the useful life of that hardware. Remember as you get hooked you will spend on upgrades, redundant infrastructure, and so on.
+* Operating Costs outside your control:
+** Cost of internet bandwidth and electricity (minimal but still there is a cost)
+** Cost of opening and closing a channel. These depend on the on-chain mining costs at that time. It is possible to open a channel at 1 sat/vb at times but the price on-chain can change in the future.
+** Cost of rebalancing if you need to do. Ideally, if you operate a good node there will be two-way traffic but still rebalancing is something one has to do once in a while and the cost is variable and determined by the network.
+** Cost of buying inbound liquidity if you cannot source it from plebs.
+** Cost of loop out and other services you might use to operate your node.
+
+You need to balance these costs against the only source of income which is your routing fees. You can set them very high but maybe no one will route through you. You can set them very low and you will not cover your cost(s). So this is a tight rope 3D chess you will play when you operate a node. It may not rain sats but it would sure be fun!
+
+<span id="can-i-open-a-channel-with-someone-for-x-amount-of-sats-what-is-the-best-amount-of-sats-to-open-a-channel-with"></span>
+== <span id="Can_I_open_a_channel_with_someone_for_X_amount_of_sats?_What_is_the_best_amount_of_sats_to_open_a_channel_with?"></span><span id="Can_I_open_a_channel_with_someone_for_X_amount_of_sats.3F_What_is_the_best_amount_of_sats_to_open_a_channel_with.3F" class="mw-headline">Can I open a channel with someone for X amount of sats? What is the best amount of sats to open a channel with?</span> ==
+
+The answer to this question is... it's a moving bar. It also depends on what kind of node you want to operate, what amount of funds you have, and who you want to connect to. I think there are ~3 broad categories of nodes in the lightning network
+
+# Profitable routing nodes: those that require a lot of management, capital, and skill
+# Middle ground nodes: a less defined group, nodes with a handful of decent-sized channels, good peers, and are great for supporting and expanding the network
+# Personal use nodes: nodes for people who want to have 1-2 good connections, the experience of understanding lightning and node running, and the ability to route personal transactions in or out of their node.
+
+So after understanding these different node groups, the answer for a good channel size for a profitable routing node is different than a node with a different use case. As of now many of the bigger routing nodes have set channel size minimums from around 2 million sats and up (some have minimums of 10 million sats!). If you are just starting out, some PlebNet nodes that are great to connect to are [https://amboss.space/node/0381de1709efbda38f9afd2d47399caa19a2630c0c795acd24755efa442685fc7d Turgidson] &amp; [https://amboss.space/node/035f42b1c1cd8afe605f3fc1befc270844ec9885b7c53f713faa672869c25cb148 GirthMavic], any size channel 20k sats and up will work to connect with them.
+
+<span id="resources"></span>
+== <span id="Resources" class="mw-headline">Resources</span> ==
+
+Now back to the best parts of PlebNet: the resources shared, the pleb connections made, and the magic of the Lightning network! A lot of questions people ask may be answered, and resources can be found with a quick look at the pinned posts, the PlebNet wikis, or in the PlebNet telegram:
+
+* https://plebnet.wiki
+* https://library.plebnet.org
+
+<span id="please-contribute-if-you-are-able"></span>
+== <span id="Please_contribute_if_you_are_able" class="mw-headline">Please contribute if you are able</span> ==
+
+Plebs just like you are volunteering their time and expertise to help the next pleb. This is probably my favorite thing about PlebNet - seeing someone who joined a week ago jump in to help out a new pleb and answer their questions is really amazing. The three links above will most likely lead you to anything you are looking for, including a list of Lightning-related telegram groups (support chats for Raspiblitz, BOS, and Umbrel for example), and many more gems of knowledge. If you are still stumped and want to ask in PlebNet, we are lucky to have the entire range of lightning user: literally, plebs that are developing on lightning, to a pleb with a fashion design background, oh and some pretty well-known champions of bitcoin as well 😉. I am fairly confident in saying that, at this time, it is the best hub of connections and resources for the lightning network.
+
+<br />
+
+
+<span id="plebnet-infrastructure"></span>
+== <span id="PlebNet_infrastructure" class="mw-headline">PlebNet infrastructure</span> ==
+
+As PlebNet has grown, we have evolved, and adjusted, and reinvented into what we are today. Currently, we have 7 different tiers of telegram groups for different purposes:
+
+<br />
+
+
+* [https://t.me/CHLNgroup PlebNet - LIGHTNING 101]: Fantastic with onboarding users to custodial Lightning, and helping people make their first transactions on the lightning network. People may get their minds blown by the speed and cheap fees that are a product of the Lightning network.
+* [https://t.me/plebnet PlebNet]: The largest PlebNet group, with a super amazing graph/web of plebs, where resources flow and friends are made!
+* PlebNet // NODERUNNERS: This group is a little smaller and focused on those who have gotten their node up and running and have a few channels, aka have made the steps beyond the initial set up a node, and are ready to talk a little more serious about node running. If you think you are ready, give a shoutout to @AEHW1 to add you over to this group. Checklist:
+
+# Use Telegram user id,
+# Claim your node with @CheeseRobot,
+# Announce the node in Plebnet,
+# Enable group invites in your Telegram settings.
+
+* PlebNet Advanced: This group is specifically focused on the development of the network and tools for routing and network optimization. Think super technical mumbojumbo and people creating and troubleshooting tools that could one day we could all be using for our nodes, who knows!
+* [https://t.me/Pleb2Salvador #Plebs2Salvador]: This group was created to build endless chains of 69 to celebrate the day El Salvador adopted BTC as legal currency. The chain is still ongoing and it is a nice side group for new node runners. You receive a channel from a previous peer and you commit to open a 1m or higher channel to your next peer. No maximum, 21 69 420 sats girth preferred.
+* [http://es.plebnet.org PlebNet Español]: Focused on Spanish-speaking people interested in learning about Lightning and setting up a node.
+* [https://t.me/plebnetbusiness PlebNet for Business]: Where businesses learn about Lightning and setting up nodes for their business.
+
+<br />
+
+
+There are also [[/plebnet.wiki/wiki/Special:MyLanguage/Local_PlebNet_groups|local PlebNet groups]] organizing in-person events in their city/country. Feel free to join them as well!
+
+
+</div>

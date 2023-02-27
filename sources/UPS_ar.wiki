@@ -1,0 +1,258 @@
+<span id="upsar"></span>
+= UPS/ar =
+
+<div class="mw-pt-translate-header noprint" dir="ltr" lang="en">
+
+This page is a <span class="plainlinks">[[/plebnet.wiki/index.php?title=Special:Translate&group=page-UPS&action=page&filter=&language=ar|translated version]]</span> of the page [[/plebnet.wiki/wiki/UPS|UPS]] and the translation is 33% complete.
+
+</div>
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+[[/plebnet.wiki/wiki/UPS|English]] • ‎<span class="mw-pt-languages-selected mw-pt-progress mw-pt-progress--low" lang="ar">العربية</span>
+
+</div>
+
+</div>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#.D8.A5.D8.B6.D8.A7.D9.81.D8.A9_.D8.A7.D9.85.D8.AF.D8.A7.D8.AF_.D9.83.D9.87.D8.B1.D8.A8.D8.A7.D8.A6.D9.8A_.D8.A7.D8.AD.D8.AA.D9.8A.D8.A7.D8.B7.D9.8A|<span class="tocnumber">١</span> <span class="toctext">إضافة امداد كهربائي احتياطي</span>]]
+** [[#.D8.A5.D8.B9.D8.AF.D8.A7.D8.AF_UPS_.D8.A8.D8.B4.D9.83.D9.84_.D8.A7.D8.AD.D8.AA.D8.B1.D8.A7.D9.81.D9.8A|<span class="tocnumber">١.١</span> <span class="toctext">إعداد UPS بشكل احترافي</span>]]
+** [[#Check_UPS|<span class="tocnumber">١.٢</span> <span class="toctext">Check UPS</span>]]
+** [[#Proceed_Further|<span class="tocnumber">١.٣</span> <span class="toctext">Proceed Further</span>]]
+
+
+</div>
+<span id="إضافة-امداد-كهربائي-احتياطي"></span>
+== <span id="إضافة_امداد_كهربائي_احتياطي"></span><span id=".D8.A5.D8.B6.D8.A7.D9.81.D8.A9_.D8.A7.D9.85.D8.AF.D8.A7.D8.AF_.D9.83.D9.87.D8.B1.D8.A8.D8.A7.D8.A6.D9.8A_.D8.A7.D8.AD.D8.AA.D9.8A.D8.A7.D8.B7.D9.8A" class="mw-headline">إضافة امداد كهربائي احتياطي</span> ==
+
+يضمن UPS (بطاريات الامداد المتواصل) أن تستمر العقدة في العمل خلال تقلبات الطاقة الطفيفة وانقطاع التيار الكهربائي.
+
+إذا لم تقم بإيقاف تشغيل Raspberry Pi بشكل صحيح، فهذا مشابه لسحب سلك الطاقة من جهاز الكمبيوتر في كل مرة تريد إيقاف تشغيله. عندما يحدث هذا ، فإنك تخاطر بإتلاف بطاقة الذاكرة SD بجهازك، وكذلك البيانات الموجودة على محرك الأقراص الثابتة SSD.
+
+الحل هو أن تقوم بتوصيل جهازك ببنك طاقة عالي الإنتاج. هذا الجهاز يعتبر شبيهًا ببنك الطاقة الذي قد تستخدمه لشحن هاتفك أثناء التخييم ولكنه أقوى بكثير. يتم توصيل حزمة البطارية بالحائط ويتم توصيل جهازك بحزمة البطارية.
+
+يجب الاعتماد على UPS فقط لتزويدك بالوقت الكافي لإيقاف تشغيل العقدة بأمان حتى يتم استعادة التيار الكهربائي. يجب ألا تقوم بتوصيل الراوتر أو المودم الخاص بك بـ UPS نظرًا لاحتمال تلف البيانات الذي قد يحدث إذا كانت العقدة الخاصة بك في طور الكتابة إلى القرص عند حدوث انقطاع للتيار الكهربائي.
+
+تحتوي العديد من أجهزة UPS على تنبيه صوتي مرتفع يتم تشغيله عند انقطاع التيار الكهربائي.
+
+وفيما يلي بعض الخيارات للنظر فيها:
+
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+* https://www.amazon.com/APC-Battery-Protector-Back-UPS-BE600M1/dp/B01FWAZEIU/ref=sr_1_1?dchild=1&keywords=B01FWAZEIU&qid=1632500054&sr=8-1
+* https://www.amazon.com/Liebert-Protection-Three-Year-Warranty-PST5-660MT120/dp/B07BXZPF99/ref=sr_1_1?dchild=1&keywords=B07BXZPF99&qid=1632500142&sr=8-1
+* https://www.amazon.co.uk/gp/product/B07BZCD927/ For those looking for UK Sockets.
+
+
+</div>
+<br />
+
+
+<span id="إعداد-ups-بشكل-احترافي"></span>
+==== <span id="إعداد_UPS_بشكل_احترافي"></span><span id=".D8.A5.D8.B9.D8.AF.D8.A7.D8.AF_UPS_.D8.A8.D8.B4.D9.83.D9.84_.D8.A7.D8.AD.D8.AA.D8.B1.D8.A7.D9.81.D9.8A" class="mw-headline">إعداد UPS بشكل احترافي</span> ====
+
+إذا كنت ترغب في أتمتة إيقاف تشغيل للعقدة بشكل مريح بمجرد وصول سعة طاقة UPS إلى الحد الأدنى، يمكنك توصيل منفذ UPS التسلسلي (عبر USB) بـ Raspberry Pi أو الكمبيوتر الشخصي وجعله يتواصل مع UPS بمجرد إعداد البرنامج الخفي الخاص بالـ UPS داخل جهاز Pi أو Linux الخاص بك بشكل صحيح، سيبدأ عملية إيقاف تشغيل مريحة إذا وصلت السعة إلى 5٪
+
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+The following steps should be run via SSH:
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+<pre>sudo apt-get install apcupsd
+sudo nano /etc/default/apcupsd</pre>
+In /etc/default/apcupsd change ‘ISCONFIGURED=no’ to ‘ISCONFIGURED=yes’
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+<pre>sudo nano  /etc/apcupsd/apcupsd.conf</pre>
+Change the values as below, make sure the DEVICE field is empty, the default is /dev/ttyS0 and should be cleared.
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+<pre>UPSNAME myups
+UPSCABLE usb
+UPSTYPE usb
+DEVICE</pre>
+Note - Make sure the Restart apcupsd
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+<pre>sudo apcupsd restart</pre>
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+<span id="check-ups"></span>
+=== <span id="Check_UPS" class="mw-headline">Check UPS</span> ===
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+CHECK IF UPS IS RECOGNISED OR ELSE YOU WILL HAVE TO STOP IT!
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+<pre>apcaccess status</pre>
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+if this shows
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+<code>STATUS  : COMMLOST</code>
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+do the following further checks - it could be that UPS is not recognised in USB due to power issue.
+
+<pre>lsusb</pre>
+will list the connected UBS devices. On some umbrel installations, UPS is not recognised on the USB bus and if that happens you would not see that in the output of this command.
+
+<pre>umbrel@umbrel:~ $ lsusb
+Bus 002 Device 002: ID 2109:0715 VIA Labs, Inc. 
+Bus 002 Device 001: ID 1d6b:0003 Linux Foundation 3.0 root hub
+Bus 001 Device 001: ID 1d6b:0002 Linux Foundation 2.0 root hub
+umbrel@umbrel:~ $ </pre>
+If this happens on your node, there is an issue and you must check /var/log/syslog
+
+<pre>tail -f /var/log/syslog</pre>
+if you see lots of USB related error messages written of the following description
+
+<pre>Jul 26 14:30:55 umbrel kernel: [ 6004.122153] usb 1-1: new high-speed USB device number 122 using xhci_hcd
+Jul 26 14:30:55 umbrel kernel: [ 6004.122286] xhci_hcd 0000:01:00.0: Setup ERROR: setup address command for slot 1.
+Jul 26 14:30:55 umbrel kernel: [ 6004.330262] xhci_hcd 0000:01:00.0: Setup ERROR: setup address command for slot 1.
+Jul 26 14:30:55 umbrel kernel: [ 6004.542121] usb 1-1: device not accepting address 122, error -22
+Jul 26 14:30:55 umbrel kernel: [ 6004.670139] usb 1-1: new high-speed USB device number 123 using xhci_hcd</pre>
+you should stop the apcupsd since your device is not recognising the UPS and filling up the syslog with error messages. If you keep it running UPSD which cannot connect to the UBS device, the syslog will be bloated with these error messages. you can press ctrl-c to stop the output from tail -f
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+<pre>sudo /etc/init.d/apcupsd stop</pre>
+and
+
+<pre>sudo nano /etc/default/apcupsd</pre>
+In /etc/default/apcupsd change ‘ISCONFIGURED=yes’ to ‘ISCONFIGURED=no’
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+The implications are that your UPS will protect only for short power outages but would not safely shutdown. We are still looking for solutions for this issue which could be related to the power supply to SSD on some installations.
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+IF YOUR UPS WAS RECOGNISED and you did not see any issues in syslog as above you are good and proceed below.
+
+
+</div>
+<br />
+
+
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+<span id="proceed-further"></span>
+=== <span id="Proceed_Further" class="mw-headline">Proceed Further</span> ===
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+Check UPS status:
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+<pre>apcaccess status</pre>
+output example:
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+<pre>$ apcaccess status
+APC      : 001,035,0900
+DATE     : 2021-06-14 02:13:51 +0000
+HOSTNAME : umbrelmavic
+VERSION  : 3.14.14 (31 May 2016) debian
+UPSNAME  : myups
+CABLE    : USB Cable
+DRIVER   : USB UPS Driver
+UPSMODE  : Stand Alone
+STARTTIME: 2021-06-13 01:38:35 +0000
+MODEL    : Back-UPS ES 350
+STATUS   : ONLINE
+LINEV    : 120.0 Volts
+LOADPCT  : 0.0 Percent
+BCHARGE  : 100.0 Percent
+TIMELEFT : 36.4 Minutes
+MBATTCHG : 5 Percent
+MINTIMEL : 3 Minutes
+MAXTIME  : 0 Seconds
+SENSE    : High
+LOTRANS  : 88.0 Volts
+HITRANS  : 139.0 Volts
+ALARMDEL : 30 Seconds
+BATTV    : 13.7 Volts
+LASTXFER : Unacceptable line voltage changes
+NUMXFERS : 1
+XONBATT  : 2021-06-13 01:50:34 +0000
+TONBATT  : 0 Seconds
+CUMONBATT: 251 Seconds
+XOFFBATT : 2021-06-13 01:54:45 +0000
+STATFLAG : 0x05000008
+SERIALNO : XXXXXXXXXXXX
+BATTDATE : 2007-06-08
+NOMINV   : 120 Volts
+NOMBATTV : 12.0 Volts
+FIRMWARE : 823.B1.D USB FW:B1
+END APC  : 2021-06-14 02:13:55 +0000</pre>
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+Once the output looks correct, specifically the STATUS shows as ONLINE, you can test the setup by disconnecting the UPS from the main power, watch the message prompts on the terminal and and let the battery drain until the point that a showdown will be initiated, this will confirm that your setup is correct.
+
+
+</div>
+
+</div>

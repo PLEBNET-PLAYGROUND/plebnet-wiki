@@ -1,0 +1,90 @@
+<span id="upgrading-umbrel-node"></span>
+= Upgrading Umbrel Node =
+
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+<span class="mw-pt-languages-ui mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="en">English</span>
+
+</div>
+
+</div>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#Intro|<span class="tocnumber">1</span> <span class="toctext">Intro</span>]]
+* [[#Upgrade_Check_List|<span class="tocnumber">2</span> <span class="toctext">Upgrade Check List</span>]]
+* [[#updrade|<span class="tocnumber">3</span> <span class="toctext">updrade</span>]]
+* [[#post_upgrade|<span class="tocnumber">4</span> <span class="toctext">post upgrade</span>]]
+
+
+</div>
+<span id="intro"></span>
+== <span id="Intro" class="mw-headline">Intro</span> ==
+
+Every once in a while you may have to upgrade your node. When a new upgrade is available, your umbrel dashboard will show a message like this.
+
+[[/plebnet.wiki/wiki/File:Umbrell_upgrade.jpg|[[File:img/Umbrell_upgrade.jpg|3148x236px|File:Umbrell upgrade.jpg]]]]
+
+However, before you rush in, it is better to be prepared for the upgrade so that you can recover from any surprises. For example, do note that all files under ~/umbrel area are overwritten. Some online tutorials mistakenly recommended installing certain tools under ~/umbrel/apps area and they will be gone.
+
+If there is any custom code/application/things you want to save, keep them under ~/ or ~/mydir or ~/&lt;yourname&gt; area.
+
+<br />
+
+
+<span id="upgrade-check-list"></span>
+== <span id="Upgrade_Check_List" class="mw-headline">Upgrade Check List</span> ==
+
+The following checklist can help you prepare for any unforeseen circumstances before you upgrade.
+
+<ol>
+<li>Take a Static Channel Backup</li>
+<li>Copy the output of <code> bos peers </code> or your channel listings from [https://amboss.space/ amboss] so that you have a list of channels you have opened and local balances.</li>
+<li>Double check your 24-word seed for umbrel and any wallet passwords you have setup. Keep a safe backup.</li>
+<li><p>Make an upgrade area to safe keep some files. ssh to your node and</p>
+<p><code> cd ~</code><br />
+<code>mkdir upgrade</code><br />
+<code>cd upgrade </code></p></li>
+<li><p>copy lnd.conf. Upgrade will overwrite it and you will need to re-do your customization again. With umbrel 0.4.1 lnd.conf is not overwritten but better safe than sorry</p>
+<p><code> cp ~/umbrel/lnd/lnd.conf ~/upgrade/ </code></p></li>
+<li><p>take a list of your watchtower peers so that you can add them again (if they are lost)</p>
+<p><code> ~/umbrel/bin/lncli wtclient towers | tee ~/upgrade/wtclienttowers.json</code></p></li>
+<li>Note down your running TMUX sessions, and bos telegram connect keys</li></ol>
+
+<br />
+
+
+== <span id="updrade" class="mw-headline">updrade</span> ==
+
+Follow the instructions to upgrade
+
+<br />
+
+
+<span id="post-upgrade"></span>
+== <span id="post_upgrade" class="mw-headline">post upgrade</span> ==
+
+# make a general healthchecks of your channels, nodes, balances.
+# compare the lnd.conf in upgrade directory with ~/umbrel/lnd/lnd.conf and repeat your customisation again. If only changes are your own changes, you can also replace the file with the one you saved before the upgrade. With umbrel 0.4.1 lnd.conf is not overwritten so you can only find new parameters added after upgrade if any.
+# restart lnd <code> cd ~/umbrel ; docker-compose restart lnd; docker-compose ps </code>
+# compare your watch towers are still intact or else add them again. <code> ~/umbrel/bin/lncli wtclient towers </code>
+# reconnect bos telegram, streaming htlc, and any other services you run under TMUX
+
+
+</div>

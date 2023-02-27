@@ -1,0 +1,448 @@
+<span id="fees-and-profitability"></span>
+= Fees And Profitability =
+
+<div class="mw-pt-translate-header noprint nomobile" dir="ltr" lang="en">
+
+This page contains <span class="plainlinks">[[/plebnet.wiki/index.php?title=Fees_And_Profitability&oldid=880&diff=2226|changes]]</span> which are not marked for translation.
+
+</div>
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+<span class="mw-pt-languages-ui mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="en">English</span>
+
+</div>
+
+</div>
+<br />
+
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#Intro|<span class="tocnumber">1</span> <span class="toctext">Intro</span>]]
+* [[#Components_of_Profitability|<span class="tocnumber">2</span> <span class="toctext">Components of Profitability</span>]]
+* [[#Setting_Routing_Fees|<span class="tocnumber">3</span> <span class="toctext">Setting Routing Fees</span>]]
+* [[#Keeping_an_Eye|<span class="tocnumber">4</span> <span class="toctext">Keeping an Eye</span>]]
+* [[#Your_Node_Routing_KPI|<span class="tocnumber">5</span> <span class="toctext">Your Node Routing KPI</span>]]
+** [[#Two_KPIs_to_Watch|<span class="tocnumber">5.1</span> <span class="toctext">Two KPIs to Watch</span>]]
+** [[#Automation_of_Routing_KPI|<span class="tocnumber">5.2</span> <span class="toctext">Automation of Routing KPI</span>]]
+*** [[#Installtion_Instructions_Node_KPI_Script|<span class="tocnumber">5.2.1</span> <span class="toctext">Installtion Instructions Node KPI Script</span>]]
+** [[#Node_Fee_Policies|<span class="tocnumber">5.3</span> <span class="toctext">Node Fee Policies</span>]]
+*** [[#.23ZeroBaseFee|<span class="tocnumber">5.3.1</span> <span class="toctext">#ZeroBaseFee</span>]]
+*** [[#Static_Fee_Rate|<span class="tocnumber">5.3.2</span> <span class="toctext">Static Fee Rate</span>]]
+*** [[#Static_Base_Fee|<span class="tocnumber">5.3.3</span> <span class="toctext">Static Base Fee</span>]]
+*** [[#Liquidity_Driven_Fee_Adjustment|<span class="tocnumber">5.3.4</span> <span class="toctext">Liquidity Driven Fee Adjustment</span>]]
+*** [[#Installing_Charge-Lnd|<span class="tocnumber">5.3.5</span> <span class="toctext">Installing Charge-Lnd</span>]]
+*** [[#Using_Charge-Lnd_to_set_Maximum_HTLCs|<span class="tocnumber">5.3.6</span> <span class="toctext">Using Charge-Lnd to set Maximum HTLCs</span>]]
+
+
+</div>
+<span id="intro"></span>
+== <span id="Intro" class="mw-headline">Intro</span> ==
+
+WARNING: Running a routing node is not for generating a primary source of income. The lightning technology is still developing at a very fast pace. The strategy which may generate some income would stop working very soon and something else will take their place. Do not commit more than you what you can have fun with when you enter the rabbit hole of a routing node.
+
+Having said that, most people enter the rabbit hole of a routing node to have fun but also generate some income, however small. The excitement to watch the first route pass through your node with 1 Sat fees is an amazing moment for many.
+
+To understand node profitability you must understand the various components of the economics of routing node.
+
+<br />
+
+
+<span id="components-of-profitability"></span>
+== <span id="Components_of_Profitability" class="mw-headline">Components of Profitability</span> ==
+
+* Costs
+
+you will incur the following costs during your routing node journey.
+
+# Capital Expense: One time expenses incurred for setting up your node.
+## Cost of node hardware and peripherals.
+## Cost of UPS and other peripherals.
+
+You should aim to recover the cost of capital expenditures over the useful life of the expense. i.e. if the node is going to last you 3 years before you decide to upgrade, you must aim to recover 1/3 of the cost every year. In accounting terms this is called depreciation.
+
+# Cost Of Goods Sold
+## Channel Rebalancing Fee Paid if any.
+## Operating Expenses
+## Chanel Open and Close Fees paid on-chain
+# Other Expenses (minor but could be significant for some)
+## Electricity Cost
+## Network Bandwidth Cost
+
+Against these costs, you will earn routing fees as Income. If you offer other services via your node, you might have additional income.
+
+You should measure the profitability of your node as below
+
+Gross Margin = Fee Earned - Cost of Good Sold (Fee Paid)
+
+Operating Margin = Gross Margin - Operating Expenses (Channel Open/Close fees and other costs)
+
+And finally, you have cash flow Net Cash Flow = Cummulative Operating Margin - CAPEX
+
+Your aim should be to be positive on all these metrics. Of course, it takes time for a node to be fully profitable.
+
+<br />
+
+
+<span id="setting-routing-fees"></span>
+== <span id="Setting_Routing_Fees" class="mw-headline">Setting Routing Fees</span> ==
+
+Before you set your routing fees, you should have a good understanding of your costs.
+
+Your routing fees is set up on each channel as
+
+# Base Fees in mSat (1000 mSat = 1 Sat)
+# Fee Rate in ppm (1 ppm = 1 Sat per 1_000_000 Sat routed)
+
+You earn routing fees *only on flows going out of your channel*. In other words you earn fees for sending your Local Balance to Remote Balance of a channel. Your fees on the incoming channel are not relevant for the purpose for fee earned.
+
+Fee Earned = Base Fee/1_000 + Routed Amount * Fee Rate / 1_000_000
+
+Assume you had a Base Fee of 10_000 mSat and Fee Rate of 200 ppm. Now assume a payment of 750_000 Sats is forwarded via your node on this channel. The fee you will earn for this transaction would be
+
+<pre>10_000/1_000 + 200 * 750_000/1_000_000 = 10 + 150 = 160 Sats</pre>
+<br />
+
+
+<span id="keeping-an-eye"></span>
+== <span id="Keeping_an_Eye" class="mw-headline">Keeping an Eye</span> ==
+
+At a very high level Node P&amp;L = Net Sats = Earned - Paid - Chain-fees - PaidToBuyLiquidity - LoopOutCustodialFees
+
+Earned = Sats earned in a period ;
+
+use-&gt; bos chart-fees-earned —days 7
+
+Paid = Sats paid for rebalancing, etc. ; use-&gt; bos chart-fees-paid —days 7
+
+Chain-fees = amount paid for on-chain fees close/open ; use-&gt; bos chart-chain-fees —days 7
+
+PaidToBuyLiquidity = example if you paid LNBIG 15k Sats to open an Inbound channel to you
+
+LoopOutCustodialFees = any Strike or Wallet Loop-out/Loop-in cost or Fees for transfer of funds to Node on-chain wallet
+
+If the Net Sats numbers every week is improving and moving towards positive (making profits), you are doing good. If going another direction, not so good and analyze why it is negative.
+
+Once you have the measurement system in place for your node, you can then begin to benchmark how much +ve or -ve your peers are at, if someone is willing to share.
+
+You can also run the #s for days 30 or 60 or 90
+
+<br />
+
+
+<span id="your-node-routing-kpi"></span>
+== <span id="Your_Node_Routing_KPI" class="mw-headline">Your Node Routing KPI</span> ==
+
+If you do not measure you do not improve. Most new node runners worry that their node is not doing anything but if asked why they think that, they have no quality data. The first step in improving your node profitability is to first understand what is the performance and how it is taking shape week by week.
+
+A week (7 days ) is not a long time in node running. If you have to make changes in fee policy, routing policy, selecting new nodes to open channel with, and to make any other decisions regarding your node, give yourself a weeks time to think about and analyse. Lightning is a long term play and there is no need to be a grasshopper jumping from one idea to other, only to spend sats in the process. Adopt a policy and give it at least a week if not more to see the results.
+
+You can use the weekend to deep dive your node performance and discuss with your mentors or in the group your reflections.
+
+The following KPIs are suggested for measuring routing node performance over a rolling 7 day period (1 week)
+
+# Local Balance
+# Sats Routed in the period
+# % Routed (Sats Routed/Local Balance)*100
+# NetFeePPM (Fee Earned - Fee Paid - OnChain Fees)/Local Balance * 1 000 000
+# Fee Earned
+# Fee Paid
+# On Chain Fees
+
+<br />
+
+
+<span id="two-kpis-to-watch"></span>
+=== <span id="Two_KPIs_to_Watch" class="mw-headline">Two KPIs to Watch</span> ===
+
+The two most important KPIs (Key Performance Indicators) to watch are the <code>% Routed</code> and <code>NetFeePPM</code>. You can also use these KPIs to compare your node to your peers and other node runners. You can also display these KPIs along with the beautiful node art every Friday [https://twitter.com/search?q=%23NodeArtFriday&src=typed_query #NodeArtFriday] for the world to see or in the plebnet group.
+
+% Routed This KPI tells you how much of your local balance you routed in the last 7 days. This tells you how much of your capital your node is turning over. The higher the number, the better is the routing performance of your node at least in the number of transactions.
+
+NetFeePPM While the first KPI is about the transactions, the second one is the main KPI about profitability. The higher the NetFeePPM, the more profitable your node is. If you are transacting 200% of your Local Balance each week but only earning 0 sats (or worse negative) then there is something to look into.
+
+A profitable node should route a good volume of Local Balance while earning higher NetFeePPM.
+
+Raising fees can reduce the % Routed while dropping fees could increase the % Routed.
+
+Your NetFeePPM has a sweet spot of % Routed which maximises the NetFeePPM and as a node operator, you need to find that and stick with that by adjusting the fee policy week over week. Once you find it, let it run for a long time until you have to tinker it again.
+
+Suggestions: If %Routed is &lt; 25% - review your channel balances to ensure sufficient liquidity for routing. Lower Fees. If %Routed is &gt; 75% - review your routing pairs with most routing and try to raise fees. You may have the potential to earn more. Review again next week. Between 25% - 75% % Routed, you can work on improving the routing by providing active liquidity management or small changes to fee policies.
+
+<br />
+
+
+<span id="automation-of-routing-kpi"></span>
+=== <span id="Automation_of_Routing_KPI" class="mw-headline">Automation of Routing KPI</span> ===
+
+This KPI idea was discussed in Plebnet and a fellow pleb has written a simple script to capture this. You can find it [https://github.com/Deekee62/bos_accounting here].
+
+Please note that this script provides KPIs from your routing node perspective and is not a replacement of accounting accurate profitability analysis. If your node sends out a lot of payments that are not routing rebalance related, your fee paid could be an incorrect reflection in your KPIs. In addition, if you do a lot of LOOP out or custodial loop out (WoS/Strike/Wallet) then the fees paid on the end of the wallet for on-chain will also not be reflected in the KPIs produced by this script.
+
+<br />
+
+
+<span id="installtion-instructions-node-kpi-script"></span>
+==== <span id="Installtion_Instructions_Node_KPI_Script" class="mw-headline">Installtion Instructions Node KPI Script</span> ====
+
+* make sure you installing these scripts on your node (in ssh). <code> ssh umbrel@umbrel.local </code>.
+
+* get the repository in your home directory (where you can run bos) <code>cd ~; git clone </code>[https://github.com/Deekee62/bos_accounting <code>https://github.com/Deekee62/bos_accounting</code>] if you already have installation to upgrade just do <code>cd ~/bos_accounting; git pull </code>[https://github.com/Deekee62/bos_accounting <code>https://github.com/Deekee62/bos_accounting</code>]
+
+* test the script <code> ~/bos_accounting/bos_accounting.sh</code> it should run for sometime and give you single line output of various numbers. If you get an error, you may have to adjust some settings in the script or your installation. Reach out for help in the group with the error you are getting. The output column headers are the following
+
+<pre>
+
+=======================================================================================================================================
+
+                              Local                             Weekly Fees earned compared to local channel balance
+                            Channel      Weekly
+                            Balance   Forwarded   percent    earned     paid      net      earned         paid    chain fee         net
+      Date        Time         sats        sats                                              sats         sats         sats        sats  
+
+
+=======================================================================================================================================
+</pre>
+* If you are happy with the results, you can place the script in cron to run every night automatically and you can check the results at your convenience.
+
+<code>cp ~/bos_accounting/bos_accounting.log ~/</code> and then add to crontab via <code> crontab -e</code> and add the following lines.
+
+<pre> 55 23 * * * ~/bos_accounting/bos_accounting.sh &gt;&gt;~/bos_accounting.log 2&gt;&amp;1</pre>
+<code>ctrl -x y enter</code> to save and exit check via <code>crontab -l</code> and you can see your entry.
+
+Raspiblitz users, please run the script with the same user who can run bos. You may have to adopt the script to replace the line <code>BOS=`which bos`</code> by <code>BOS=path of bos on your installation</code> if you get issues in running via cron.
+
+This will run the script every night and you can see the results every day by <code>cat ~/bos_accounting.log</code>
+
+Once you are measuring the node performance and comfortable with it, you can move on to managing your fee policies. Described in the following sections.
+
+<br />
+
+
+<span id="node-fee-policies"></span>
+=== <span id="Node_Fee_Policies" class="mw-headline">Node Fee Policies</span> ===
+
+Before jumping into fee policies, let us review some of the popular approaches in brief:
+
+<br />
+
+
+<span id="zerobasefee"></span>
+==== <span id="#ZeroBaseFee"></span><span id=".23ZeroBaseFee" class="mw-headline">#ZeroBaseFee</span> ====
+
+Proponents for #ZeroBase fee claim that the network pathfinding algorithm can be improved if the base fee is removed from the pathfinding calculation. Today the pathfinding problem is an NP-Hard problem but without a base fee, it becomes a linear function. <sup>citation needed</sup>
+
+If you wish to follow 0 base fee, you can set up your base fee = 0 for selected or all channels. This is also used to indicate your node supporting zero base fee.
+
+Some nodes go a step further and drop their fee rate also to 0 ppm and that becomes #ZeroFeeRouting.
+
+Some nodes go for 0 base fee and low fee rate which becomes #LowFeeRouting and promotes micro payments through their nodes.
+
+Please note in the case of #ZeroFeeRouting or #LowFeeRouting you are not going to earn very little or if at all any routing fees and if your node does not rebalance itself, you will incur rebalancing fees.
+
+<br />
+
+
+<span id="static-fee-rate"></span>
+==== <span id="Static_Fee_Rate" class="mw-headline">Static Fee Rate</span> ====
+
+Another popular approach is to keep a static fee rate (say 200 ppm) for all channels along with base-fee = 0 or 1 Sat (1000 mSat). The advantage of this approach is that it allows you to maintain your node once a day or even a week and make one change that affects all channels. It reduces node management drastically if you are manually managing fees. You need to make sure that the average cost of rebalance is lower than the fee rate or else you will lose sats. See the section about node KPIs and keep that in mind and avoid aggressive and obsessive rebalancing. If network see two way traffic you can still route well with static fee and you will not generate much gossip traffic for the network too.
+
+<br />
+
+
+<span id="static-base-fee"></span>
+==== <span id="Static_Base_Fee" class="mw-headline">Static Base Fee</span> ====
+
+Variation of static fee rate is to use static base fee (or eat all you can buffet). Here you setup a static base fee (say 199 Sats 199000 mSat) and a fee-rate of 0 ppm. Any routes passing via your node will pay a fixed fee 199 sat. Naturally this favours larger transactions over smaller transactions (for example 199 fee for 2 000 000 sats is reasonable but for 1 000 sats is very expensive). This fee policy can work for you and you can find the sweet spot for your node which balances the number of transaction, transaction size, and effective fee earned. It will also be a simple process that each forward will earn you same fee.
+
+<br />
+
+
+<span id="liquidity-driven-fee-adjustment"></span>
+==== <span id="Liquidity_Driven_Fee_Adjustment" class="mw-headline">Liquidity Driven Fee Adjustment</span> ====
+
+Finally, a popular approach is to adjust your fees with your liquidity.
+
+When high on local, let it flow When low on local, go slow
+
+The idea is that when you have liquidity at your local side, you charge low (but reasonable to make profit) fees. As liquidity moves away earning you fees, you start raising your fees. As a further extension, you can also set your fees high to stop routing through a channel where there is no liquidity. This is [https://twitter.com/search?q=%239999BaseFee&src=typed_query #9999BaseFee]. If your channel has run out of liquidity on your end, the network does not realise this and continues to send you traffic if your fees are low. This causes &quot;Temporary Channel Failure&quot; on the network and not only creates delays but also affects your node reputation. By presenting a low fee channel with zero or close to zero liquidity you are affecting the network path finding. If you cannot provide the liquidity (via rebalance or other means), it is sensible to step out of the path finding paths which can be done by raising your fees.
+
+There are automation tools which can be used to implement automatic fee management for the node. The tool works for most strategies. Find the details below.
+
+<br />
+
+
+<span id="installing-charge-lnd"></span>
+==== <span id="Installing_Charge-Lnd" class="mw-headline">Installing Charge-Lnd</span> ====
+
+Detailed instructions are provided [https://github.com/accumulator/charge-lnd/blob/master/INSTALL.md here] including options to install in docker. The following are simple instructions which should work for everyone specially umbrel on pi.
+
+# <code>cd ~</code>
+# <code>git clone </code>[https://github.com/accumulator/charge-lnd <code>https://github.com/accumulator/charge-lnd</code>] if you want to use max-htlc=-1 feature, use <code>git clone </code>[https://github.com/bhaagbosedk/charge-lnd <code>https://github.com/bhaagbosedk/charge-lnd</code>]
+# <code>cd charge-lnd</code>
+# <code>pip3 install -r requirements.txt .</code> It will take some time. Take a coffee.
+# <code>~/.local/bin/charge-lnd --help</code> If this gives you the help options, you are done!
+
+'''Dry Run'''
+
+Create a configuration file for your fee policy. You can use the sample configuration file of charge-lnd [https://github.com/accumulator/charge-lnd/blob/master/charge.config.example here] or the following is a very basic configuration you can use straight away
+
+<code>nano ~/charge-lnd/myconfig</code>
+
+Then paste this (change as required)
+
+If you are an older version of lnd or do not prefer to disable the channel, you can try this policy
+
+<pre># default policy is proportional
+[default]
+chan.min_ratio = 0
+chan.max_ratio = 1
+strategy = proportional
+#Please change the fees to what you want
+base_fee_msat = 0
+min_fee_ppm = 49
+max_fee_ppm = 249
+
+# place holder for your defaults for your fee policies
+[0-mydefaults]
+# no strategy, so this only sets some defaults
+min_fee_ppm_delta = 10
+min_htlc_msat = 1_000
+#Change if you want to route smaller htlc
+max_htlc_msat_ratio = 1
+
+#9999BaseFee should be evaluated first before other fees are set.
+[1-stop_routing]
+# if &lt; 10% on local increase fees very high
+chan.max_ratio = 0.1
+strategy = static
+base_fee_msat = 9999_000
+fee_ppm = 0</pre>
+if lnd 13 or higher (disable channel is supported). However be mindful that disable channel can send confusing signal to network and your peers might think the disable is due to connectivity issues. It may hamper your ranking on terminal.
+
+<pre>[default]
+chan.min_ratio = 0
+chan.max_ratio = 1
+strategy = proportional
+#Please change the fees to what you want
+base_fee_msat = 0
+min_fee_ppm = 49
+max_fee_ppm = 249
+
+# place holder for your defaults for your fee policies
+[0-mydefaults]
+# no strategy, so this only sets some defaults
+min_fee_ppm_delta = 10
+min_htlc_msat = 1_000
+#Change if you want to route smaller htlc
+max_htlc_msat_ratio = 1
+
+# This policy will disable a channel, to avoid routing failures when the balance drops below 250_000 Sats (usual payment amount). Adjust as necessary.
+[1-stop_routing]
+# if &lt; 10% on local (for smaller channel), disable channel
+# if channel local balance is less than 250_000 (for larger channels), disable channel
+
+chan.max_ratio = 0.10
+chan.max_local_balance = 250_000
+strategy = disable
+fee_ppm = 999
+</pre>
+<br />
+
+
+Save and Exit <code>ctrl-x Y enter</code>
+
+Run in dry run mode. This will run the script and evaluate everything but will not make the change. Make sure to change the path of lnddir to whatever applies for your system.
+
+<code>~/.local/bin/charge-lnd --lnddir ~/umbrel/lnd -c ~/charge-lnd/myconfig --dry-run</code>
+
+If you are happy with the output you can run the same command without <code>--dry-run</code> and it will make the change.
+
+'''Multiple Channels''' Charge-lnd does not handle multiple channels with same peer properly for proportional fees. See [https://github.com/accumulator/charge-lnd/issues/43 issue report here]. You should instead set up static policy (or ignore policy and manage fees manually) for those peers who have multiple channels with you. You can use this policy and place it between 0 and 1 (i.e. before stop routing)
+
+<pre>[0.5 Multiple Channels]
+#Special policy to handle multiple channels with same peer to avoid incorrect fees setup.
+node.id = &lt;pubkey - multiple can be provided separated by ,&gt;
+
+strategy = static
+fee_ppm = 149
+base_fee_msat = 0
+</pre>
+'''Now add to cron''' If you are happy with your fee policies you can run charge-lnd in cron to run regularly.
+
+<code>crontab -e</code>
+
+if you are asked to choose an editor, choose /bin/nano
+
+copy this line adjusting as necessary specially the path to lnddir for your system
+
+<code>42 */4 * * * /home/umbrel/.local/bin/charge-lnd --lnddir /home/umbrel/umbrel/lnd -c /home/umbrel/charge-lnd/myconfig &gt; /tmp/charge-lnd.log 2&gt;&amp;1; date &gt;&gt; /tmp/charge-lnd.log</code>
+
+Save and Exit <code>ctrl-x Y enter</code>
+
+Check by <code>crontab -l</code> and you can see your entry. This will allow system to run this script on 42nd minute every 4 hours. You can choose any random number between 0-59 instead of 42 (otherwise entire plebnet will update the fees on 42nd minute bringing down the gossip network).
+
+'''My Node Installation''' installation for mynode are slightly different (path and need for super user). Replace some of the commands as below
+
+<pre>sudo nano /home/admin/charge-lnd/charge.config
+
+sudo -u admin /home/admin/.local/bin/charge-lnd -c /home/admin/charge-lnd/charge.config
+
+sudo su - admin
+
+crontab -e
+
+42 */4 * * * /home/admin/.local/bin/charge-lnd -c /home/admin/charge-lnd/charge.config</pre>
+<br />
+
+
+<span id="using-charge-lnd-to-set-maximum-htlcs"></span>
+==== <span id="Using_Charge-Lnd_to_set_Maximum_HTLCs" class="mw-headline">Using Charge-Lnd to set Maximum HTLCs</span> ====
+
+Charge-Lnd can also be an easy way to implement auto-adjusting max-htlcs.
+
+A maximum htlc setting can be used to limit the size of outbound transactions that can pass through a channel, depending on the channel liquidity. This can be a good thing, because when someone tries to forward a payment through one of your channels, but that channel doesn't have enough liquidity, it will cause a payment failure at your node. If your node gets a lot of payment failures it may affect your node's reliability reputation in the network. By setting max-htlc limits so that your channels are only considered when they have enough liquidity to handle the payment, can reduce the number of failures your node experiences, and improve the lightning network as a whole.
+
+Please note that setting max_htlc can reveal your channel local balance. Also updating it too often can spam the gossip network (therefore please update it along with your charge-lnd fee policy). If your max_htlc is reduced, and subsequently your channel is rebalance, your channel will be restricted to smaller size forwards until the next run of charge-lnd.
+
+Updating max_htlc is still experimental.
+
+Default Charge-lnd does now allow setting max_htlc to local balance. [https://github.com/accumulator/charge-lnd/issues/48 See issue report]. Therefore a [https://github.com/BhaagBoseDK/charge-lnd fork was created for those who wish to use this feature].
+
+If you already use charge-lnd and wish to use max_htlc to set to your local balance:
+
+<pre># Save configuration file and remove previous installation. If your installation is in a different directory adapt the commands accordingly.
+cp ~/charge-lnd/*.config /tmp/
+rm -rf ~/charge-lnd
+</pre>
+Then follow the installation steps [https://plebnet.wiki/wiki/Fees_And_Profitability#Installing_Charge-Lnd here] replacing original git clone by <code> git clone </code>[https://github.com/BhaagBoseDK/charge-lnd <code>https://github.com/BhaagBoseDK/charge-lnd</code>]<code> </code>
+
+Now in your charge-lnd config file you can add <code>max_htlc_msat = -1</code> which is encoded to make your max-htlc become a value just below the local balance of the channel it is being applied to.
+
+if you add to a specific policy, it will apply to that specific policy.
+
+if you add it under [my defaults] section it would apply to all policies. See [https://plebnet.wiki/wiki/User:VS#My_Charge-LND_Configuration a sample here]
+
+<br />
+See [[/plebnet.wiki/wiki/Using_Charge-Lnd_to_Adjust_HTLC_Limits|Using Charge-Lnd to Adjust HTLC Limits]]
+
+
+</div>

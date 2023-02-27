@@ -1,0 +1,32 @@
+<span id="anonymous-edits-and-privacy"></span>
+= Anonymous edits and privacy =
+
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+<span class="mw-pt-languages-ui mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="en">English</span>
+
+</div>
+
+</div>
+When editing pages on the PlebNet Wiki, '''please make extra sure that you are logged in'''. If you wish to remain anonymous, then please still create an account: eg anon123.
+
+The reason for this is, MediaWiki tracks and displays the IP addresses of anonymous edits. If you accidentally made an anonymous change, and would like the IP address removed, please contact an administrator, e.g via [https://t.me/bitcoin_opinion telegram], as this can be done.
+
+Administrators:
+
+* Mads
+* Walton
+* Xenonfun
+* Rajwinder
+
+
+</div>
