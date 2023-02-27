@@ -1,3 +1,4 @@
 [submodule "exportMediaWiki2HTML"]
 	path = exportMediaWiki2HTML
 	url = git@github.com:SolidCharity/exportMediaWiki2HTML.git
+	ignore = dirty
