@@ -1,3 +1,10 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>Welcome_to_Plebnet</title>
   <style>
     html {
       color: #1a1a1a;
@@ -158,177 +165,8 @@
   <![endif]-->
 </head>
 <body>
- 
-<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
-<head>
-<meta charset="utf-8" />
-<meta name="generator" content="pandoc" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-<title>
-<p>Welcome_to_Plebnet</p>
-</title>
-<style>
-<p><code>   html {</code><br />
-<code>     color: #1a1a1a;</code><br />
-<code>     background-color: #fdfdfd;</code><br />
-<code>   }</code><br />
-<code>   body {</code><br />
-<code>     margin: 0 auto;</code><br />
-<code>     max-width: 36em;</code><br />
-<code>     padding-left: 50px;</code><br />
-<code>     padding-right: 50px;</code><br />
-<code>     padding-top: 50px;</code><br />
-<code>     padding-bottom: 50px;</code><br />
-<code>     hyphens: auto;</code><br />
-<code>     overflow-wrap: break-word;</code><br />
-<code>     text-rendering: optimizeLegibility;</code><br />
-<code>     font-kerning: normal;</code><br />
-<code>   }</code><br />
-<code>   @media (max-width: 600px) {</code><br />
-<code>     body {</code><br />
-<code>       font-size: 0.9em;</code><br />
-<code>       padding: 12px;</code><br />
-<code>     }</code><br />
-<code>     h1 {</code><br />
-<code>       font-size: 1.8em;</code><br />
-<code>     }</code><br />
-<code>   }</code><br />
-<code>   @media print {</code><br />
-<code>     html {</code><br />
-<code>       background-color: white;</code><br />
-<code>     }</code><br />
-<code>     body {</code><br />
-<code>       background-color: transparent;</code><br />
-<code>       color: black;</code><br />
-<code>       font-size: 12pt;</code><br />
-<code>     }</code><br />
-<code>     p, h2, h3 {</code><br />
-<code>       orphans: 3;</code><br />
-<code>       widows: 3;</code><br />
-<code>     }</code><br />
-<code>     h2, h3, h4 {</code><br />
-<code>       page-break-after: avoid;</code><br />
-<code>     }</code><br />
-<code>   }</code><br />
-<code>   p {</code><br />
-<code>     margin: 1em 0;</code><br />
-<code>   }</code><br />
-<code>   a {</code><br />
-<code>     color: #1a1a1a;</code><br />
-<code>   }</code><br />
-<code>   a:visited {</code><br />
-<code>     color: #1a1a1a;</code><br />
-<code>   }</code><br />
-<code>   img {</code><br />
-<code>     max-width: 100%;</code><br />
-<code>   }</code><br />
-<code>   h1, h2, h3, h4, h5, h6 {</code><br />
-<code>     margin-top: 1.4em;</code><br />
-<code>   }</code><br />
-<code>   h5, h6 {</code><br />
-<code>     font-size: 1em;</code><br />
-<code>     font-style: italic;</code><br />
-<code>   }</code><br />
-<code>   h6 {</code><br />
-<code>     font-weight: normal;</code><br />
-<code>   }</code><br />
-<code>   ol, ul {</code><br />
-<code>     padding-left: 1.7em;</code><br />
-<code>     margin-top: 1em;</code><br />
-<code>   }</code><br />
-<code>   li &gt; ol, li &gt; ul {</code><br />
-<code>     margin-top: 0;</code><br />
-<code>   }</code><br />
-<code>   blockquote {</code><br />
-<code>     margin: 1em 0 1em 1.7em;</code><br />
-<code>     padding-left: 1em;</code><br />
-<code>     border-left: 2px solid #e6e6e6;</code><br />
-<code>     color: #606060;</code><br />
-<code>   }</code><br />
-<code>   code {</code><br />
-<code>     font-family: Menlo, Monaco, Consolas, 'Lucida Console', monospace;</code><br />
-<code>     font-size: 85%;</code><br />
-<code>     margin: 0;</code><br />
-<code>     hyphens: manual;</code><br />
-<code>   }</code><br />
-<code>   pre {</code><br />
-<code>     margin: 1em 0;</code><br />
-<code>     overflow: auto;</code><br />
-<code>   }</code><br />
-<code>   pre code {</code><br />
-<code>     padding: 0;</code><br />
-<code>     overflow: visible;</code><br />
-<code>     overflow-wrap: normal;</code><br />
-<code>   }</code><br />
-<code>   .sourceCode {</code><br />
-<code>    background-color: transparent;</code><br />
-<code>    overflow: visible;</code><br />
-<code>   }</code><br />
-<code>   hr {</code><br />
-<code>     background-color: #1a1a1a;</code><br />
-<code>     border: none;</code><br />
-<code>     height: 1px;</code><br />
-<code>     margin: 1em 0;</code><br />
-<code>   }</code><br />
-<code>   table {</code><br />
-<code>     margin: 1em 0;</code><br />
-<code>     border-collapse: collapse;</code><br />
-<code>     width: 100%;</code><br />
-<code>     overflow-x: auto;</code><br />
-<code>     display: block;</code><br />
-<code>     font-variant-numeric: lining-nums tabular-nums;</code><br />
-<code>   }</code><br />
-<code>   table caption {</code><br />
-<code>     margin-bottom: 0.75em;</code><br />
-<code>   }</code><br />
-<code>   tbody {</code><br />
-<code>     margin-top: 0.5em;</code><br />
-<code>     border-top: 1px solid #1a1a1a;</code><br />
-<code>     border-bottom: 1px solid #1a1a1a;</code><br />
-<code>   }</code><br />
-<code>   th {</code><br />
-<code>     border-top: 1px solid #1a1a1a;</code><br />
-<code>     padding: 0.25em 0.5em 0.25em 0.5em;</code><br />
-<code>   }</code><br />
-<code>   td {</code><br />
-<code>     padding: 0.125em 0.5em 0.25em 0.5em;</code><br />
-<code>   }</code><br />
-<code>   header {</code><br />
-<code>     margin-bottom: 4em;</code><br />
-<code>     text-align: center;</code><br />
-<code>   }</code><br />
-<code>   #TOC li {</code><br />
-<code>     list-style: none;</code><br />
-<code>   }</code><br />
-<code>   #TOC ul {</code><br />
-<code>     padding-left: 1.3em;</code><br />
-<code>   }</code><br />
-<code>   #TOC &gt; ul {</code><br />
-<code>     padding-left: 0;</code><br />
-<code>   }</code><br />
-<code>   #TOC a:not(:hover) {</code><br />
-<code>     text-decoration: none;</code><br />
-<code>   }</code><br />
-<code>   code{white-space: pre-wrap;}</code><br />
-<code>   span.smallcaps{font-variant: small-caps;}</code><br />
-<code>   div.columns{display: flex; gap: min(4vw, 1.5em);}</code><br />
-<code>   div.column{flex: auto; overflow-x: auto;}</code><br />
-<code>   div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}</code><br />
-<code>   ul.task-list{list-style: none;}</code><br />
-<code>   ul.task-list li input[type="checkbox"] {</code><br />
-<code>     width: 0.8em;</code><br />
-<code>     margin: 0 0.8em 0.2em -1.6em;</code><br />
-<code>     vertical-align: middle;</code><br />
-<code>   }</code><br />
-<code>   .display.math{display: block; text-align: center; margin: 0.5rem auto;}</code><br />
-<code> </code></p>
-</style>
-</head>
-<body>
 <p><span id="welcome-to-plebnet"></span></p>
-<h1 id="welcome_to_plebnet">
-<p>Welcome to Plebnet</p>
-</h1>
+<h1 id="welcome_to_plebnet">Welcome to Plebnet</h1>
 <div class="mw-pt-translate-header noprint nomobile" dir="ltr" lang="en">
 <p>This page contains <span class="plainlinks"><a
 href="/plebnet.wiki/index.php?title=Welcome_to_Plebnet&amp;oldid=2045&amp;diff=2205"
@@ -362,9 +200,7 @@ group when first joining, as well with some important tips.</p>
 <div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
 <div class="toctitle" lang="en" dir="ltr">
 <p><span id="mw-toc-heading"></span></p>
-<h2 id="contents">
-<p>Contents</p>
-</h2>
+<h2 id="contents">Contents</h2>
 <p><span class="toctogglespan"></span></p>
 </div>
 <ul>
@@ -402,10 +238,8 @@ title="wikilink"><span class="tocnumber">8</span>
 </div>
 <p><span id="pleb-tips-that-everyone-should-know"></span></p>
 <h2
-id="pleb_tips_that_everyone_should_know">
-<p><span id="PLEB_TIPS_THAT_EVERYONE_SHOULD_KNOW" class="mw-headline">PLEB
-TIPS THAT EVERYONE SHOULD KNOW</span></p>
-</h2>
+id="pleb_tips_that_everyone_should_know"><span id="PLEB_TIPS_THAT_EVERYONE_SHOULD_KNOW" class="mw-headline">PLEB
+TIPS THAT EVERYONE SHOULD KNOW</span></h2>
 <p>TRUST NO ONE</p>
 <p>THERE ARE RISKS WITH RUNNING A LIGHTNING NODE</p>
 <p>DO YOUR OWN RESEARCH</p>
@@ -413,20 +247,16 @@ TIPS THAT EVERYONE SHOULD KNOW</span></p>
 <p>RUNNING A NODE IS NOT THE SAME AS MINING BITCOIN</p>
 <p><span id="how-did-i-get-here"></span></p>
 <h2
-id="how_did_i_get_here">
-<p><span id="How_did_I_get_here?"></span><span id="How_did_I_get_here.3F" class="mw-headline">How
-did I get here?</span></p>
-</h2>
+id="how_did_i_get_here"><span id="How_did_I_get_here?"></span><span id="How_did_I_get_here.3F" class="mw-headline">How
+did I get here?</span></h2>
 <p>I am unable to answer that question for you, but maybe you clicked on
 one of our links on Twitter? You may have also typed in kycjelly.com
 after hearing Walton’s wonderful voice proclaim it on Clubhouse... but
 really that is for you to figure out.</p>
 <p><span id="can-i-become-a-node-operator"></span></p>
 <h2
-id="can_i_become_a_node_operator">
-<p><span id="Can_I_become_a_node_operator?"></span><span id="Can_I_become_a_node_operator.3F" class="mw-headline">Can
-I become a node operator?</span></p>
-</h2>
+id="can_i_become_a_node_operator"><span id="Can_I_become_a_node_operator?"></span><span id="Can_I_become_a_node_operator.3F" class="mw-headline">Can
+I become a node operator?</span></h2>
 <p>I can speak with experience here - anyone can learn to operate a
 lightning node. This does not mean that anyone can do it with ease, or
 that you will be able to run your node successfully and without risk.
@@ -436,11 +266,9 @@ try asking: can someone point me to the best resources for someone
 interested in lightning, or interested in running a lightning node?</p>
 <p><span id="how-much-money-can-i-make-running-a-lightning-node-how-much-are-you-making-weekly"></span></p>
 <h2
-id="how_much_money_can_i_make_running_a_lightning_node_how_much_are_you_making_weekly">
-<p><span id="How_much_money_can_I_make_running_a_lightning_node?_How_much_are_you_making_weekly?"></span><span id="How_much_money_can_I_make_running_a_lightning_node.3F_How_much_are_you_making_weekly.3F" class="mw-headline">How
+id="how_much_money_can_i_make_running_a_lightning_node_how_much_are_you_making_weekly"><span id="How_much_money_can_I_make_running_a_lightning_node?_How_much_are_you_making_weekly?"></span><span id="How_much_money_can_I_make_running_a_lightning_node.3F_How_much_are_you_making_weekly.3F" class="mw-headline">How
 much money can I make running a lightning node? How much are you making
-weekly?</span></p>
-</h2>
+weekly?</span></h2>
 <p>Questions along these lines are tricky to answer and depend on too
 many variables for it to get a response. Many of us running nodes are
 not currently profitable. Our main purpose is learning, supporting the
@@ -483,11 +311,9 @@ your cost(s). So this is a tight rope 3D chess you will play when you
 operate a node. It may not rain sats but it would sure be fun!</p>
 <p><span id="can-i-open-a-channel-with-someone-for-x-amount-of-sats-what-is-the-best-amount-of-sats-to-open-a-channel-with"></span></p>
 <h2
-id="can_i_open_a_channel_with_someone_for_x_amount_of_sats_what_is_the_best_amount_of_sats_to_open_a_channel_with">
-<p><span id="Can_I_open_a_channel_with_someone_for_X_amount_of_sats?_What_is_the_best_amount_of_sats_to_open_a_channel_with?"></span><span id="Can_I_open_a_channel_with_someone_for_X_amount_of_sats.3F_What_is_the_best_amount_of_sats_to_open_a_channel_with.3F" class="mw-headline">Can
+id="can_i_open_a_channel_with_someone_for_x_amount_of_sats_what_is_the_best_amount_of_sats_to_open_a_channel_with"><span id="Can_I_open_a_channel_with_someone_for_X_amount_of_sats?_What_is_the_best_amount_of_sats_to_open_a_channel_with?"></span><span id="Can_I_open_a_channel_with_someone_for_X_amount_of_sats.3F_What_is_the_best_amount_of_sats_to_open_a_channel_with.3F" class="mw-headline">Can
 I open a channel with someone for X amount of sats? What is the best
-amount of sats to open a channel with?</span></p>
-</h2>
+amount of sats to open a channel with?</span></h2>
 <p>The answer to this question is... it's a moving bar. It also depends
 on what kind of node you want to operate, what amount of funds you have,
 and who you want to connect to. I think there are ~3 broad categories of
@@ -515,27 +341,21 @@ href="https://amboss.space/node/035f42b1c1cd8afe605f3fc1befc270844ec9885b7c53f71
 any size channel 20k sats and up will work to connect with them.</p>
 <p><span id="resources"></span></p>
 <h2
-id="resources">
-<p><span id="Resources" class="mw-headline">Resources</span></p>
-</h2>
+id="resources"><span id="Resources" class="mw-headline">Resources</span></h2>
 <p>Now back to the best parts of PlebNet: the resources shared, the pleb
 connections made, and the magic of the Lightning network! A lot of
 questions people ask may be answered, and resources can be found with a
 quick look at the pinned posts, the PlebNet wikis, or in the PlebNet
 telegram:</p>
 <ul>
-<li><a href="https://plebnet.wiki"><a
-href="https://plebnet.wiki">https://plebnet.wiki</a></a></li>
+<li><a href="https://plebnet.wiki">https://plebnet.wiki</a></li>
 <li><a
-href="https://library.plebnet.org"><a
-href="https://library.plebnet.org">https://library.plebnet.org</a></a></li>
+href="https://library.plebnet.org">https://library.plebnet.org</a></li>
 </ul>
 <p><span id="please-contribute-if-you-are-able"></span></p>
 <h2
-id="please_contribute_if_you_are_able">
-<p><span id="Please_contribute_if_you_are_able" class="mw-headline">Please
-contribute if you are able</span></p>
-</h2>
+id="please_contribute_if_you_are_able"><span id="Please_contribute_if_you_are_able" class="mw-headline">Please
+contribute if you are able</span></h2>
 <p>Plebs just like you are volunteering their time and expertise to help
 the next pleb. This is probably my favorite thing about PlebNet - seeing
 someone who joined a week ago jump in to help out a new pleb and answer
@@ -553,10 +373,8 @@ resources for the lightning network.</p>
 </p>
 <p><span id="plebnet-infrastructure"></span></p>
 <h2
-id="plebnet_infrastructure">
-<p><span id="PlebNet_infrastructure" class="mw-headline">PlebNet
-infrastructure</span></p>
-</h2>
+id="plebnet_infrastructure"><span id="PlebNet_infrastructure" class="mw-headline">PlebNet
+infrastructure</span></h2>
 <p>As PlebNet has grown, we have evolved, and adjusted, and reinvented
 into what we are today. Currently, we have 7 different tiers of telegram
 groups for different purposes:</p>
@@ -611,7 +429,5 @@ href="/plebnet.wiki/wiki/Special:MyLanguage/Local_PlebNet_groups"
 title="wikilink">local PlebNet groups</a> organizing in-person events in
 their city/country. Feel free to join them as well!</p>
 </div>
-</body>
-</html>
 </body>
 </html>

@@ -156,7 +156,14 @@ init:## 	DL pandoc & pip install requirements.txt
 		type -P curl && \
 		curl -LJO https://github.com/jgm/pandoc/releases/download/3.1/pandoc-3.1-linux-amd64.tar.gz | echo ""
 	$(PYTHON3) -m pip install $(USER_FLAG) --upgrade pip
-	$(PYTHON3) -m pip install $(USER_FLAG) -r requirements.txt
+	$(PYTHON3) -m pip install $(USER_FLAG) -r $(PWD)/requirements.txt
+	#pandoc -f mediawiki --metadata title="" -t html -s export/Welcome_to_Plebnet.wiki -o index.en.wiki
+	#pandoc -f mediawiki --metadata title="" -t html5 -s index.en.wiki -o index.en.html
+	#pandoc -f mediawiki --metadata title="" -t html5 -s index.en.wiki -o index.en.html
+	sed -i .bak '1d' index.en.html
+#<p>&lt;!DOCTYPE html&gt;</p>
+	sed 's/<p>&lt;!DOCTYPE html&gt;<\/p>/ /' index.en.html > index.html
+
 help:## 	verbose help
 	@echo verbose $@
 	@sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' |  sed -e 's/^/ /'
