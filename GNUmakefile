@@ -154,7 +154,7 @@ init:## 	DL pandoc & pip install requirements.txt
 help:## 	verbose help
 	@echo verbose $@
 	@sed -n 's/^##//p' ${MAKEFILE_LIST} | column -t -s ':' |  sed -e 's/^/ /'
-get-plebnet-wiki:##
+get-plebnet-wiki:## 	python3 exportMediaWiki2Html.py --url https://plebnet.wiki
 	python3 exportMediaWiki2Html.py --url https://plebnet.wiki
 wiki:## 	make wiki...
 	#@for i in ./export/*.html; do echo $i; done
