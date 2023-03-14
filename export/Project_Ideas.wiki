@@ -1,0 +1,35 @@
+<span id="project-ideas"></span>
+= Project Ideas =
+
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+<span class="mw-pt-languages-ui mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="en">English</span>
+
+</div>
+
+</div>
+This is a page to track project ideas. What does the PlebNet need building?
+
+* Better visualization tools, e.g create playbacks of an entire day's forwarding events
+* Basic auto-balancing scripts
+** Existing packages that could be used as starting point: [https://github.com/C-Otto/rebalance-lnd rebalance-lnd], [https://github.com/alexbosworth/balanceofsatoshis BOS]
+* [[/plebnet.wiki/wiki/Special:MyLanguage/Plebnet_Playground|Plebnet Playground]]
+* GirthMatrix - VR girth experience (e.g. https://plebnet.satoshis.tech/3d )
+* Self account creation for wiki - perhaps using new Amboss groups and then signing message with node
+* Software to automatically rebalance a node: set a budget, it takes care of keeping node balanced.
+* Software to automatically set fees. Analyze flows, and set fees with the aim of keeping the node channels balanced.
+** Existing packages that could be used as starting point: [https://github.com/accumulator/charge-lnd charge-lnd]
+* A site that logs nodes through which payments happen easily, versus nodes through which payments fail a lot
+* Better / advanced reporting
+
+
+</div>

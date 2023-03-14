@@ -1,0 +1,149 @@
+<span id="balancing-nodes"></span>
+= Balancing Nodes =
+
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+<span class="mw-pt-languages-ui mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="en">English</span>
+
+</div>
+
+</div>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#Intro|<span class="tocnumber">1</span> <span class="toctext">Intro</span>]]
+* [[#What_is_a_balanced_node|<span class="tocnumber">2</span> <span class="toctext">What is a balanced node</span>]]
+** [[#Why_balancing_is_required|<span class="tocnumber">2.1</span> <span class="toctext">Why balancing is required</span>]]
+** [[#What_are_your_options_now|<span class="tocnumber">2.2</span> <span class="toctext">What are your options now</span>]]
+** [[#How_to_achieve_balance_with_fees|<span class="tocnumber">2.3</span> <span class="toctext">How to achieve balance with fees</span>]]
+*** [[#Some_Practical_Ways_To_Get_Your_Sats_on_Local_again|<span class="tocnumber">2.3.1</span> <span class="toctext">Some Practical Ways To Get Your Sats on Local again</span>]]
+
+
+</div>
+<span id="intro"></span>
+= <span id="Intro" class="mw-headline">Intro</span> =
+
+Most new NodeRunners struggle with the concept of balancing the node and channel and in the process, they end up being too fixated on rebalancing and targeting that magic 50:50 balance on each and every channel at tremendous cost and frustration. If your inbound &lt;&gt; outbound it is mathematically impossible to achieve 50:50 split on every channel so stop wasting time and sats on obsessive rebalancing.
+
+Let us look at the concept of balance from a holistic level.
+
+<span id="what-is-a-balanced-node"></span>
+= <span id="What_is_a_balanced_node" class="mw-headline">What is a balanced node</span> =
+
+A perfectly balanced node is one where Sum of Local liquidity is equal to the sum of Remote liquidity Sum of Localliquidity on every channel is equal to sum of Remote liquidity on that channel.
+
+It does not exist.
+
+You can also consider a perfectly balanced node as a mirage. It is not possible. If a node is doing its jobs, there will be movements of Sats on channels.
+
+<br />
+
+
+<span id="why-balancing-is-required"></span>
+== <span id="Why_balancing_is_required" class="mw-headline">Why balancing is required</span> ==
+
+The way LND protocol is designed, the channel capacity (girth) is available publicly. You can check it on graph, public explorers (like https://amboss.space/), and even on block chain. The channel id is composed of Block_Transaction_Output. For example, channel id
+
+<pre>690334x2723x1</pre>
+indicates that this channel was opened in block 690334 transaction number 2723 in that block and output 1 (remember first output is x0) in that transaction.
+
+However, the local and remote balance of the channel is not available publicly and to the network. It can be probed and guessed but it is not published as part of network gossip (to avoid transmitting too many gossip messages and overwhelming the network).
+
+Imagine a network where B-&gt;A-&gt;M (your node) -&gt;Z-&gt;Y
+
+When node B wants to send some sats to node Y, it can create a route, which could pass via your node M, but if you are not a direct peer of B, Node B would never know how much is on your local balance to send outward towards Y. Node B would have Local/Remote information about channel B-&gt;A, but not about Local/Remote balance of A-&gt;M, M-&gt;Z, Z-&gt;Y. Node B would only know the capacity of the channels but not the Local/Remote balance. Node B is the initiator node, it will use its logic to guess and most senders assume the channel has 50% of the capacity available as local.
+
+If the lowest capacity channel in this path is A-&gt;M for 1_000_000 Sats, B would assume it can send at least 500_000 Sats + Fees. It will create and HTLC for that amount and pass it on to A, who will pass it on to M keeping the fees for A-&gt;M, who will pass it on to Z keeping the fees for M-&gt;Z, who will pass it on to Y, keeping the fees for Z-&gt;Y. However, if M-&gt;Z only has 200_000 sats on local, this HTLC will fail at that point (which you see as
+
+<pre>failure: TemporaryChannelFailure at 689892x1307x0 from nofrixion_tokyo</pre>
+if you run bos rebalance).
+
+If there is no other route, the payment will fail and B can only send 200_000 sats on this route.
+
+To prevent such failed HTLC, which also punish your node (M) in the eyes of B (sender) because you caused them the inconvenience of trying a route where there were not enough sats on your local side, it is *advised* to keep your channels balanced.
+
+* Cetaris Paribus, your local and inbound liquidity is constant*
+
+This could be a difficult concept to understand but unless you are sending payments (or receiving invoices), and you are not opening new channels and plebs are not opening channels into you, your total node capacity, your Local, and your Remote will remain the same. No amount of routing will change this balance (except the small amount of fees you will earn for routing).
+
+Imagine your node (M)
+
+* Channel 1 with A 1_000_000 girth, 300_000 Remote, 700_000 Local. Imagine your fee on this channel is 2_000 Sats (base fee)
+* Channel 2 with Z 2_000_000 girth, 1_200_000 Remote, 800_000 Local. Imagine your fee on this channel is 1_000 Sats (base fee)
+
+Your node would show a total of 1_500_000 Remote and 1_500_000 Local. Pretty good balance even though individual channels are not balanced.
+
+If A sends to Z a transaction of 200_000 for which you earn a fee of 1_000 (lucky you). Note, the fee on Channel M-&gt;Z is applied for the transaction not the fee for channel A-&gt;M. The channels will look like this
+
+* Channel 1 with A 1_000_000 girth, (300_000 - 200_000 - 1_000 (fees)) = 99_000 Remote, (700_000 + 200_000 + 1_000 (fees)) = 901_000 Local.
+* Channel 2 with Z 2_000_000 girth, (1_200_000 + 200_000) = 1_400_000 Remote, (800_000 - 200_000) = 600_000 Local.
+
+Note, that the fee was calculated for channel M-&gt;Z but it is collected on channel A-&gt;M.
+
+And your node will now show a total of 1_499_000 Remote and 1_501_000 Local. Your channels have gone out of balance but your Local is still the same + fees earned (1_000)
+
+<br />
+
+
+<span id="what-are-your-options-now"></span>
+== <span id="What_are_your_options_now" class="mw-headline">What are your options now</span> ==
+
+# Do Nothing
+
+Doing nothing is usually a valid and zero-cost option. If you do nothing, you are hoping for traffic to flow from Z-&gt;A in future which will auto-balance your channels and you will also earn fees in the process. This should usually be the first option any node runner should think of instead of rushing into rebalancing routines.
+
+# Circular Rebalancing
+
+If doing nothing is not helping and you are not seeing two-way traffic, and at the same time you see a lot of traffic going to Z (which is failing at your node and eventually using other routes) and you want to be part of the action to earn fees for that traffic you can do what is known as circular rebalance. Which is essentially paying yourself which goes OUT of the channel with local balance and comes back in from the channel with remote provided there exist a path. Doing this cost the routing fees and you must evaluate carefully what you pay for rebalacne v/s what you earn on routing. If your routing fees for M-&gt;Z are very low and the rebalance fees is very high, you will make a loss over time. Plebs sometimes ask if Circular Rebalancing is bad. Well there is no good or bad - circular rebalancing is a &quot;tool&quot; and costs to use the tool. It can be used to fix a channel or it can be used to create a DIY disaster.
+
+# Loop out
+
+This is the most expensive route. You payout to a custodial lightning wallet (or LOOP service) and take the coin on-chain.
+
+<br />
+
+
+<span id="how-to-achieve-balance-with-fees"></span>
+== <span id="How_to_achieve_balance_with_fees" class="mw-headline">How to achieve balance with fees</span> ==
+
+If you visualise the node as a tap between connected water tanks, your fees determine how much the tap is open.
+
+Low Fee will encourage movement from Local to Remote. You decide what fee you are comfortable with based on your profitability expectations. If you have a lot of local balance on a channel, consider lowering the fees to the level you are comfortable with and it should encourage routing out to remote. Remember, you can bring the horse to water but you cannot make it drink. In the same way just because you have a lot of liquidity on local and set fees to super-low does not mean the sats will move to remote. It depends a lot also on your peer, and how that peer is connected. If the peer has set all their channels on super-high fees, then nothing will move from your node to them, because nothing will move from their node to further out into the network. The only time your channel will be used is if someone is sending a payment specifically to your peer. Many wallets and merchants fall in this category. Think of it as being connected to a village with 8 lane highway but only a few dirt roads leaving the village further out. Who would use that highway? In essence, think before you open a channel with a peer and see how well connected they are and if they are running their node with the same love and care you put into your node.
+
+Setting a high fee, when you do not have local liquidity, gives a signal to the network that you are moving to the hard shoulder on a motorway when you are running out of fuel instead of blocking a lane. This will reduce failed HTLC events on your node because a sender tries cheaper routes first before trying expensive routes.
+
+Remember you only earn fees on your local -&gt; moving to -&gt; remote.
+
+And when your sats are on Remote, you are at the mercy of your peer and their fees to allow routing back to you.
+
+Plebs make the noob mistake of setting very low fees when their sats are local, then complain when the sats move to remote and do not come back without expensive rebalancing. Think of it this way. You roll a heavy rock up the hill (at a high rebalancing rate) and then provided a smooth path down so the rock keeps tumbling down again to your local. Your fees should be higher than your cost of rebalancing (or your flow should be two way flow so there is natural rebalancing). See the section on running a profitable node [[/plebnet.wiki/wiki/Special:MyLanguage/FeesAndProfitability|FeesAndProfitability]].
+
+<br />
+
+
+<span id="some-practical-ways-to-get-your-sats-on-local-again"></span>
+=== <span id="Some_Practical_Ways_To_Get_Your_Sats_on_Local_again" class="mw-headline">Some Practical Ways To Get Your Sats on Local again</span> ===
+
+# Do nothing, let it flow naturally. Set fees to encourage.
+# Do circular rebalance, it will cost. Set future fees accordingly.
+# Create a route that will encourage the network to push liquidity through your node. For example a reasonably priced LOOP channel (which is in demand) can push most remote sats to your node (and go out to remote on LOOP).
+# Ask a friendly node to pay your node via your peer you want to pull sats from using <code>bos send --in</code>. It will cost but you can get your sats on local and set fee accordingly in future. You can pay your friend on-chain OR return the favour in future.
+
+
+</div>

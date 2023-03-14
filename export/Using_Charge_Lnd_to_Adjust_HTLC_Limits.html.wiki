@@ -1,0 +1,15 @@
+<span id="using-charge-lnd-to-adjust-htlc-limits"></span>
+= Using Charge-Lnd to Adjust HTLC Limits =
+
+<div class="mw-parser-output">
+
+A maximum htlc setting can be used to limit the amount of outbound liquidity that can pass through a channel, subject to channel outbound liquidity. This can be a good thing, because when someone tries to forward a payment through one of your channels, but that channel doesn't have enough liquidity, it will cause a payment failure at your node. If your node gets a lot of payment failures it may affect your node's reliability reputation in the network. By setting max-htlc limits so that your channels are only considered when they have enough liquidity to handle the payment, it can reduce the number of failures your node experiences, and improve the lightning network as a whole.
+
+Note that max-htlc settings don't limit the amount of incoming liquidity a channel can receive, which is good. Incoming liquidity is not what causes failures on your node, and it also allows for your locally depleted channels to have liquidity flow back into them without any issue, despite low maximum htlcs.
+
+Charge-Lnd can be used to automatically adjust your max-htlc limits on your channels. Today it is not possible to set up in the main configuration file along with the fees and there is an [https://github.com/accumulator/charge-lnd/issues/48 open issue report] for that. However the following workaround can be done to set up max-htlc.
+
+You can use special fork of charge-lnd to set max_htlc_msat = local balance. [https://plebnet.wiki/wiki/Fees_And_Profitability#Using_Charge-Lnd_to_set_Maximum_HTLCs See here for installation instructions]
+
+
+</div>

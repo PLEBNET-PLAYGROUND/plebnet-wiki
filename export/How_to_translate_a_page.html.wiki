@@ -1,0 +1,82 @@
+<span id="how-to-translate-a-page"></span>
+= How to translate a page =
+
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+<span class="mw-pt-languages-ui mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="en">English</span>
+
+</div>
+
+</div>
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#Why_translating_content.3F|<span class="tocnumber">1</span> <span class="toctext">Why translating content?</span>]]
+* [[#How_to_translate_content.3F|<span class="tocnumber">2</span> <span class="toctext">How to translate content?</span>]]
+** [[#How_to_start_a_new_translation|<span class="tocnumber">2.1</span> <span class="toctext">How to start a new translation</span>]]
+** [[#How_to_modify_an_existing_translation|<span class="tocnumber">2.2</span> <span class="toctext">How to modify an existing translation</span>]]
+* [[#Which_language_should_I_translate_into.3F|<span class="tocnumber">3</span> <span class="toctext">Which language should I translate into?</span>]]
+* [[#External_resources|<span class="tocnumber">4</span> <span class="toctext">External resources</span>]]
+
+
+</div>
+<span id="why-translating-content"></span>
+== <span id="Why_translating_content?"></span><span id="Why_translating_content.3F" class="mw-headline">Why translating content?</span> ==
+
+60% of online content is in English, even though only 16% of the world population speaks English, according to [https://www.visualcapitalist.com/the-most-used-languages-on-the-internet/ data gathered by VisualCapitalist]. Developing countries are the biggest Bitcoin users. For instance, the top countries on Binance are Turkey, Russia, Brazil, Argentina, and Vietnam ([https://www.similarweb.com/website/binance.com/#overview Source]). On Bitrefill users mostly come from: the US, El Salvador, Venezuela, Afghanistan, and Germany ([https://www.similarweb.com/website/bitrefill.com/#overview Source]). India, Pakistan, Ukraine, Kenya, Nigeria, and the Philippines are also major countries for Bitcoin ([https://blog.chainalysis.com/reports/2021-global-crypto-adoption-index Source 1], [https://www.statista.com/chart/18345/crypto-currency-adoption/ Source 2]).
+
+Therefore translating the PlebNet wiki into more languages is essential to ensure global adoption of Lightning, especially in countries that need it the most.
+
+<span id="how-to-translate-content"></span>
+== <span id="How_to_translate_content?"></span><span id="How_to_translate_content.3F" class="mw-headline">How to translate content?</span> ==
+
+You need an account to contribute to the PlebNet wiki. Contact the administrators on Telegram to get one.
+
+<span id="how-to-start-a-new-translation"></span>
+=== <span id="How_to_start_a_new_translation" class="mw-headline">How to start a new translation</span> ===
+
+Once logged in, follow the following steps:
+
+* Go on the page you want to translate, for instance, the [[/plebnet.wiki/wiki/Main_Page|Main Page]],
+* Click on the link &quot;Translate this page&quot; at the top of the page,
+* In the top right-hand corner click on the blue link &quot;English&quot; (in &quot;Translate to English&quot;) to change the target language. For instance, if you want to translate the page into Hindi, write &quot;Hindi&quot;,
+* Two columns will appear: on the left, the original English language content, on the right, the content in your target language, which is probably blank if you're starting a new translation,
+* Click on one English paragraph on the left, a text field appears, translate the content, and then click on &quot;Publish translation&quot;.
+* Make sure you keep Mediawiki text formatting such as = for titles. For more information on Mediawiki text formatting, click [https://www.mediawiki.org/wiki/Help:Formatting here].
+
+You don't need to translate everything all at once. Once you have translated at least one paragraph a page is automatically created. Untranslated paragraphs will be displayed to readers in English. Go back on the English content and it should be visible at the top of the page. The page's URL is ENGLISH_NAME/LANGUAGE_CODE. All language codes are available [https://iso639-3.sil.org/code_tables/639/data here].
+
+<span id="how-to-modify-an-existing-translation"></span>
+=== <span id="How_to_modify_an_existing_translation" class="mw-headline">How to modify an existing translation</span> ===
+
+Go to the page in your target language, for instance [[/plebnet.wiki/wiki/Main_Page/es|Main_Page/es]] and click on the &quot;Translate&quot; tab at the top of the page.
+
+<span id="which-language-should-i-translate-into"></span>
+== <span id="Which_language_should_I_translate_into?"></span><span id="Which_language_should_I_translate_into.3F" class="mw-headline">Which language should I translate into?</span> ==
+
+All languages are welcome on PlebNet! Whether you speak Luxemburgish, Japanese, or Yoruba, feel free to start a translation!
+
+<span id="external-resources"></span>
+== <span id="External_resources" class="mw-headline">External resources</span> ==
+
+* [https://www.mediawiki.org/wiki/Help:Extension:Translate/Page_translation_administration Page translation administration] on MediaWiki
+* [https://www.mediawiki.org/wiki/Help:Extension:Translate/Page_translation_example Page translation example] on MediaWiki
+
+
+</div>

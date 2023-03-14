@@ -1,0 +1,61 @@
+<span id="loop"></span>
+= Loop =
+
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+<span class="mw-pt-languages-ui mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="en">English</span>
+
+</div>
+
+</div>
+Loop is a service that enables lightning node operators to convert their on-chain BTC into Lightning BTC, and vice versa.
+
+<br />
+
+
+<span id="looping-in"></span>
+== <span id=""Looping_in""></span><span id=".22Looping_in.22" class="mw-headline">&quot;Looping in&quot;</span> ==
+
+&quot;Looping in&quot; serves multiple purposes:
+
+- it increases a node's lightning inbound liquidity - it sends the liquidity into the channels that are in most need of inbound liquidity, so they end up in a balanced state
+
+<br />
+
+
+<span id="looping-out"></span>
+== <span id=""Looping_out""></span><span id=".22Looping_out.22" class="mw-headline">&quot;Looping out&quot;</span> ==
+
+&quot;Looping out&quot; is primarily used to transfer lightning funds back to on-chain.
+
+<br />
+
+
+<span id="installing-loop"></span>
+== <span id="Installing_Loop" class="mw-headline">Installing Loop</span> ==
+
+Installing loop requires installing [https://docs.lightning.engineering/lightning-network-tools/lightning-terminal lit] 'the lightning terminal'.
+
+Lit is composed of multiple binaries, which can either be run on the node directly, or externally to the node by setting up proper access.
+
+Lit binaries are
+
+* frcli
+* litd
+* lncli
+* loop
+* pool
+
+Lit needs to be configured with a variation of the lnd.conf file, and the lnd process needs to first be shut down before lit can be launched.
+
+
+</div>

@@ -1,0 +1,308 @@
+<span id="main-pagear"></span>
+= Main Page/ar =
+
+<div class="mw-pt-translate-header noprint" dir="ltr" lang="en">
+
+This page is a <span class="plainlinks">[[/plebnet.wiki/index.php?title=Special:Translate&group=page-Main+Page&action=page&filter=&language=ar|translated version]]</span> of the page [[/plebnet.wiki/wiki/Main_Page|Main Page]] and the translation is 98% complete.
+
+</div>
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+[[/plebnet.wiki/wiki/Main_Page|English]] • ‎[[/plebnet.wiki/wiki/Main_Page/ha|Hausa]] • ‎[[/plebnet.wiki/wiki/Main_Page/tr|Türkçe]] • ‎[[/plebnet.wiki/wiki/Main_Page/wo|Wolof]] • ‎[[/plebnet.wiki/wiki/Main_Page/yo|Yorùbá]] • ‎[[/plebnet.wiki/wiki/Main_Page/es|español]] • ‎[[/plebnet.wiki/wiki/Main_Page/fr|français]] • ‎<span class="mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="ar">العربية</span> • ‎[[/plebnet.wiki/wiki/Main_Page/hi|हिन्दी]]
+
+</div>
+
+</div>
+أهلًا بكم في Plebnet!
+
+لقد حددنا &quot;الدليل&quot; الرئيسي في هذه الصفحة. اتبع المقالات هنا من أجل الحصول على فهم أفضل للخطوات المطلوبة للانضمام إلى بليبنيت، والحصول على العقدة الخاصة بك وتشغيلها. إذا كنت ترغب في التصفح ببساطة، يمكنك عرض جميع صفحاتنا [[/plebnet.wiki/wiki/Special:AllPages|جميع الصفحات]].
+
+<br />
+
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#.D9.84.D9.84.D9.82.D8.B1.D8.A7.D8.A1.D8.A9_.D8.A3.D9.88.D9.84.D9.8B.D8.A7|<span class="tocnumber">١</span> <span class="toctext">للقراءة أولًا</span>]]
+* [[#.D8.A7.D9.84.D8.A8.D8.AF_.D8.A8.D8.A7.D9.84.D8.B9.D9.8E.D9.85.D9.92.D9.84|<span class="tocnumber">٢</span> <span class="toctext">البد بالعَمْل</span>]]
+* [[#.D8.A7.D8.B7.D9.84.D8.A8_.D8.B9.D9.82.D8.AF.D8.AA.D9.83|<span class="tocnumber">٣</span> <span class="toctext">اطلب عقدتك</span>]]
+* [[#.D9.81.D8.AA.D8.AD_.D8.A7.D9.84.D9.82.D9.86.D9.88.D8.A7.D8.AA|<span class="tocnumber">٤</span> <span class="toctext">فتح القنوات</span>]]
+* [[#.D8.A7.D9.84.D8.AD.D9.81.D8.A7.D8.B8_.D8.B9.D9.84.D9.89_.D9.86.D8.B8.D8.A7.D9.81.D8.A9_.D8.A7.D9.84.D8.B9.D9.82.D8.AF.D8.A9|<span class="tocnumber">٥</span> <span class="toctext">الحفاظ على نظافة العقدة</span>]]
+* [[#.D8.A7.D9.84.D9.86.D8.B3.D8.AE_.D8.A7.D9.84.D8.A7.D8.AD.D8.AA.D9.8A.D8.A7.D8.B7.D9.8A_.2F_.D8.A7.D9.84.D8.A7.D8.B3.D8.AA.D8.B1.D8.AF.D8.A7.D8.AF|<span class="tocnumber">٦</span> <span class="toctext">النسخ الاحتياطي / الاسترداد</span>]]
+* [[#.D8.A7.D9.84.D8.AA.D8.AD.D8.AF.D9.8A.D8.AB.D8.A7.D8.AA|<span class="tocnumber">٧</span> <span class="toctext">التحديثات</span>]]
+* [[#.D8.A8.D9.88.D8.AA_Balance_of_Satoahi|<span class="tocnumber">٨</span> <span class="toctext">بوت Balance of Satoahi</span>]]
+** [[#.D9.86.D8.B8.D8.B1.D8.A9_.D8.B9.D8.A7.D9.85.D8.A9_.D8.B9.D9.84.D9.89_.D8.A7.D8.B9.D8.AF.D8.A7.D8.AF.D8.A7.D8.AA_LND|<span class="tocnumber">٨.١</span> <span class="toctext">نظرة عامة على اعدادات LND</span>]]
+** [[#.D8.AA.D8.B4.D8.BA.D9.8A.D9.84_.D8.B9.D9.82.D8.AF.D8.A9_.D8.AA.D9.88.D8.AC.D9.8A.D9.87_.D9.85.D8.B1.D8.A8.D8.AD.D8.A9|<span class="tocnumber">٨.٢</span> <span class="toctext">تشغيل عقدة توجيه مربحة</span>]]
+** [[#.D9.85.D8.B3.D8.A7.D8.AD.D8.A9_.D8.A7.D9.84.D9.84.D8.B9.D8.A8_.D9.88.D8.A7.D9.84.D8.AA.D8.AC.D8.B1.D9.8A.D8.A8|<span class="tocnumber">٨.٣</span> <span class="toctext">مساحة اللعب والتجريب</span>]]
+** [[#.D8.A3.D8.B3.D8.A6.D9.84.D8.A9_.D9.88.D8.A3.D8.AC.D9.88.D8.A8.D8.A9_.D8.B4.D8.A7.D8.A6.D8.B9.D8.A9|<span class="tocnumber">٨.٤</span> <span class="toctext">أسئلة وأجوبة شائعة</span>]]
+** [[#.D8.A7.D9.84.D9.85.D8.B5.D8.A7.D8.AF.D8.B1|<span class="tocnumber">٨.٥</span> <span class="toctext">المصادر</span>]]
+* [[#.D8.AC.D9.85.D9.8A.D8.B9_.D8.A7.D9.84.D8.B5.D9.81.D8.AD.D8.A7.D8.AA|<span class="tocnumber">٩</span> <span class="toctext">جميع الصفحات</span>]]
+
+
+</div>
+<span id="للقراءة-أولا"></span>
+== <span id="للقراءة_أولًا"></span><span id=".D9.84.D9.84.D9.82.D8.B1.D8.A7.D8.A1.D8.A9_.D8.A3.D9.88.D9.84.D9.8B.D8.A7" class="mw-headline">للقراءة أولًا</span> ==
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Welcome_to_Plebnet|أهلًا بكم في بليبنيت]]
+
+الرجاء قراءة الرابط أعلاه قبل أي شيء آخر! يحتوي على مقدمة ونصائح مفيدة.
+
+<br />
+
+
+<span id="البد-بالعمل"></span>
+== <span id="البد_بالعَمْل"></span><span id=".D8.A7.D9.84.D8.A8.D8.AF_.D8.A8.D8.A7.D9.84.D8.B9.D9.8E.D9.85.D9.92.D9.84" class="mw-headline">البد بالعَمْل</span> ==
+
+هل أنت جديد وربما لا تفهم شبكة البرق تمامًا؟ ليس لديك عقدة خاصة بك حتى الآن؟ لست مشتركًا في مجموعة بليبنت على التلغرام؟
+
+يرجى الاطلاع على صفحة [[/plebnet.wiki/wiki/Special:MyLanguage_/_Getting_started|البدء بالعمل]].
+
+<br />
+
+
+<span id="اطلب-عقدتك"></span>
+== <span id="اطلب_عقدتك"></span><span id=".D8.A7.D8.B7.D9.84.D8.A8_.D8.B9.D9.82.D8.AF.D8.AA.D9.83" class="mw-headline">اطلب عقدتك</span> ==
+
+بالنسبة إلى التلغرام ، راسل
+
+[https://t.me/cheeserobotcheeserobot @cheeserobot]
+
+<pre>ثم  أدخل الأمر التالي  / claim   العقدة الخاصة بك (اتبع التعليمات ، سوف تحتاج إلى توقيع رسالة مع العقدة الخاصة بك لإثبات أنك  صاحب العقدة).</pre>
+بعد ذلك ، في مجموعة [https://t.me/plebnet plebnet] أعلن عن عقدتك باستخدام <code> / node </code>. إذا رأيت العقدة الخاصة بك ، ‎لقد نجحت.
+
+<pre> كرر في المجموعات الأخرى التي تدعم CheeseRobot مع  / node .</pre>
+بالإضافة إلى ذلك ، يعد [https://amboss.space Amboss.space] أحد أفضل مواقع الويب للبحث عن العقد ومعلوماتها الأساسية. يمكن للأشخاص الذهاب إلى Amboss لتصفح معلومات العقدة الخاصة بك. يمكنك المطالبة بالعقدة الخاصة بك على Amboss مما سيسمح لك بتخصيص ملف تعريفي للعقدة الخاص بك وإضافة معلومات إضافية. استخدم هذه التعليمات: [[/plebnet.wiki/wiki/Special:MyLanguage_/_Claim_on_Amboss|مطالبة على Amboss]]
+
+<br />
+
+
+<span id="فتح-القنوات"></span>
+== <span id="فتح_القنوات"></span><span id=".D9.81.D8.AA.D8.AD_.D8.A7.D9.84.D9.82.D9.86.D9.88.D8.A7.D8.AA" class="mw-headline">فتح القنوات</span> ==
+
+السؤال الأول الذي يطرحه الشخص المبتدئ بعد (أو حتى قبل) تنصيب العقدة &quot;مع من يجب فتح القناة باستخدام&quot;
+
+أود أن أقول - &quot;من الأفضل أن تجد مرشدًا مستعدًا لقضاء بعض الوقت معك، يعلمك كيف تعمل الشبكة، ويرشدك لتكون مشغلًا أفضل للعقد&quot;
+
+بالطبع في عصر جوجل والإنترنت قد يكون هذا الفكر غير عملي ولكن لا يوجد بديل للمعلّم في رحلتك كمشغل للعقد.
+
+للحصول على معلومات تتعلق بقنوات البرق، بما في ذلك طرق الحصول على السيولة الواردة، راجع: [[/plebnet.wiki/wiki/Special:MyLanguage_/_%D9%81%D8%AA%D8%AD_%D8%A7%D9%84%D9%82%D9%86%D9%88%D8%A7%D8%AA|فتح القنوات]]
+
+<br />
+
+
+<span id="الحفاظ-على-نظافة-العقدة"></span>
+== <span id="الحفاظ_على_نظافة_العقدة"></span><span id=".D8.A7.D9.84.D8.AD.D9.81.D8.A7.D8.B8_.D8.B9.D9.84.D9.89_.D9.86.D8.B8.D8.A7.D9.81.D8.A9_.D8.A7.D9.84.D8.B9.D9.82.D8.AF.D8.A9" class="mw-headline">الحفاظ على نظافة العقدة</span> ==
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Node_Hardening|تحصين العقدة]]
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Maintaining_node_hygiene|الحفاظ على نظافة العقدة]]
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Node_Hardware|أجهزة العقدة]]
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/UPS|UPS]] (بطاريات الامداد المتواصل)
+
+<span id="النسخ-الاحتياطي-الاسترداد"></span>
+== <span id="النسخ_الاحتياطي_/_الاسترداد"></span><span id=".D8.A7.D9.84.D9.86.D8.B3.D8.AE_.D8.A7.D9.84.D8.A7.D8.AD.D8.AA.D9.8A.D8.A7.D8.B7.D9.8A_.2F_.D8.A7.D9.84.D8.A7.D8.B3.D8.AA.D8.B1.D8.AF.D8.A7.D8.AF" class="mw-headline">النسخ الاحتياطي / الاسترداد</span> ==
+
+يحتوي الرابط التالي على بعض المعلومات المهمة حول نُسخ الحماية الاحتياطية للقنوات وحلول الاسترداد بحيث يكون لديك فكرة أفضل عن كيفية الحفاظ على أمان أموالك.
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Backup/Recovery|النسخ الاحتياطي/الاسترداد]]
+
+<br />
+إضافة معلومات شخصية على العقدة
+
+يمكن تخصيص عقدتك لتظهر كاسم (اسم مستعار) بدلاً من مجرد مجموعة من الأحرف والأرقام العشوائية. يمكنك أيضًا تعيين لون للعقدة الخاصة بك والذي سيظهر في العديد من المواقع والبرامج ذات الصلة بشبكة البرق (لا تستخدم اسمك الشخصي)
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Setting_a_node_alias|اسم العقدة المستعار]]
+
+<br />
+
+
+== <span id="التحديثات"></span><span id=".D8.A7.D9.84.D8.AA.D8.AD.D8.AF.D9.8A.D8.AB.D8.A7.D8.AA" class="mw-headline">التحديثات</span> ==
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Upgrading_Umbrel_Node|تحديث عقدة Umbrel]]
+
+<br />
+
+
+<span id="بوت-balance-of-satoahi"></span>
+= <span id="بوت_Balance_of_Satoahi"></span><span id=".D8.A8.D9.88.D8.AA_Balance_of_Satoahi" class="mw-headline">بوت Balance of Satoahi</span> =
+
+Balance of Satoshis ، أو BoS ، هي مجموعة من الأوامر تعمل مع أرصدة LND. يمكن أن تفعل أشياء مماثلة لواجهات المستخدم مثل ThunderHub أو RideTheLightning. ومع ذلك ، فإن خياراتك أوسع بكثير مع BoS ، وستحتاج إليها إذا كنت ترغب في إعداد روبوت تلغرام مع العقدة الخاصة بك (للحصول على إشعارات عند فتح / إغلاق القنوات، أو عند القيام بتوجيه المدفوعات، أو عندما تفقد العقدة اتصالها بالإنترنت، وللحصول على نسخ احتياطية تلقائية للقنوات من أجل السلامة).
+
+للمزيد من المعلومات ، وأوامر BoS الشائعة ، انظر: [[/plebnet.wiki/wiki/Special:MyLanguage/Balance_of_Satoshis|Balance of Satoshis]].
+
+[https://github.com/niteshbalusu11/BOS-Commands-Document يمكنك مراجعة هذا المستند التعليمي الممتاز لأوامر BoS]
+
+عملية تنصيب [[/plebnet.wiki/wiki/Special:MyLanguage/Umbrel_-_%D8%AA%D9%86%D8%B5%D9%8A%D8%A8_BoS|Umbrel - Installing BoS]]. تضم ارشادات لإعداد بوت BoS على التلغرام.
+
+<span id="نظرة-عامة-على-اعدادات-lnd"></span>
+== <span id="نظرة_عامة_على_اعدادات_LND"></span><span id=".D9.86.D8.B8.D8.B1.D8.A9_.D8.B9.D8.A7.D9.85.D8.A9_.D8.B9.D9.84.D9.89_.D8.A7.D8.B9.D8.AF.D8.A7.D8.AF.D8.A7.D8.AA_LND" class="mw-headline">نظرة عامة على اعدادات LND</span> ==
+
+انقر فوق الرابط أدناه للحصول على معلومات تتعلق بإعداد محدودية حجم القناة والرسوم المحددة مسبقًا على القنوات الجديدة وإعداد أبراج المراقبة وإعدادات التحسين الأخرى.
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/LND_Configuration_Settings|اعدادات ملف الـ LND]]
+
+<br />
+
+
+<span id="تشغيل-عقدة-توجيه-مربحة"></span>
+== <span id="تشغيل_عقدة_توجيه_مربحة"></span><span id=".D8.AA.D8.B4.D8.BA.D9.8A.D9.84_.D8.B9.D9.82.D8.AF.D8.A9_.D8.AA.D9.88.D8.AC.D9.8A.D9.87_.D9.85.D8.B1.D8.A8.D8.AD.D8.A9" class="mw-headline">تشغيل عقدة توجيه مربحة</span> ==
+
+لا ترى أية مدفوعات توجّه من خلال عقدتك، أو أن ساتوشياتك تتحرك في اتجاه واحد فقط؟
+
+هل تريد المزيد من المعلومات حول إعادة موازنة القنوات والرسوم؟ هل تريد تشغيل برنامج يقوم بضبط الرسوم تلقائيًا، أو برنامج يمنحك مؤشرات الأداء الرئيسية (KPY)؟
+
+'''مرجعك الشامل للحصول على نصائح حول ربحية عقدة التوجيه:''' [[/plebnet.wiki/wiki/Special:MyLanguage_/_%D8%AA%D8%B4%D8%BA%D9%8A%D9%84_%D8%B9%D9%82%D8%AF%D8%A9_%D8%AA%D9%88%D8%AC%D9%8A%D9%87_%D9%85%D8%B1%D8%A8%D8%AD%D8%A9|تشغيل عقدة توجيه مربحة]]
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Fees_And_Profitability|الطيرق المختصر لتحديد الرسوم تلقائيًا وأتمتة مؤشرات الأداء الرئيسية]]
+
+<span id="مساحة-اللعب-والتجريب"></span>
+== <span id="مساحة_اللعب_والتجريب"></span><span id=".D9.85.D8.B3.D8.A7.D8.AD.D8.A9_.D8.A7.D9.84.D9.84.D8.B9.D8.A8_.D9.88.D8.A7.D9.84.D8.AA.D8.AC.D8.B1.D9.8A.D8.A8" class="mw-headline">مساحة اللعب والتجريب</span> ==
+
+انقر فوق الصورة أدناه للحصول على معلومات حول مساحة لعب بليبنيت، وهو مكان يمكنك من خلاله تعلم واستخدام شبكة البرق دون المخاطرة بأي أموال حقيقية (على الشبكة الاختبارية).
+
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+[[/plebnet.wiki/wiki/Plebnet_Playground|[[File:img/450px-PlebnetPlayground.jpg|450x356px|Plebnet Playground Logo]]]]
+
+
+</div>
+<br />
+
+
+<span id="أسئلة-وأجوبة-شائعة"></span>
+== <span id="أسئلة_وأجوبة_شائعة"></span><span id=".D8.A3.D8.B3.D8.A6.D9.84.D8.A9_.D9.88.D8.A3.D8.AC.D9.88.D8.A8.D8.A9_.D8.B4.D8.A7.D8.A6.D8.B9.D8.A9" class="mw-headline">أسئلة وأجوبة شائعة</span> ==
+
+مجموعة مختارة من الأسئلة المتداولة في مجموعات [https://t.me/plebnet plebnet].
+
+<pre> الأسئلة والأجوبة المتكررة</pre>
+<br />
+
+
+== <span id="المصادر"></span><span id=".D8.A7.D9.84.D9.85.D8.B5.D8.A7.D8.AF.D8.B1" class="mw-headline">المصادر</span> ==
+
+المصادر
+
+<span id="جميع-الصفحات"></span>
+= <span id="جميع_الصفحات"></span><span id=".D8.AC.D9.85.D9.8A.D8.B9_.D8.A7.D9.84.D8.B5.D9.81.D8.AD.D8.A7.D8.AA" class="mw-headline">جميع الصفحات</span> =
+
+<div class="mw-allpages-body">
+
+* [[wiki/Anonymous_edits_and_privacy|Anonymous edits and privacy]]
+* [[wiki/Anonymous_edits_and_privacy/en|Anonymous edits and privacy/en]]
+* [[wiki/Backup/Recovery|Backup/Recovery]]
+* [[wiki/Backup/Recovery/en|Backup/Recovery/en]]
+* [[wiki/Backup/Recovery/es|Backup/Recovery/es]]
+* [[wiki/Backup/Recovery/fr|Backup/Recovery/fr]]
+* [[wiki/Balance_of_Satoshis|Balance of Satoshis]]
+* [[wiki/Balance_of_Satoshis/en|Balance of Satoshis/en]]
+* [[wiki/Balancing_Nodes|Balancing Nodes]]
+* [[wiki/Balancing_Nodes/en|Balancing Nodes/en]]
+* [[wiki/Bash_aliases|Bash aliases]]
+* [[wiki/Bash_aliases/en|Bash aliases/en]]
+* [[wiki/BoS_Telegram_AutoStart|BoS Telegram AutoStart]]
+* [[wiki/BoS_Telegram_AutoStart/en|BoS Telegram AutoStart/en]]
+* [[wiki/Charge-lnd_BTCPayServer_Setup|Charge-lnd BTCPayServer Setup]]
+* [[wiki/Claim_on_Amboss|Claim on Amboss]]
+* [[wiki/Claim_on_Amboss/en|Claim on Amboss/en]]
+* [[wiki/Compacting_Channel_DB|Compacting Channel DB]]
+* [[wiki/FAQ|FAQ]]
+* [[wiki/FAQ/en|FAQ/en]]
+* [[wiki/Fees_And_Profitability|Fees And Profitability]]
+* [[wiki/Fees_And_Profitability/en|Fees And Profitability/en]]
+* [[wiki/Getting_Inbound_Liquidity|Getting Inbound Liquidity]]
+* [[wiki/Getting_started|Getting started]]
+* [[wiki/Getting_started/en|Getting started/en]]
+* [[wiki/Getting_started/fr|Getting started/fr]]
+* [[wiki/Help!_I_do_not_see_any_routing_through_my_node|Help! I do not see any routing through my node]]
+* [[wiki/Help!_I_do_not_see_any_routing_through_my_node/en|Help! I do not see any routing through my node/en]]
+* [[wiki/Help!_My_sats_are_only_moving_in_one_direction|Help! My sats are only moving in one direction]]
+* [[wiki/Help!_My_sats_are_only_moving_in_one_direction/en|Help! My sats are only moving in one direction/en]]
+* [[wiki/How_to_translate_a_page|How to translate a page]]
+* [[wiki/How_to_translate_a_page/en|How to translate a page/en]]
+* [[wiki/How_to_upgrade_umbrel_without_upgrading_umbrel|How to upgrade umbrel without upgrading umbrel]]
+* [[wiki/Iterm2|Iterm2]]
+* [[wiki/Iterm2/en|Iterm2/en]]
+* [[wiki/LND_Configuration_Settings|LND Configuration Settings]]
+* [[wiki/LND_Configuration_Settings/en|LND Configuration Settings/en]]
+* [[wiki/Lightning_Exchanges|Lightning Exchanges]]
+* [[wiki/Lightning_Exchanges/en|Lightning Exchanges/en]]
+* [[wiki/Local_PlebNet_groups|Local PlebNet groups]]
+* [[wiki/Local_PlebNet_groups/en|Local PlebNet groups/en]]
+* [[wiki/Loop|Loop]]
+* [[wiki/Loop/en|Loop/en]]
+* [[wiki/Main_Page|Main Page]]
+* [[wiki/Main_Page/ar|Main Page/ar]]
+* [[wiki/Main_Page/en|Main Page/en]]
+* [[wiki/Main_Page/es|Main Page/es]]
+* [[wiki/Main_Page/fr|Main Page/fr]]
+* [[wiki/Main_Page/ha|Main Page/ha]]
+* [[wiki/Main_Page/hi|Main Page/hi]]
+* [[wiki/Main_Page/tr|Main Page/tr]]
+* [[wiki/Main_Page/wo|Main Page/wo]]
+* [[wiki/Main_Page/yo|Main Page/yo]]
+* [[wiki/Maintaining_node_hygiene|Maintaining node hygiene]]
+* [[wiki/Maintaining_node_hygiene/en|Maintaining node hygiene/en]]
+* [[wiki/Mosh|Mosh]]
+* [[wiki/Mosh/en|Mosh/en]]
+* [[wiki/Node_Hardening|Node Hardening]]
+* [[wiki/Node_Hardening/en|Node Hardening/en]]
+* [[wiki/Node_Hardware|Node Hardware]]
+* [[wiki/Node_Hardware/en|Node Hardware/en]]
+* [[wiki/Notes_on_Privacy|Notes on Privacy]]
+* [[wiki/Opening_channels|Opening channels]]
+* [[wiki/Opening_channels/en|Opening channels/en]]
+* [[wiki/Opening_channels/fr|Opening channels/fr]]
+* [[wiki/Plebnet_Playground|Plebnet Playground]]
+* [[wiki/Plebnet_Playground/en|Plebnet Playground/en]]
+* [[wiki/Plebnet_Playground/es|Plebnet Playground/es]]
+* [[wiki/Plebnet_logo|Plebnet logo]]
+* [[wiki/Plebnet_logo/en|Plebnet logo/en]]
+* [[wiki/Ppm|Ppm]]
+* [[wiki/Ppm/en|Ppm/en]]
+* [[wiki/Project_Ideas|Project Ideas]]
+* [[wiki/Project_Ideas/en|Project Ideas/en]]
+* [[wiki/Push_Channel_Opens|Push Channel Opens]]
+* [[wiki/Push_Channel_Opens/en|Push Channel Opens/en]]
+* [[wiki/Reduce_channel_database_size|Reduce channel database size]]
+* [[wiki/Resources|Resources]]
+* [[wiki/Resources/en|Resources/en]]
+* [[wiki/Running_A_Profitable_Routing_Node|Running A Profitable Routing Node]]
+* [[wiki/Running_A_Profitable_Routing_Node/en|Running A Profitable Routing Node/en]]
+* [[wiki/Setting_a_node_alias|Setting a node alias]]
+* [[wiki/Suez|Suez]]
+* [[wiki/Terminal_UIs|Terminal UIs]]
+* [[wiki/UPS|UPS]]
+* [[wiki/UPS/ar|UPS/ar]]
+* [[wiki/UPS/en|UPS/en]]
+* [[wiki/Umbrel_-_Installing_BoS|Umbrel - Installing BoS]]
+* [[wiki/Upgrading_Umbrel_Node|Upgrading Umbrel Node]]
+* [[wiki/Upgrading_Umbrel_Node/en|Upgrading Umbrel Node/en]]
+* [[wiki/Using_Charge-Lnd_to_Adjust_HTLC_Limits|Using Charge-Lnd to Adjust HTLC Limits]]
+* [[wiki/Watchtowers|Watchtowers]]
+* [[wiki/Welcome_to_Plebnet|Welcome to Plebnet]]
+* [[wiki/Welcome_to_Plebnet/en|Welcome to Plebnet/en]]
+* [[wiki/Welcome_to_Plebnet/es|Welcome to Plebnet/es]]
+* [[wiki/Welcome_to_Plebnet/fr|Welcome to Plebnet/fr]]
+
+
+</div>
+
+</div>

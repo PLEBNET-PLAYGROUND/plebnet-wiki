@@ -1,0 +1,161 @@
+<span id="welcome-to-plebnetfr"></span>
+= Welcome to Plebnet/fr =
+
+<div class="mw-pt-translate-header noprint" dir="ltr" lang="en">
+
+This page is a <span class="plainlinks">[[/plebnet.wiki/index.php?title=Special:Translate&group=page-Welcome+to+Plebnet&action=page&filter=&language=fr|translated version]]</span> of the page [[/plebnet.wiki/wiki/Welcome_to_Plebnet|Welcome to Plebnet]] and the translation is 96% complete.
+
+</div>
+<div class="mw-pt-translate-header">
+
+<span class="mw-translate-fuzzy">Outdated translations are marked like this.</span>
+
+</div>
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+[[/plebnet.wiki/wiki/Welcome_to_Plebnet|English]] • ‎[[/plebnet.wiki/wiki/Welcome_to_Plebnet/es|español]] • ‎<span class="mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="fr">français</span>
+
+</div>
+
+</div>
+Ceci est un guide pour ceux qui se demandent ce qu'est PlebNet et où commencer.
+
+PlebNet c'est une communauté géniale initiée par un groupe de plébéiens désintéressés qui voulaient travailler ensemble pour intégrer un maximum de gens sur Lightning.
+
+Les objectifs de PlebNet sonts :
+
+* Rassembler les utilisateurs du réseau Lightning,
+* Améliorer la connaissance de Lighnting,
+* Apprendre ensemble comment gérer un nœud (node) et utiliser un portemonnaie (wallet) Lightning,
+* Vulgariser Lightning et réduire le fossé entre le monde tech et les utilisateurs lambda.
+
+Vous trouverez d'abord les questions les plus fréquentes ainsi que des conseils utiles, suivis d'informations sur l'infrastructure PlebNet plus bas.
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#CONSEILS_ESSENTIELS_QUE_TOUT_PL.C3.89B.C3.89IEN_DOIT_CONNA.C3.8ETRE|<span class="tocnumber">1</span> <span class="toctext">CONSEILS ESSENTIELS QUE TOUT PLÉBÉIEN DOIT CONNAÎTRE</span>]]
+* [[#Qu.27est-ce_que_je_fais_ici_.3F|<span class="tocnumber">2</span> <span class="toctext">Qu'est-ce que je fais ici ?</span>]]
+* [[#Comment_faire_tourner_un_n.C5.93ud_.3F|<span class="tocnumber">3</span> <span class="toctext">Comment faire tourner un nœud ?</span>]]
+* [[#Combien_puis-je_gagner_en_faisant_tourner_un_n.C5.93ud_Lightning.3F_Combien_gagnez-vous_par_semaine_.3F|<span class="tocnumber">4</span> <span class="toctext">Combien puis-je gagner en faisant tourner un nœud Lightning? Combien gagnez-vous par semaine ?</span>]]
+* [[#Puis-je_ouvrir_un_canal_avec_quelqu.27un_pour_X_sats_.3F_Quel_est_le_montant_optimal_pour_ouvrir_un_canal_.3F|<span class="tocnumber">5</span> <span class="toctext">Puis-je ouvrir un canal avec quelqu'un pour X sats ? Quel est le montant optimal pour ouvrir un canal ?</span>]]
+* [[#Ressources|<span class="tocnumber">6</span> <span class="toctext">Ressources</span>]]
+* [[#Contribuez_si_vous_pouvez_.21|<span class="tocnumber">7</span> <span class="toctext">Contribuez si vous pouvez !</span>]]
+* [[#L.27infrastructure_PlebNet|<span class="tocnumber">8</span> <span class="toctext">L'infrastructure PlebNet</span>]]
+
+
+</div>
+<span id="conseils-essentiels-que-tout-plébéien-doit-connaître"></span>
+== <span id="CONSEILS_ESSENTIELS_QUE_TOUT_PLÉBÉIEN_DOIT_CONNAÎTRE"></span><span id="CONSEILS_ESSENTIELS_QUE_TOUT_PL.C3.89B.C3.89IEN_DOIT_CONNA.C3.8ETRE" class="mw-headline">CONSEILS ESSENTIELS QUE TOUT PLÉBÉIEN DOIT CONNAÎTRE</span> ==
+
+NE FAITES CONFIANCE À PERSONNE
+
+GÉRER UN NŒUD LIGHTNING COMPORTE DES RISQUES
+
+CHERCHEZ PAR VOUS-MÊME
+
+APPRENEZ DE VOS ERREURS ET AIDEZ LES AUTRES
+
+FAIRE TOURNER UN NŒUD N'EST PAS LA MÊME CHOSE QUE MINER DU BITCOIN
+
+<span id="quest-ce-que-je-fais-ici"></span>
+== <span id="Qu'est-ce_que_je_fais_ici_?"></span><span id="Qu.27est-ce_que_je_fais_ici_.3F" class="mw-headline">Qu'est-ce que je fais ici ?</span> ==
+
+Nul ne peut répondre à cette question à votre place, mais peut-être que vous avez cliqué sur un de nos liens sur Twitter ?
+
+<span id="comment-faire-tourner-un-nœud"></span>
+== <span id="Comment_faire_tourner_un_nœud_?"></span><span id="Comment_faire_tourner_un_n.C5.93ud_.3F" class="mw-headline">Comment faire tourner un nœud ?</span> ==
+
+Tout le monde peut gérer un nœud Lightning. Néanmoins, cela ne veut pas dire que c'est chose aisée ou bien que cela ne comporte aucun risque. Faites vos travail et évaluez les risques par vous-mêmes. Au lieu de poser des questions telle que celle-ci, essayez de trouver les meilleures ressources sur Lightning et la gestion d'un nœud.
+
+<span id="combien-puis-je-gagner-en-faisant-tourner-un-nœud-lightning-combien-gagnez-vous-par-semaine"></span>
+== <span id="Combien_puis-je_gagner_en_faisant_tourner_un_nœud_Lightning?_Combien_gagnez-vous_par_semaine_?"></span><span id="Combien_puis-je_gagner_en_faisant_tourner_un_n.C5.93ud_Lightning.3F_Combien_gagnez-vous_par_semaine_.3F" class="mw-headline">Combien puis-je gagner en faisant tourner un nœud Lightning? Combien gagnez-vous par semaine ?</span> ==
+
+Difficile de répondre à ces questions car cela dépend de multiples variables. Beaucoup parmi nous font tourner leur nœud sans être profitable. Notre objectif est avant tout d'apprendre, d'aider le réseau et de déterminer le meilleur moyen de gérer un nœud sans perdre d'argent. Si pour vous le futur sera basé sur un étalon Bitcoin, alors cela signifie sûrement que les transactions passeront par Lightning. Certains voient leurs nœuds et canaux comme un investissement pour ce futur lointain. Néanmoins, il n'y a aucune garantie qu'un nœud peut être profitable, aujourd'hui ou dans le futur. Cette réponse n'a pas vocation à vous décourager et nous avons des utilisateurs qui parviennent à être rentables, mais ils ont investi beaucoup de leur temps et de leur capital dans leurs nœuds pour cela. Avant de savoir comment être profitable, vous devez comprendre les coûts et revenus. Pour faire tourner un nœud vos coûts sont :
+
+* CAPEX (investissement) pour l'achat du matériel.
+* Autres coûts hors de votre contrôle :
+** Connexion internet et électricité (faible coût en général)
+** Coût d'ouverture et de fermeture d'un canal. Ces coûts dépendent des coûts de minage au moment de la transaction. Il est parfois possible d'ouvrir un canal avec 1 sat/vb (la transaction prendra plus de temps à être confirmée) mais ce prix est susceptible de changer.
+** Coût pour ré-équilibrer un canal (si vous en avez besoin). En général, quand vous gérez un nœud il y a des transactions dans les deux sense mais vous avez parfois besoin de rebalancer le canal, ce qui a un coût,
+** Coût d'achat de liquidité entrante (inbound liquidity), si vous n'arrivez pas à en obtenir de la part d'autre plébéien,
+** Coût des services de gestion de nœuds (loop out, etc.).
+
+Vous devez mettre en regard ces coûts avec la seule et unique source de revenus potentielle : les frais de routage. Vous pouvez certes fixer des frais élevés mais personne ne voudra passer par votre nœud. Vous pouvez les fixer très faible mais cela ne couvrira pas vos coûts. Entre ceux deux extrêmes il y a une fine ligne pour faire tourner un nœud rentable. Les sats ne vont peut-être pas pleuvoir mais ça reste très drôle !
+
+<span id="puis-je-ouvrir-un-canal-avec-quelquun-pour-x-sats-quel-est-le-montant-optimal-pour-ouvrir-un-canal"></span>
+== <span id="Puis-je_ouvrir_un_canal_avec_quelqu'un_pour_X_sats_?_Quel_est_le_montant_optimal_pour_ouvrir_un_canal_?"></span><span id="Puis-je_ouvrir_un_canal_avec_quelqu.27un_pour_X_sats_.3F_Quel_est_le_montant_optimal_pour_ouvrir_un_canal_.3F" class="mw-headline">Puis-je ouvrir un canal avec quelqu'un pour X sats ? Quel est le montant optimal pour ouvrir un canal ?</span> ==
+
+Réponse... ça dépend ! Ça dépend du type de nœud que vous voulez, des fonds dont vous disposez et d'avec qui vous voulez vous connecter. Il y a 3 grandes catégories de nœuds sur Lightning :
+
+# Les nœuds profitables : ils requièrent beaucoup de management, de capital et de compétence,
+# Les nœuds intermédiaire : groupe moins bien défini, ces nœuds un quelques canaux d'une taille décente, de bons pairs et sont super pour supporter et étendre le réseau Lightning
+# Les nœuds à usage personnel : pour ceux qui veulent juste une ou deux bonnes connexions et qui veulent faire l'expérience de comprendre Lightning et de gérer un nœud et qui peuvent router leurs propres transactions depuis et vers leur nœud.
+
+La taille optimale d'un canal dépend de votre type de nœud. Les plus gros nœuds de routage ont des taille de canaux d'au moins 2 millions de sats (voire 10 millions de sats). Si vous venez de commencer, certains nœuds PlebNet comme [https://amboss.space/node/0381de1709efbda38f9afd2d47399caa19a2630c0c795acd24755efa442685fc7d Turgidson] et [https://amboss.space/node/035f42b1c1cd8afe605f3fc1befc270844ec9885b7c53f713faa672869c25cb148 GirthMavic] sont super pour se connecter : n'importe quelle taille de canal supérieure à 20 000 sats suffit pour s'y connecter.
+
+<span id="ressources"></span>
+== <span id="Ressources" class="mw-headline">Ressources</span> ==
+
+La meilleure partie de PlebNet : les ressources partagées, les connexions et la magie du réseau Lightning ! Beaucoup de réponses à vos questions se trouvent dans les réponses épinglées sur Telegram et le Wiki PlebNet :
+
+* https://plebnet.wiki
+* https://library.plebnet.org
+
+<span id="contribuez-si-vous-pouvez"></span>
+== <span id="Contribuez_si_vous_pouvez_!"></span><span id="Contribuez_si_vous_pouvez_.21" class="mw-headline">Contribuez si vous pouvez !</span> ==
+
+Des plébéiens comme vous donnent de leur temps pour aider le reste de la plèbe. C'est la meilleure partie de PlebNet : quand quelqu'un qui est arrivé il y a tout juste une semaine se met à aider un nouveau. Les liens sur cette page sont des mines d'or d'information. Si vous ne trouvez toujours pas de réponse à votre question : demandez sur PlebNet, nous avons toute la gamme des utilisateurs Lightning, des développeurs pros aux simples amateurs pour qui c'est un passe-temps. PlebBet est le meilleur centre de connexions et de ressources sur le réseau Lightning.
+
+<br />
+
+
+<span id="linfrastructure-plebnet"></span>
+== <span id="L'infrastructure_PlebNet"></span><span id="L.27infrastructure_PlebNet" class="mw-headline">L'infrastructure PlebNet</span> ==
+
+PlebNet a évolué et dispose aujourd'hui de 7 groupes Telegram, chacun avec un objectif différent :
+
+<br />
+
+
+* [https://t.me/CHLNgroup PlebNet - LIGHTNING 101]: Groupe fantastique pour faire découvrir Lightning et aider à réaliser votre première transaction sur le réseau Lightning.
+* [https://t.me/plebnet PlebNet]: Le groupe PlebNet le plus large, avec un superbe réseau de plébéiens et un nombre incalculable de ressources.
+* PlebNet // NODERUNNERS: Ce plus petit groupe est réservé à ceux qui ont déjà un nœur avec quelques canaux et qui sont prêts pour des discussions plus sérieuses sur la gestion d'un nœud. Si vous pensez être prêt, envoyez un message à @AEHW1 sur Telegram en lui demandant de vous ajouter à ce groupe. Pour cela, il faut :
+
+# Avoir défini un nom d'utilisateur sur Telegram,
+# Réclamer votre nœud avec @CheeseRobot,
+# Annoncer votre nœud sur le groupe général PlebNet,
+# Autoriser les invitations de groupe dans vos paramètres Telegram.
+
+* PlebNet Advanced: Ce groupe est destiné au développement du réseau et des outils de routage et d'optimisation.
+* [https://t.me/Pleb2Salvador #Plebs2Salvador]: Ce groupe a vocation à créer une chaîne de nœud pour célébrer l'adoption du Bitcoin par le Salvador. Vous recevez un canal d'un pair et vous vous engagez à ouvrir un canal au pair suivant.
+* [http://es.plebnet.org PlebNet Español]: Groupe pour les hispanophones qui veulent découvrir Lightning et gérer un nœud.
+* [https://t.me/plebnetbusiness PlebNet for Business]: Là où les entreprises apprennent comment utiliser Lightning et mettre en place des nœuds pour leur activité professionnelle.
+
+<br />
+
+
+<div class="mw-translate-fuzzy">
+
+Il y a aussi des [[/plebnet.wiki/wiki/Special:MyLanguage/Local_PlebNet_groups|groupes PlebNet locaux]] qui organisent des évènements en personne dans leur ville. Rejoignez-nous !
+
+
+</div>
+
+</div>

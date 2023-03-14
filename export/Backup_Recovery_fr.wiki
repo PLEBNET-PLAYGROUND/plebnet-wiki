@@ -1,0 +1,120 @@
+<span id="backuprecoveryfr"></span>
+= Backup/Recovery/fr =
+
+<div class="mw-pt-translate-header noprint" dir="ltr" lang="en">
+
+This page is a <span class="plainlinks">[[/plebnet.wiki/index.php?title=Special:Translate&group=page-Backup%2FRecovery&action=page&filter=&language=fr|translated version]]</span> of the page [[/plebnet.wiki/wiki/Backup/Recovery|Backup/Recovery]] and the translation is 100% complete.
+
+</div>
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+[[/plebnet.wiki/wiki/Backup/Recovery|English]] • ‎[[/plebnet.wiki/wiki/Backup/Recovery/es|español]] • ‎<span class="mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="fr">français</span>
+
+</div>
+
+</div>
+Gérer un node Lightning est risqué et il est possible de perdre vos fonds. Néanmoins, les étapes ci-dessous vous permettent de drastiquement réduire cette possibilité.
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#Sauvegarde_des_canaux|<span class="tocnumber">1</span> <span class="toctext">Sauvegarde des canaux</span>]]
+** [[#Static_Channel_Backups_.28SCB.29|<span class="tocnumber">1.1</span> <span class="toctext">Static Channel Backups (SCB)</span>]]
+** [[#Comment_obtenir_un_SCB_.3F|<span class="tocnumber">1.2</span> <span class="toctext">Comment obtenir un SCB ?</span>]]
+* [[#R.C3.A9cup.C3.A9ration|<span class="tocnumber">2</span> <span class="toctext">Récupération</span>]]
+** [[#Si_vous_avez_toujours_acc.C3.A8s_.C3.A0_votre_n.C5.93ud|<span class="tocnumber">2.1</span> <span class="toctext">Si vous avez toujours accès à votre nœud</span>]]
+** [[#Si_vous_n.27avez_plus_acc.C3.A8s_.C3.A0_votre_n.C5.93ud|<span class="tocnumber">2.2</span> <span class="toctext">Si vous n'avez plus accès à votre nœud</span>]]
+** [[#TOUT_ESPOIR_EST_PERDU_.28pas_de_SCB.29|<span class="tocnumber">2.3</span> <span class="toctext">TOUT ESPOIR EST PERDU (pas de SCB)</span>]]
+** [[#Exceptions|<span class="tocnumber">2.4</span> <span class="toctext">Exceptions</span>]]
+*** [[#Votre_n.C5.93ud_tombe_en_panne_pendant_un_HTLC_.22in-flight.22|<span class="tocnumber">2.4.1</span> <span class="toctext">Votre nœud tombe en panne pendant un HTLC &quot;in-flight&quot;</span>]]
+*** [[#Vous_initiez_une_fermeture_de_force_et_vos_fonds_sont_toujours_bloqu.C3.A9s_dans_un_verrou_temporel|<span class="tocnumber">2.4.2</span> <span class="toctext">Vous initiez une fermeture de force et vos fonds sont toujours bloqués dans un verrou temporel</span>]]
+
+
+</div>
+<span id="sauvegarde-des-canaux"></span>
+== <span id="Sauvegarde_des_canaux" class="mw-headline">Sauvegarde des canaux</span> ==
+
+<span id="static-channel-backups-scb"></span>
+=== <span id="Static_Channel_Backups_(SCB)"></span><span id="Static_Channel_Backups_.28SCB.29" class="mw-headline">Static Channel Backups (SCB)</span> ===
+
+LND peut générer un fichier de sauvegarde de vos canaux en utilisant la méthode &quot;Static Channel Backups&quot; (SCB). Au lieu d'essayer de maintenir l'état du canal le plus récent, la méthode SCB tente de notifier vos pairs afin qu'ils forcent la fermeture du canal (force close). Ceci empêche des utilisateurs de diffuser accidentellement un ancien état et cela leur permet de fermer le canal et de recevoir leur solde local (local balance). Quand vous utilisez un SCB vous recevez vos fonds assez rapidement dans la mesure où le verrouillage temporel (time-lock) pour les fermetures forcées (force closures) s'applique seulement aux pairs qui initient la fermeture forcée et non à l'autre pair.
+
+Un fichier SCB est mis à jour dès qu'un canal est ouvert ou fermé. Les information sur le canal sont ajoutées au SCB à l'ouverture du canal et sont supprimées du SCB lors de sa fermeture.
+
+IMPORTANT : Les SCB ne rétablissent pas votre nœud à son état normal. Les SCB servent uniquement à récupérer tous les fonds de votre portefeuille on-chain et le solde local de vos canaux (off-chain).
+
+<span id="comment-obtenir-un-scb"></span>
+=== <span id="Comment_obtenir_un_SCB_?"></span><span id="Comment_obtenir_un_SCB_.3F" class="mw-headline">Comment obtenir un SCB ?</span> ===
+
+Il y a différentes manières d'obtenir un SCB.
+
+* Grâce au bot Telegram BoS (recommandé) : [[/plebnet.wiki/wiki/Special:MyLanguage/Umbrel_-_Installing_BoS|Umbrel - Installer BoS]]
+* Si vous utilisez Umbrel : Vous pouvez contacter Umbrel pour recevoir votre SCB si votre nœud tombe en panne,
+* Si vous n'utilisez pas Umbrel : avec ThunderHub, vous pouvez télécharger la dernière sauvegarde dans les outils et options (tools option),
+* Avec lncli en utilisant la commande &quot;lncli exportchanbackup&quot;.
+
+Le bot Telegram BoS est recommandé car il vous envoie automatiquement un fichier SCB dès qu'un canal est ouvert ou fermé. À l'inverse, les autres méthodes sont manuelles et peuvent ne pas être maintenues à jour.
+
+<span id="récupération"></span>
+== <span id="Récupération"></span><span id="R.C3.A9cup.C3.A9ration" class="mw-headline">Récupération</span> ==
+
+&quot;Shit happens!&quot; Si votre nœud tombe en panne et que vous ne pouvez pas le redémarrer alors différentes solutions existent.
+
+<span id="si-vous-avez-toujours-accès-à-votre-nœud"></span>
+=== <span id="Si_vous_avez_toujours_accès_à_votre_nœud"></span><span id="Si_vous_avez_toujours_acc.C3.A8s_.C3.A0_votre_n.C5.93ud" class="mw-headline">Si vous avez toujours accès à votre nœud</span> ===
+
+Vous aurez besoin de vos 24 mots et du SCB. Suivez [https://github.com/lightningnetwork/lnd/blob/master/docs/recovery.md#recovering-using-scbs ces instructions] (Utilisez lncli restorechanbackup).
+
+<span id="si-vous-navez-plus-accès-à-votre-nœud"></span>
+=== <span id="Si_vous_n'avez_plus_accès_à_votre_nœud"></span><span id="Si_vous_n.27avez_plus_acc.C3.A8s_.C3.A0_votre_n.C5.93ud" class="mw-headline">Si vous n'avez plus accès à votre nœud</span> ===
+
+Dans ce cas-là (par exemple, si notre nœud a été détruit dans une attaque nucléaire), vous devrez créer un nouveau nœud pour récupérer vos fonds.
+
+Vous aurez besoin de vos 24 mots et du SCB. Vous pouvez démarrer un nouveau nœud avec Neutrino pour gagner du temps. Neutrino est un client léger qui permet de faire tourner un nœud Lightning sans Bitcoin Core. Vous pouvez créer un nœud Neutrino en suivant [https://github.com/alexbosworth/ln-service ces instructions]. Ces instructions expliquent comment créer un nœud sur AWS EC2 mais vous pouvez de la même manière créer votre nœud sur votre ordinateur ou sur un Raspberry Pi.
+
+Une fois votre nœud Neutrino lancé, suivez les [https://github.com/lightningnetwork/lnd/blob/master/docs/recovery.md#recovering-using-scbs mêmes instructions de récupération] (utilisez lncli create -multi_file=channel.backup)
+
+Note : Remplacez channel.backup par le nom de votre fichier de sauvegarde.
+
+<span id="tout-espoir-est-perdu-pas-de-scb"></span>
+=== <span id="TOUT_ESPOIR_EST_PERDU_(pas_de_SCB)"></span><span id="TOUT_ESPOIR_EST_PERDU_.28pas_de_SCB.29" class="mw-headline">TOUT ESPOIR EST PERDU (pas de SCB)</span> ===
+
+Si vous n'avez pas de SCB et que vous n'avez que vos 24 mots alors il est possible de récupérer vos fonds mais sans garantie de succès.
+
+Tout d'abord, contactez tous vos pairs et demandez leur de fermer de force (force close) manuellement vos canaux.
+
+Une fois la fermeture de force confirmée, suivez [https://github.com/guggero/chantools/blob/master/doc/chantools_genimportscript.md ces instructions].
+
+<span id="exceptions"></span>
+=== <span id="Exceptions" class="mw-headline">Exceptions</span> ===
+
+<span id="votre-nœud-tombe-en-panne-pendant-un-htlc-in-flight"></span>
+==== <span id="Votre_nœud_tombe_en_panne_pendant_un_HTLC_"in-flight""></span><span id="Votre_n.C5.93ud_tombe_en_panne_pendant_un_HTLC_.22in-flight.22" class="mw-headline">Votre nœud tombe en panne pendant un HTLC &quot;in-flight&quot;</span> ====
+
+Si votre nœud est tombé en panne pendant qu'un paiement &quot;in-flight&quot; était en train d'être routé par votre nœud ou pendant que vous faisiez un paiement alors il n'y a malheureusement aucun moyen de récupérer ces fonds. Ces fonds sont bloqué dans le HTLC (Hashed TimeLock Contract). Vous pouvez en revanche récupérer le reste de vos fonds on-chain et off-chain.
+
+<span id="vous-initiez-une-fermeture-de-force-et-vos-fonds-sont-toujours-bloqués-dans-un-verrou-temporel"></span>
+==== <span id="Vous_initiez_une_fermeture_de_force_et_vos_fonds_sont_toujours_bloqués_dans_un_verrou_temporel"></span><span id="Vous_initiez_une_fermeture_de_force_et_vos_fonds_sont_toujours_bloqu.C3.A9s_dans_un_verrou_temporel" class="mw-headline">Vous initiez une fermeture de force et vos fonds sont toujours bloqués dans un verrou temporel</span> ====
+
+Si vous initiez une fermeture de force, vos fonds sont bloqués pendant un certain nombre de blocs. Si votre nœud tombe en panne pendant le verrou temporelle d'une fermeture de force que vous avez initiée alors malheureusement LND comporte à ce jour un bug qui retire du SCB les détails du canal avant que le verrou temporel n'expire. Ces fonds peuvent être récupérés à l'aide d'un SCB plus ancien (avant que les détails du canal n'aient été supprimés). Utilisez ce SCB pour récupérer vos fonds comme expliqué ci-dessus. Vous recevrez vos fonds sur votre portemonnaie on-chain à l'expiration du verrou temporel. Le bot Telegram BoS est votre sauveur dans ce cas de figure car l'historique de conversation avec le bot contient tous les anciens SCB. D'après Lightning Labs, ce but devrait être résolu dans la version 0.14.0-beta.
+
+Si vous n'avez pas un SCB plus ancien alors il n'y a malheureusement à ce jour aucun moyen de récupérer vos fonds.
+
+
+</div>
