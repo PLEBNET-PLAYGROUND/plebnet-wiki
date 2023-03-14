@@ -1,1 +1,0 @@
-exportMediaWiki2HTML/requirements.txt
