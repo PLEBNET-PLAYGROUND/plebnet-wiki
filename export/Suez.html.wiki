@@ -1,0 +1,76 @@
+<span id="suez"></span>
+= Suez =
+
+<div class="mw-pt-translate-header noprint nomobile" dir="ltr" lang="en">
+
+This page contains <span class="plainlinks">[[/plebnet.wiki/index.php?title=Suez&diff=1073|changes]]</span> which are not marked for translation.
+
+</div>
+<div class="mw-parser-output">
+
+Suez is a “Tool for pretty printing and optimizing Lightning Network channels.”.
+
+<br />
+[[/plebnet.wiki/wiki/File:Suez_tui.png|[[File:img/800px-Suez_tui.png|800x293px|Suez tui.png]]]]
+
+<br />
+
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#Installation|<span class="tocnumber">1</span> <span class="toctext">Installation</span>]]
+** [[#Cloning_from_Git|<span class="tocnumber">1.1</span> <span class="toctext">Cloning from Git</span>]]
+** [[#Python_.26_Poetry|<span class="tocnumber">1.2</span> <span class="toctext">Python &amp; Poetry</span>]]
+** [[#Installing_dependencies_and_running_suez|<span class="tocnumber">1.3</span> <span class="toctext">Installing dependencies and running suez</span>]]
+
+
+</div>
+<span id="installation"></span>
+= <span id="Installation" class="mw-headline">Installation</span> =
+
+A good place to save third party software on your node is the ~/src directory.
+
+<pre>   mkdir -p ~/src
+   cd ~/src</pre>
+<br />
+
+
+<span id="cloning-from-git"></span>
+=== <span id="Cloning_from_Git" class="mw-headline">Cloning from Git</span> ===
+
+We’ll need to clone the code from github, this is done using git. So let’s first make sure we have git installed:
+
+<pre>   sudo apt-get install git -y
+   git —version
+   git clone https://github.com/prusnak/suez.git
+   cd suez</pre>
+<br />
+
+
+<span id="python-poetry"></span>
+=== <span id="Python_&_Poetry"></span><span id="Python_.26_Poetry" class="mw-headline">Python &amp; Poetry</span> ===
+
+Suez is implemented in Python3, and uses ‘poetry’ for its dependencies. Python3 is the default python version if you’re running Ubuntu &gt;= 20.04.
+
+<pre>   python3 —version
+   pip3 install poetry</pre>
+<br />
+
+
+<span id="installing-dependencies-and-running-suez"></span>
+=== <span id="Installing_dependencies_and_running_suez" class="mw-headline">Installing dependencies and running suez</span> ===
+
+At this point you should be able to complete the last 2 steps:
+
+<pre>   poetry install
+   poetry run ./suez</pre>
+
+</div>

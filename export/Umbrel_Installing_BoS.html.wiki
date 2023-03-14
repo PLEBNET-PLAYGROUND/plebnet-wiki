@@ -1,0 +1,235 @@
+<span id="umbrel---installing-bos"></span>
+= Umbrel - Installing BoS =
+
+<div class="mw-parser-output">
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#Installing_BOS|<span class="tocnumber">1</span> <span class="toctext">Installing BOS</span>]]
+** [[#Upgrading_bos|<span class="tocnumber">1.1</span> <span class="toctext">Upgrading bos</span>]]
+** [[#Validate_that_the_tool_is_working:|<span class="tocnumber">1.2</span> <span class="toctext">Validate that the tool is working:</span>]]
+** [[#Installing_Telegram_Bot|<span class="tocnumber">1.3</span> <span class="toctext">Installing Telegram Bot</span>]]
+*** [[#Video_Instructions_of_Initial_Setup|<span class="tocnumber">1.3.1</span> <span class="toctext">Video Instructions of Initial Setup</span>]]
+*** [[#Text_Instructions_of_Initial_Setup|<span class="tocnumber">1.3.2</span> <span class="toctext">Text Instructions of Initial Setup</span>]]
+*** [[#TMUX_Instructions|<span class="tocnumber">1.3.3</span> <span class="toctext">TMUX Instructions</span>]]
+*** [[#Disown_or_Nohup_Instructions|<span class="tocnumber">1.3.4</span> <span class="toctext">Disown or Nohup Instructions</span>]]
+*** [[#Docker_Instructions:|<span class="tocnumber">1.3.5</span> <span class="toctext">Docker Instructions:</span>]]
+*** [[#Paying_invoices_from_bot|<span class="tocnumber">1.3.6</span> <span class="toctext">Paying invoices from bot</span>]]
+
+
+</div>
+<span id="installing-bos"></span>
+== <span id="Installing_BOS" class="mw-headline">Installing BOS</span> ==
+
+These are the commands to enter in a command-line interface for Umbrel - (once you have ssh'd into your umbrel, you can follow these steps):
+
+These instructions are from [https://github.com/alexbosworth/run-lnd#install-lnd bos installation instructions].
+
+<code> curl -sL </code>[https://deb.nodesource.com/setup_16.x <code>https://deb.nodesource.com/setup_16.x</code>]<code> | sudo -E bash - </code>
+
+<code>sudo apt-get install -y nodejs </code>
+
+Avoid using sudo with NPM
+
+<code> mkdir ~/.npm-global </code>
+
+<code>npm config set prefix '~/.npm-global' </code>
+
+Update path
+
+<code> nano ~/.profile </code>
+
+Add a new line to the end:
+
+<code> PATH=&quot;$HOME/.npm-global/bin:$PATH&quot; </code>
+
+This line should be by itself, literally at the end. Outside of any &quot;if then&quot; code.
+
+Save and exit <code>ctrl + x</code><br />
+<code>y enter</code>
+
+update shell:
+
+<code> . ~/.profile </code>
+
+Install balanceofsatoshis. This command also works for upgrade
+
+<code> npm i -g balanceofsatoshis </code>
+
+<span id="upgrading-bos"></span>
+=== <span id="Upgrading_bos" class="mw-headline">Upgrading bos</span> ===
+
+Skip this step if you are installing BoS for the first time. Go down to next section, &quot;Validate...&quot;
+
+If you already have bos and want to upgrade:
+
+kill running telegram bot process
+
+<code>ps -ef | grep bos | grep -v grep</code> does it show the running process for bos telegram? if yes terminate that session with <code> kill -9 processid</code> process id the is the first number in ps -ef outout (see below - the process id is 32605)
+
+<pre>umbrel@umbrel:~ $ ps -ef |grep bos | grep -v grep
+umbrel   32605 10432  0 20:58 pts/2    00:00:11 node /usr/bin/bos telegram --connect</pre>
+upgrade using (you may have to use sudo if you previously installed bos with sudo)
+
+<code> npm i -g balanceofsatoshis </code>
+
+however, there could be some checks you can make before upgrade to make sure you do not run into trouble.
+
+# if you have previously installed bos with <code>sudo npm i -g balanceofsatoshis</code> please upgrade also with sudo or else you might run into version issues.
+# if your upgrades succeed up <code>bos -V</code> still gives the old version do the following
+
+<br />
+<code>find / -name bos 2&gt;/dev/null</code> does it show 4 areas?
+
+<pre>$ find / -name bos 2&gt;/dev/null
+/usr/lib/node_modules/balanceofsatoshis/bos
+/usr/bin/bos
+/usr/local/lib/node_modules/balanceofsatoshis/bos
+/usr/local/bin/bos</pre>
+if yes, please delete the /usr/local/bin installation by <code> sudo rm /usr/local/bin/bos sudo rm -r /usr/local/lib/node_modules/balanceofsatoshis </code>
+
+check <code>/usr/bin/bos -V </code> shows correct version?
+
+then exit the shell and enter again. Check with <code>bos -V</code>
+
+reconnect your telegram bot with the new version.
+
+<span id="validate-that-the-tool-is-working"></span>
+=== <span id="Validate_that_the_tool_is_working:" class="mw-headline">Validate that the tool is working:</span> ===
+
+Run the following commands and validate the output (not an error):
+
+<code>bos --version</code><br />
+<code>bos utxos</code>
+
+If you get a 503, UnexpectedgetUtxosError, do the following:
+
+<code>sudo nano /etc/hosts</code><br />
+add the following line at the bottom<br />
+<br />
+<code>127.0.0.1 umbrel.local</code><br />
+<br />
+Then save and exit, <code>ctrl + x</code><br />
+<code>y enter</code><br />
+Now test again
+
+<span id="installing-telegram-bot"></span>
+=== <span id="Installing_Telegram_Bot" class="mw-headline">Installing Telegram Bot</span> ===
+
+<span id="video-instructions-of-initial-setup"></span>
+==== <span id="Video_Instructions_of_Initial_Setup" class="mw-headline">Video Instructions of Initial Setup</span> ====
+
+Go to Telegram Start chat with [https://t.me/BotFather @BotFather] press <code>/start /newbot </code>
+
+Link to video instructions. https://t.me/plebnet/153904
+
+After the video setup, ''see also [[/plebnet.wiki/wiki/BoS_Telegram_AutoStart|BoS Telegram AutoStart]]'' (OR) scroll down to the TMUX instructions to keep the bot running in the background. Use only one of them.
+
+<br />
+
+
+<span id="text-instructions-of-initial-setup"></span>
+==== <span id="Text_Instructions_of_Initial_Setup" class="mw-headline">Text Instructions of Initial Setup</span> ====
+
+Go to Telegram Start chat with [https://t.me/BotFather @BotFather] press <code>/start /newbot </code> Decide A bot name <code>NodeAliasNew</code> Decide a bot user name for telegram <code>BotName_bot</code>
+
+You will get a long alphanumeric API KEY for the bot, Note that. You can always retrieve it using <code>/mybot</code> with BotFather<br />
+BotFather will give you a link to your new bot, click on it and it will take you to your bot.<br />
+Now come back to your node<br />
+On your SSH session run: <code> bos telegram </code> at first prompt type API key (alpha numeric) received from BotFather.
+
+In Telegram go to your bot by clicking on the link provided in BotFather (t.me/BotName_bot). Then press Start.
+
+type <code>/connect</code><br />
+you will get a numeric key, type that numeric key on the second prompt in your ssh session with <code> bos telegram </code>
+
+You should get a connected message in your Telegram Bot as well as on SSH session.
+
+Verify by typing <code>/version</code> in your telegram bot and you should see the version number of bos.
+
+<br />
+Press Ctrl-C in SSH session with <code> bos telegram </code><br />
+bos telegram command needs to be running in the background for the bot to be online always, you can keep the bot online with either Docker or TMUX. If you prefer not to install docker or tmux option, see the disown/nohup section at the end.<br />
+<br />
+''see also [[/plebnet.wiki/wiki/BoS_Telegram_AutoStart|BoS Telegram AutoStart]]''
+
+<span id="tmux-instructions"></span>
+==== <span id="TMUX_Instructions" class="mw-headline">TMUX Instructions</span> ====
+
+TMUX To use tmux, you can do the following:
+
+<code> sudo apt-get install tmux </code>
+
+<code>tmux new -s &lt;give any session name&gt; </code>
+
+The session name can be anything you like to name. e.g. &quot;my_telegram_bot&quot;
+
+then in that window <code> bos telegram --connect &lt;connect id&gt; </code> where connect_id is your connection id - numeric key received from bot.
+
+at this point, your bot should be working
+
+to detach from TMUX, now enter <code> ctrl+b d </code> note ctrl-b is one command followed by d (not ctrl-b d together)
+
+It should say detached from the session
+
+If you want to connect back to this session later, just ssh again and then <code>tmux ls </code> and you should see your session you can then use <code>tmux attach -t &lt;YourSessionNameHere&gt; </code> you can keep attaching and detaching from the session and it keeps running
+
+tmux kill-server —— to kill the sessions tmux attach -t &lt;session name&gt;
+
+<span id="disown-or-nohup-instructions"></span>
+==== <span id="Disown_or_Nohup_Instructions" class="mw-headline">Disown or Nohup Instructions</span> ====
+
+if you are not using docker or tmux and want a simpler unix way or running the process in background after you exit the shell you can use disown or nohup.
+
+<code> bos telegram --connect &lt;yourConnectionCode&gt; 1&gt; /tmp/bos.log 2&gt;&amp;1 &amp; disown </code> OR <code> nohup bos telegram --connect &lt;yourConnectionCode&gt; 1&gt; /tmp/bos.log 2&gt;&amp;1 &amp; </code>
+
+both command will execute the process in background and you will get the process id as
+
+<code> $ /usr/bin/bos telegram --connect XXXXXX 1&gt;/tmp/bos.log 2&gt;&amp;1 &amp; disown </code>
+
+<code>[1] 26912 &lt;---- this process ID will be different for each session. </code>
+
+when you are running under nohup, exit your shell by typing <code>exit</code> on your shell prompt and do not just press x on there terminal window to close the window. Closing terminal window sends SIGTERM to terminated the running processes under the shell instead of SIGHUP.
+
+disown is preferred, some plebs have reported issues with nohup that the process exits after they exit from shell (possibly by closing the window instead of pressing exit).
+
+<span id="docker-instructions"></span>
+==== <span id="Docker_Instructions:" class="mw-headline">Docker Instructions:</span> ====
+
+If you have done npm install as above, docker ends up running a separate copy and it will cause confusion when you upgrade (because your bos telegram would show a different version to rest of upgraded bos). We suggest you run bos telegram under tmux, disown, or nohup as described above. if you still prefer to run under docker the instructions are below.
+
+Run:
+
+<code>docker pull alexbosworth/balanceofsatoshis</code>
+
+For upgragrade <code>docker ps | grep bos | grep -v grep</code> and note the container id of bos container.
+
+<code>docker rm -f {container-id}</code> to remove the previous image.
+
+Now pull the new image and proceed to restart the bos container <code>docker ps</code> to check the container id running bos and <code>docker restart &lt;container id&gt;</code>
+
+This is the UMBREL SPECIFIC docker command string to run the telegram bot:<br />
+<code>10.21.21.9</code>, this is a sample LND_IP. To get your own LND_IP address to use in the docker command, run:<br />
+<code>cat /home/umbrel/.env </code><br />
+and replace the IP you get in the below command.<br />
+<code> docker run -d --restart always --network=&quot;host&quot; --add-host=umbrel.local:10.21.21.9 -v $HOME/.bos:/home/node/.bos -v $HOME/umbrel/lnd:/home/node/.lnd:ro alexbosworth/balanceofsatoshis:latest telegram --connect &lt;YOUR CONNECT CODE HERE&gt; </code>
+
+<span id="paying-invoices-from-bot"></span>
+==== <span id="Paying_invoices_from_bot" class="mw-headline">Paying invoices from bot</span> ====
+
+If you have secure access to your telegram account and you want to allow the Telegram Bot to pay invoices set a budget to pay for invoices through telegram using bot's <code>/pay</code> command:
+
+<code>bos telegram —-connect &lt;numeric key from telegram bot&gt; —-budget &lt;yourMaxBudget in sats&gt;</code>
+
+If you prefer to use bot only for messages from your node, do not set budget and it wont be able to pay any invoices.
+
+
+</div>

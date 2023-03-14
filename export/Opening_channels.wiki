@@ -1,0 +1,165 @@
+<span id="opening-channels"></span>
+= Opening channels =
+
+<div class="mw-pt-translate-header noprint nomobile" dir="ltr" lang="en">
+
+This page contains <span class="plainlinks">[[/plebnet.wiki/index.php?title=Opening_channels&oldid=2020&diff=2257|changes]]</span> which are not marked for translation.
+
+</div>
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+<span class="mw-pt-languages-ui mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="en">English</span> • ‎[[/plebnet.wiki/wiki/Opening_channels/fr|français]]
+
+</div>
+
+</div>
+The first question which a pleb has after (or even before) the node is synced &quot;'''who should I open channel with?'''&quot;
+
+I would say - '''with a mentor who is willing to spend time with you, teach you the ropes, mentor and guide you to be a better node runner'''
+
+Of course in the age of google, the internet, and instant gratification, this thought can be frowned upon but there is no replacement for a mentor in your journey as node runner.
+
+<br />
+
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#Add_Liquidity|<span class="tocnumber">1</span> <span class="toctext">Add Liquidity</span>]]
+* [[#Reserve_For_Anchor_Channels|<span class="tocnumber">2</span> <span class="toctext">Reserve For Anchor Channels</span>]]
+* [[#Find_Nodes_in_PLEBNET_Telegram_Group|<span class="tocnumber">3</span> <span class="toctext">Find Nodes in PLEBNET Telegram Group</span>]]
+* [[#Other_Channel_Sources|<span class="tocnumber">4</span> <span class="toctext">Other Channel Sources</span>]]
+* [[#Keep_It_Girthy|<span class="tocnumber">5</span> <span class="toctext">Keep It Girthy</span>]]
+* [[#Balanced_Channels|<span class="tocnumber">6</span> <span class="toctext">Balanced Channels</span>]]
+** [[#.E2.80.9CGirthy_.28formerly_known_as_Ghetto.29_Submarine_Swap.E2.80.9D_.28aka:_.E2.80.98trust-required.E2.80.99_dual-funded_channel.29|<span class="tocnumber">6.1</span> <span class="toctext">“Girthy (formerly known as Ghetto) Submarine Swap” (aka: ‘trust-required’ dual-funded channel)</span>]]
+** [[#MEG_.28aka:_.E2.80.98trustless.E2.80.99_dual-funded_channel.29_-_Mutually_Exchanged_Girth|<span class="tocnumber">6.2</span> <span class="toctext">MEG (aka: ‘trustless’ dual-funded channel) - Mutually Exchanged Girth</span>]]
+
+
+</div>
+<span id="add-liquidity"></span>
+=== <span id="Add_Liquidity" class="mw-headline">Add Liquidity</span> ===
+
+Generate a Lightning wallet and add some funds so that you can open channels. Keep in mind that PLEBNET prefers [[/plebnet.wiki/wiki/Special:MyLanguage/#keep-it-girthy|girthy channels]], so fund your node accordingly.
+
+<br />
+
+
+<span id="reserve-for-anchor-channels"></span>
+=== <span id="Reserve_For_Anchor_Channels" class="mw-headline">Reserve For Anchor Channels</span> ===
+
+If you use Anchor Channels (enabled by default in [https://github.com/lightningnetwork/lnd/releases lnd13.1]), lnd keeps a UTXO on your node as a reserve for commitment fees. The reserve amount is 10K sats multiplied by the number of channels you have, up to a [https://github.com/lightningnetwork/lnd/pull/5274 maximum of 100K Sats].
+
+If you have only one UTXO on your node on-chain wallet, you can get into issues that you are unable to spend that UTXO for opening channels. It is therefore suggested that you keep at least one 100K UTXO on your on-chain wallet.
+
+To do that,
+
+# In umbrel dashboard - bitcoin wallet - select deposit. It will generate a new address. Copy that.
+# In umbrel dashboard - bitcoin wallet - select withdraw. Page the address generated in step 1 above here and choose the amount 100000 Sats
+# Select low fee 1 Sat/Vb and send. It will create a UTXO of 100K Sats on your node which will be used for Anchor Channels once there is at least 1 on-chain confirmation of this transaction.
+
+<br />
+
+
+<span id="find-nodes-in-plebnet-telegram-group"></span>
+=== <span id="Find_Nodes_in_PLEBNET_Telegram_Group" class="mw-headline">Find Nodes in PLEBNET Telegram Group</span> ===
+
+If you’re not yet able or willing to offer girthy channels and just want to get started with a smaller amount of sats, [https://amboss.space/node/0381de1709efbda38f9afd2d47399caa19a2630c0c795acd24755efa442685fc7d Turgidson] is for PLEBNET newbies and will accept channels as low as 20k.
+
+You may want to check out [https://www.youtube.com/watch?v=qnj-ix45tVw Lightning Routing: The First 30 Days] to get some ideas
+
+Otherwise, you’ll need to find some other nodes in PLEBNET to open channels with.
+
+You can go to http://graph.plebnet.org/ to see the current visual graph of nodes, or type <code>/graph@cheeserobot group</code> in the PLEBNET chat. <code>/groupnodes@cheeserobot</code> will output a list of the 50 most recent members and nodes. You can contact plebs form the graph or list and see if they’d like to open a channel.
+
+You can also just ask in the PLEBNET channel if anyone is interested in opening a channel with you.
+
+<br />
+
+
+<span id="other-channel-sources"></span>
+=== <span id="Other_Channel_Sources" class="mw-headline">Other Channel Sources</span> ===
+
+For a two-way routing, required to both send and receive sats, you need a good balance of inbound and outbound liquidity. Most new node runners end up with a lot of outbound liquidity because they are the ones opening channels. [[/plebnet.wiki/wiki/Getting_Inbound_Liquidity|Here is how you can get some inbound liquidity]]
+
+<span id="keep-it-girthy"></span>
+=== <span id="Keep_It_Girthy" class="mw-headline">Keep It Girthy</span> ===
+
+It’s best to have fewer big channels with more sats than it is to have many smaller ones. The recommended minimum channel size is 2 million sats, which will cost you 1 million sats per channel if you are trying to have an even balance of inbound and outbound liquidity.
+
+<br />
+
+
+<span id="balanced-channels"></span>
+=== <span id="Balanced_Channels" class="mw-headline">Balanced Channels</span> ===
+
+The idea is to have balanced channels. This means that there is an equal amount of sats between each node on the channel.
+
+For example, if <code>Node A</code> opens a channel with <code>Node B</code> for 2m sats, it will start entirely on their end. <code>Node A</code> will want to find a way to have 1m sats on each side of the channel.
+
+There are several different ways to accomplish this.
+
+<br />
+
+
+<span id="girthy-formerly-known-as-ghetto-submarine-swap-aka-trust-required-dual-funded-channel"></span>
+==== <span id="“Girthy_(formerly_known_as_Ghetto)_Submarine_Swap”_(aka:_‘trust-required’_dual-funded_channel)"></span><span id=".E2.80.9CGirthy_.28formerly_known_as_Ghetto.29_Submarine_Swap.E2.80.9D_.28aka:_.E2.80.98trust-required.E2.80.99_dual-funded_channel.29" class="mw-headline">“Girthy (formerly known as Ghetto) Submarine Swap” (aka: ‘trust-required’ dual-funded channel)</span> ====
+
+'''ONLY DO THIS WITH ESTABLISHED AND TRUSTED PLEBNET NODES! IT IS POSSIBLE TO LOSE SATS DOING THIS.'''
+
+# <code>Node A</code> opens a channel with X sats.
+# <code>Node B</code> sends a Lightning invoice for half of the amount X sats that was opened on the channel
+# The <code>Node A</code> operator sends the address of their preferred on-chain Bitcoin wallet to the operator of <code>Node B</code>
+# The <code>Node B</code> operator sends half of the amount X sats of the opened channel to the Bitcoin wallet of the operator of <code>Node A</code> from step 3
+# <code>Node A</code> pays the Lightning invoice
+
+In some other versions, the swap is executed as below
+
+# you agree with NODE B you trust to open a 2X channel and at the time of open you push X towards them (i.e you gift them X on LN)
+# In return NODE B pay X back to you at your on-chain address. (this is based on trust. Usually, people are honourable because they don't want to spoil their reputation for a few dollars but you never know).
+# End result you have a 2X channel with X local X remote. And you have X on-chain to open another channel.
+
+<br />
+
+
+<span id="meg-aka-trustless-dual-funded-channel---mutually-exchanged-girth"></span>
+==== <span id="MEG_(aka:_‘trustless’_dual-funded_channel)_-_Mutually_Exchanged_Girth"></span><span id="MEG_.28aka:_.E2.80.98trustless.E2.80.99_dual-funded_channel.29_-_Mutually_Exchanged_Girth" class="mw-headline">MEG (aka: ‘trustless’ dual-funded channel) - Mutually Exchanged Girth</span> ====
+
+With the support for internal funding added, adding balanced channel is now a piece of cake. All you need is a willing peer.
+
+Alex Bosworth’s CLI tool, [https://github.com/alexbosworth/balanceofsatoshis Balance of Satoshis] utilizes keysend to add this functionality to LND (which does not natively support it, yet)
+
+<pre>Please also ensure that your boss 10.10.2 or higher and node.js/npm software is up to date before attempting this.</pre>
+<pre>Pre-req:  make sure NODE 1 and NODE 2 have keysend enabled (this is the default for Umbrel) and at least 1 channel already established to integrate you into the lightning network (you need a path out for key send to new peering node for the whole process to work)
+
+(NODE 1: Alice)
+(0) Run: bos open-balanced-channel
+(1) enter remote node public key
+(2) enter full channel size
+(3) enter fee rate
+(4) select Y if you want to fund from internal (node wallet) or else use an external wallet to provide the signed transaction for the exact details provided. copy the signed_transaction if you followed external funding.
+
+(NODE 2: Bob)
+(0) Run: bos open-balanced-channel (it should see the request from node1 at this point)
+(1) agree with funding rate (y/n)
+(2) press Y for internal funding (node wallet) or else use an external wallet to provide the signed transaction for the exact details provided. copy the signed_transaction if you followed external funding.
+(3) hit enter and this should work.
+
+check via: lncli pendingchannels</pre>
+
+</div>

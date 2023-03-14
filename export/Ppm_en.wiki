@@ -1,0 +1,34 @@
+<span id="ppmen"></span>
+= Ppm/en =
+
+<div class="mw-pt-translate-header noprint" dir="ltr" lang="en">
+
+[[Special_Translate_amp_group_page_Ppm_amp_language_en_amp_action_page_amp_filter_.html|Translate this page]]
+
+</div>
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+[[/plebnet.wiki/wiki/Ppm|English]]
+
+</div>
+
+</div>
+The acronym PPM stands for &quot;Parts Per Million&quot;. It quantifies the number of Satoshis per 1 Million Sats.
+
+For example:
+
+<pre>   1ppm is 1 sat per 1 Million Satoshis
+   1000ppm is 1000 sats per 1 Million Satoshis
+   4000ppm is 4000 sats per 1 Million Satoshis
+   4000ppm is 1000 sats per 250k Satoshis</pre>
+
+</div>

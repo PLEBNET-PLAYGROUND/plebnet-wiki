@@ -1,0 +1,95 @@
+<span id="getting-starteden"></span>
+= Getting started/en =
+
+<div class="mw-pt-translate-header noprint" dir="ltr" lang="en">
+
+[[Special_Translate_amp_group_page_Getting_started_amp_language_en_amp_action_page_amp_filter_.html|Translate this page]]
+
+</div>
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+[[/plebnet.wiki/wiki/Getting_started|English]] • ‎[[/plebnet.wiki/wiki/Getting_started/fr|français]]
+
+</div>
+
+</div>
+In order join [http://plebnet.org PLEBNET], you need a [https://en.wikipedia.org/wiki/Lightning_Network Lightning Network] node (more on that later) and [https://telegram.org/ Telegram] to chat and connect with us!
+
+If you are totally new to the lightning network, and would like to get an overview of how it works before diving in, then read the [https://bitcoiner.guide/lightning/ bitcoiner.guide/lightning] guide.
+
+<br />
+
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#Node|<span class="tocnumber">1</span> <span class="toctext">Node</span>]]
+* [[#Telegram|<span class="tocnumber">2</span> <span class="toctext">Telegram</span>]]
+* [[#CheeseRobot|<span class="tocnumber">3</span> <span class="toctext">CheeseRobot</span>]]
+* [[#Node_with_2_channels_or_more|<span class="tocnumber">4</span> <span class="toctext">Node with 2 channels or more</span>]]
+
+
+</div>
+<span id="node"></span>
+=== <span id="Node" class="mw-headline">Node</span> ===
+
+There are several newbie options for getting a Lightning node set up and running. Some of them are software only, some hardware + software.
+
+* [https://github.com/rootzoll/raspiblitz RaspiBlitz] is a great option that runs on Raspberry Pi v4+
+* [https://getumbrel.com/ Umbrel] is a newbie-friendly package that runs on Raspberry Pi v4+
+* [https://youtu.be/fppmhqjqh2E BTC SESSIONS] has a good video walkthrough for getting started with Raspberry Pi and Umbrel
+* '''Security note for Umbrel:''' ''Your Umbrel node is only as secure as your network (WiFi/LAN).'' Be sure to read the [https://github.com/getumbrel/umbrel/blob/master/SECURITY.md Security Disclosure] from the Umbrel team. Your funds can be at risk if someone can steal your SSD so protect your node the same way you protect any other valuable at your home. If you are comfortable with command line, you can change the wallet password from command line and then remember to use that password each time you restart lnd or during upgrades (or else your node will not start without correct password for the wallet). Do not keep the wallet password same as the dashboard password or else umbrel will change it back to hardcoded password on next unlock. By default the wallet is unlocked automatically during startup using hardcoded passwords.
+* [https://start9.com/ Start9] is an all-in-one option that includes the necessary hardware
+* [https://www.mynodebtc.com/ myNode] is another all-in-one with hardware
+* [https://stadicus.github.io/RaspiBolt/ RaspiBolt] has some good information on how to set up the necessary services manually
+
+For additional information about node hardware see the [[/plebnet.wiki/wiki/Special:MyLanguage/Node_Hardware|Node Hardware]] page.
+
+<br />
+
+
+<span id="telegram"></span>
+=== <span id="Telegram" class="mw-headline">Telegram</span> ===
+
+PLEBNET discussion and coordination happens on the Telegram chat platform.
+
+Download the [https://telegram.org/ Telegram app] and join the [http://kycjelly.com PLEBNET] group.
+
+The companion Telegram channel [https://t.me/plebnetlibrary PLEBNET Library] contains high quality materials collected from chat group traffic.
+
+<br />
+
+
+<span id="cheeserobot"></span>
+=== <span id="CheeseRobot" class="mw-headline">CheeseRobot</span> ===
+
+A Telegram bot that will allow you to join and interact with the PLEBNET.
+
+You’ll want to send a private message to <code>@cheeserobot</code> to claim and add your node. Start with <code>/claim</code> and follow the instructions to get add your node id. Then, in the PLEBNET channel, use <code>/id@cheeserobot</code> to get yourself added to the graph.
+
+<br />
+
+
+<span id="node-with-2-channels-or-more"></span>
+=== <span id="Node_with_2_channels_or_more" class="mw-headline">Node with 2 channels or more</span> ===
+
+Also join the NODE RUNNER group. @mention [https://t.me/AEHW1 Walton] to add you to the other group as well.
+
+
+</div>

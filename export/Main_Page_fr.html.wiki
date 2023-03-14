@@ -1,0 +1,311 @@
+<span id="main-pagefr"></span>
+= Main Page/fr =
+
+<div class="mw-pt-translate-header noprint" dir="ltr" lang="en">
+
+This page is a <span class="plainlinks">[[/plebnet.wiki/index.php?title=Special:Translate&group=page-Main+Page&action=page&filter=&language=fr|translated version]]</span> of the page [[/plebnet.wiki/wiki/Main_Page|Main Page]] and the translation is 100% complete.
+
+</div>
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+[[/plebnet.wiki/wiki/Main_Page|English]] • ‎[[/plebnet.wiki/wiki/Main_Page/ha|Hausa]] • ‎[[/plebnet.wiki/wiki/Main_Page/tr|Türkçe]] • ‎[[/plebnet.wiki/wiki/Main_Page/wo|Wolof]] • ‎[[/plebnet.wiki/wiki/Main_Page/yo|Yorùbá]] • ‎[[/plebnet.wiki/wiki/Main_Page/es|español]] • ‎<span class="mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="fr">français</span> • ‎[[/plebnet.wiki/wiki/Main_Page/ar|العربية]] • ‎[[/plebnet.wiki/wiki/Main_Page/hi|हिन्दी]]
+
+</div>
+
+</div>
+'''Bienvenue sur PlebNet !'''
+
+Vous trouverez sur cette page le &quot;guide&quot; principal. Suivez ces articles afin de mieux comprends les étapes requises pour rejoindre PlebNet avec un nœud (node) opérationnel.
+
+Vous pouvez trouver toutes les pages [[/plebnet.wiki/wiki/Special:AllPages|ici]] (dont les pages en anglais).
+
+<br />
+
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#.C3.80_lire_avant_toute_chose|<span class="tocnumber">1</span> <span class="toctext">À lire avant toute chose</span>]]
+* [[#Comment_commencer|<span class="tocnumber">2</span> <span class="toctext">Comment commencer</span>]]
+* [[#Revendiquer_votre_n.C5.93ud|<span class="tocnumber">3</span> <span class="toctext">Revendiquer votre nœud</span>]]
+* [[#Ouvrir_des_canaux_.28channels.29|<span class="tocnumber">4</span> <span class="toctext">Ouvrir des canaux (channels)</span>]]
+* [[#Maintenir_un_n.C5.93ud|<span class="tocnumber">5</span> <span class="toctext">Maintenir un nœud</span>]]
+* [[#Sauvegarde_et_r.C3.A9cup.C3.A9ration|<span class="tocnumber">6</span> <span class="toctext">Sauvegarde et récupération</span>]]
+* [[#Personnalisation|<span class="tocnumber">7</span> <span class="toctext">Personnalisation</span>]]
+* [[#Mises_.C3.A0_jour|<span class="tocnumber">8</span> <span class="toctext">Mises à jour</span>]]
+* [[#Balance_of_Satoshis|<span class="tocnumber">9</span> <span class="toctext">Balance of Satoshis</span>]]
+* [[#Aper.C3.A7u_des_param.C3.A8tres_de_configuration_de_LND|<span class="tocnumber">10</span> <span class="toctext">Aperçu des paramètres de configuration de LND</span>]]
+* [[#Faire_tourner_un_n.C5.93ud_en_.C3.A9tant_profitable|<span class="tocnumber">11</span> <span class="toctext">Faire tourner un nœud en étant profitable</span>]]
+* [[#Bac_.C3.A0_sable_.28Sandbox.29|<span class="tocnumber">12</span> <span class="toctext">Bac à sable (Sandbox)</span>]]
+* [[#F.C3.80Q|<span class="tocnumber">13</span> <span class="toctext">FÀQ</span>]]
+* [[#Ressources|<span class="tocnumber">14</span> <span class="toctext">Ressources</span>]]
+* [[#Toutes_les_pages|<span class="tocnumber">15</span> <span class="toctext">Toutes les pages</span>]]
+
+
+</div>
+<span id="à-lire-avant-toute-chose"></span>
+== <span id="À_lire_avant_toute_chose"></span><span id=".C3.80_lire_avant_toute_chose" class="mw-headline">À lire avant toute chose</span> ==
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Welcome_to_Plebnet|Bienvenue sur PlebNet]]
+
+'''Lisez le lien ci-dessus avant de commencer'''
+
+Il contient une introduction et des astuces utiles.
+
+<br />
+
+
+<span id="comment-commencer"></span>
+== <span id="Comment_commencer" class="mw-headline">Comment commencer</span> ==
+
+Vous êtes nouveau et ne comprenez pas Lightning ? Vous n'avez pas encore votre propre nœud ? Vous n'êtes pas encore sur le groupe Telegram PlebNet ?
+
+Lisez la page [[/plebnet.wiki/wiki/Special:MyLanguage/Getting_started|Commencer]] (en anglais).
+
+<br />
+
+
+<span id="revendiquer-votre-nœud"></span>
+== <span id="Revendiquer_votre_nœud"></span><span id="Revendiquer_votre_n.C5.93ud" class="mw-headline">Revendiquer votre nœud</span> ==
+
+Sur Telegram, envoyez un message privé (DM) à [https://t.me/cheeserobot @cheeserobot]. Ensuite utilisez la commande <code>/claim</code> suivie de l'URI de votre nœud. Suivez les instructions fournies par cheeserobot. Vous aurez notamment besoin de signer un message à l'aide de votre nœud pour prouver que vous en êtes le propriétaire.
+
+Ensuite, sur le [https://t.me/plebnet groupe Telegram PlebNet], annoncez votre nœud avec <code>/node</code>. Si vous voyez votre nœud : bravo, vous avez réussi !
+
+Répétez la procédure dans les autres groupes qui supportent CheeseRobot.
+
+Par ailleurs, [https://amboss.space Amboss.space] est un des meilleurs sites pour chercher des nœuds et obtenir leurs données de base. N'importe quel utilisateur peut chercher les informations de votre nœud sur Amboss. Vous pouvez déclarer votre nœud sur Amboss et ainsi personnaliser votre profil et y ajouter des informations. Pour cela suivez les instructions suivantes : [[/plebnet.wiki/wiki/Special:MyLanguage/Claim_on_Amboss|Déclarer sur Amboss]] (en anglais).
+
+<br />
+
+
+<span id="ouvrir-des-canaux-channels"></span>
+== <span id="Ouvrir_des_canaux_(channels)"></span><span id="Ouvrir_des_canaux_.28channels.29" class="mw-headline">Ouvrir des canaux (channels)</span> ==
+
+La première question de tout plébéien après la synchronisation de son nœud : « Avec qui devrais-je ouvrir un canal ? »
+
+Réponse : '''Avec un mentor qui est disposé à passer du temps à vous aider, vous apprendre les bases, vous former et vous guider pour devenir un meilleur gestionnaire de nœud.'''
+
+Évidemment, à l'heure de Google, d'internet et de la gratification immédiate, cela peut être mal vu mais rien ne pourra remplacer un bon mentor dans votre parcours pour devenir un gestionnaire de nœud.
+
+Pour plus d'information sur les canaux Lightning, notamment les méthodes pour obtenir de la liquidité entrante, lisez [[/plebnet.wiki/wiki/Special:MyLanguage/Opening_channels|Ouvrir des canaux]]
+
+<br />
+
+
+<span id="maintenir-un-nœud"></span>
+== <span id="Maintenir_un_nœud"></span><span id="Maintenir_un_n.C5.93ud" class="mw-headline">Maintenir un nœud</span> ==
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Node_Hardening|Renforcement de nœud]]
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Maintaining_node_hygiene|Maintenir un nœud]]
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Node_Hardware|Matériel pour nœud]]
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/UPS|ASI]] (Alimentation sans interruption, en anglais : Uninterrupted Power Supply, UPS)
+
+<span id="sauvegarde-et-récupération"></span>
+== <span id="Sauvegarde_et_récupération"></span><span id="Sauvegarde_et_r.C3.A9cup.C3.A9ration" class="mw-headline">Sauvegarde et récupération</span> ==
+
+Le lien suivant contient des informations importantes à propos des sauvegardes de canaux et des solutions de récupération afin que vous sachiez sécuriser vos fonds.
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Backup/Recovery|Sauvegarde et récupération]]
+
+<br />
+
+
+<span id="personnalisation"></span>
+== <span id="Personnalisation" class="mw-headline">Personnalisation</span> ==
+
+Vous pouvez personnaliser votre nœud et lui donner un nom (alias), au lieu d'une suite aléatoire de lettres et de chiffres. Vous pouvez aussi déterminer la couleur de votre nœud qui sera ensuite affichée sur les différents logiciels et sites internet de gestion Lightning.
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Setting_a_node_alias|Choisir un alias pour votre nœud]]
+
+<br />
+
+
+<span id="mises-à-jour"></span>
+== <span id="Mises_à_jour"></span><span id="Mises_.C3.A0_jour" class="mw-headline">Mises à jour</span> ==
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Upgrading_Umbrel_Node|Mettre à jour un nœud Umbrel]]
+
+<br />
+
+
+<span id="balance-of-satoshis"></span>
+== <span id="Balance_of_Satoshis" class="mw-headline">Balance of Satoshis</span> ==
+
+''Balance of Satoshis'' (BoS) est un ensemble de commandes pour travailler avec les soldes LND. BoS est similaire à ThunderHub ou RideTheLightning. Néanmoins, BoS offre davantage d'options et vous aurez besoin de BoS si vous voulez mettre en place un bot Telegram avec votre nœud. Un tel bot peut servir à obtenir des sauvegardes automatiques de votre nœud ou encore à recevoir des notifications quand vos canaux sont ouverts ou fermés, quand vous transmettez un paiement, quand votre nœud est hors ligne.
+
+Pour plus d'information sur BoS, consultez : [[/plebnet.wiki/wiki/Special:MyLanguage/Balance_of_Satoshis|Balance of Satoshis]].
+
+[https://github.com/niteshbalusu11/BOS-Commands-Document Excellente documentation des commandes BOS]
+
+Instruction pour installer un bot Telegram BoS : [[/plebnet.wiki/wiki/Special:MyLanguage/Umbrel_-_Installing_BoS|Umbrel - Installer BoS]]
+
+<span id="aperçu-des-paramètres-de-configuration-de-lnd"></span>
+== <span id="Aperçu_des_paramètres_de_configuration_de_LND"></span><span id="Aper.C3.A7u_des_param.C3.A8tres_de_configuration_de_LND" class="mw-headline">Aperçu des paramètres de configuration de LND</span> ==
+
+Cliquez sur le lien ci-dessous pour savoir notamment comment limiter la taille des canaux, fixer les commissions (fees) sur les nouveaux canaux, mettre en place des tours de guet (watchtower).
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/LND_Configuration_Settings|Paramètres de configurations de LND]]
+
+<br />
+
+
+<span id="faire-tourner-un-nœud-en-étant-profitable"></span>
+== <span id="Faire_tourner_un_nœud_en_étant_profitable"></span><span id="Faire_tourner_un_n.C5.93ud_en_.C3.A9tant_profitable" class="mw-headline">Faire tourner un nœud en étant profitable</span> ==
+
+Aucune transaction transférée par votre nœud ? Vos sats ne bougent que dans une direction ?
+
+Vous voulez savoir comment rebalancer et gérer les commissions (fees) ? Vous voulez un logiciel qui ajuste automatiquement les commissions ou vous donne les indicateurs clé de performance (Key Performance Indicators, KPI) de votre nœud ?
+
+'''Tout sur la profitabilité des nœuds sur :''' [[/plebnet.wiki/wiki/Special:MyLanguage/Running_A_Profitable_Routing_Node|Avoir un nœud profitable]]
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Fees_And_Profitability|Instructions pour auto-fee et auto-KPI]]
+
+<span id="bac-à-sable-sandbox"></span>
+== <span id="Bac_à_sable_(Sandbox)"></span><span id="Bac_.C3.A0_sable_.28Sandbox.29" class="mw-headline">Bac à sable (Sandbox)</span> ==
+
+Sur [[/plebnet.wiki/wiki/Special:MyLanguage/Plebnet_Playground|PlebNet Playground]], vous pouvez apprendre à utiliser Lightning sans aucun risque (signet).
+
+[[/plebnet.wiki/wiki/Plebnet_Playground|[[File:img/450px-PlebnetPlayground.jpg|450x356px|Logo Plebnet Playground]]]]
+
+<br />
+
+
+<span id="fàq"></span>
+== <span id="FÀQ"></span><span id="F.C3.80Q" class="mw-headline">FÀQ</span> ==
+
+Foire aux questions les plus fréquentes sur les groupes Telegram [https://t.me/plebnet PlebNet]: [[/plebnet.wiki/wiki/Special:MyLanguage/FAQ|FÀQ]]
+
+<br />
+
+
+<span id="ressources"></span>
+== <span id="Ressources" class="mw-headline">Ressources</span> ==
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Resources|Ressources]]
+
+<span id="toutes-les-pages"></span>
+= <span id="Toutes_les_pages" class="mw-headline">Toutes les pages</span> =
+
+<div class="mw-allpages-body">
+
+* [[wiki/Anonymous_edits_and_privacy|Anonymous edits and privacy]]
+* [[wiki/Anonymous_edits_and_privacy/en|Anonymous edits and privacy/en]]
+* [[wiki/Backup/Recovery|Backup/Recovery]]
+* [[wiki/Backup/Recovery/en|Backup/Recovery/en]]
+* [[wiki/Backup/Recovery/es|Backup/Recovery/es]]
+* [[wiki/Backup/Recovery/fr|Backup/Recovery/fr]]
+* [[wiki/Balance_of_Satoshis|Balance of Satoshis]]
+* [[wiki/Balance_of_Satoshis/en|Balance of Satoshis/en]]
+* [[wiki/Balancing_Nodes|Balancing Nodes]]
+* [[wiki/Balancing_Nodes/en|Balancing Nodes/en]]
+* [[wiki/Bash_aliases|Bash aliases]]
+* [[wiki/Bash_aliases/en|Bash aliases/en]]
+* [[wiki/BoS_Telegram_AutoStart|BoS Telegram AutoStart]]
+* [[wiki/BoS_Telegram_AutoStart/en|BoS Telegram AutoStart/en]]
+* [[wiki/Charge-lnd_BTCPayServer_Setup|Charge-lnd BTCPayServer Setup]]
+* [[wiki/Claim_on_Amboss|Claim on Amboss]]
+* [[wiki/Claim_on_Amboss/en|Claim on Amboss/en]]
+* [[wiki/Compacting_Channel_DB|Compacting Channel DB]]
+* [[wiki/FAQ|FAQ]]
+* [[wiki/FAQ/en|FAQ/en]]
+* [[wiki/Fees_And_Profitability|Fees And Profitability]]
+* [[wiki/Fees_And_Profitability/en|Fees And Profitability/en]]
+* [[wiki/Getting_Inbound_Liquidity|Getting Inbound Liquidity]]
+* [[wiki/Getting_started|Getting started]]
+* [[wiki/Getting_started/en|Getting started/en]]
+* [[wiki/Getting_started/fr|Getting started/fr]]
+* [[wiki/Help!_I_do_not_see_any_routing_through_my_node|Help! I do not see any routing through my node]]
+* [[wiki/Help!_I_do_not_see_any_routing_through_my_node/en|Help! I do not see any routing through my node/en]]
+* [[wiki/Help!_My_sats_are_only_moving_in_one_direction|Help! My sats are only moving in one direction]]
+* [[wiki/Help!_My_sats_are_only_moving_in_one_direction/en|Help! My sats are only moving in one direction/en]]
+* [[wiki/How_to_translate_a_page|How to translate a page]]
+* [[wiki/How_to_translate_a_page/en|How to translate a page/en]]
+* [[wiki/How_to_upgrade_umbrel_without_upgrading_umbrel|How to upgrade umbrel without upgrading umbrel]]
+* [[wiki/Iterm2|Iterm2]]
+* [[wiki/Iterm2/en|Iterm2/en]]
+* [[wiki/LND_Configuration_Settings|LND Configuration Settings]]
+* [[wiki/LND_Configuration_Settings/en|LND Configuration Settings/en]]
+* [[wiki/Lightning_Exchanges|Lightning Exchanges]]
+* [[wiki/Lightning_Exchanges/en|Lightning Exchanges/en]]
+* [[wiki/Local_PlebNet_groups|Local PlebNet groups]]
+* [[wiki/Local_PlebNet_groups/en|Local PlebNet groups/en]]
+* [[wiki/Loop|Loop]]
+* [[wiki/Loop/en|Loop/en]]
+* [[wiki/Main_Page|Main Page]]
+* [[wiki/Main_Page/ar|Main Page/ar]]
+* [[wiki/Main_Page/en|Main Page/en]]
+* [[wiki/Main_Page/es|Main Page/es]]
+* [[wiki/Main_Page/fr|Main Page/fr]]
+* [[wiki/Main_Page/ha|Main Page/ha]]
+* [[wiki/Main_Page/hi|Main Page/hi]]
+* [[wiki/Main_Page/tr|Main Page/tr]]
+* [[wiki/Main_Page/wo|Main Page/wo]]
+* [[wiki/Main_Page/yo|Main Page/yo]]
+* [[wiki/Maintaining_node_hygiene|Maintaining node hygiene]]
+* [[wiki/Maintaining_node_hygiene/en|Maintaining node hygiene/en]]
+* [[wiki/Mosh|Mosh]]
+* [[wiki/Mosh/en|Mosh/en]]
+* [[wiki/Node_Hardening|Node Hardening]]
+* [[wiki/Node_Hardening/en|Node Hardening/en]]
+* [[wiki/Node_Hardware|Node Hardware]]
+* [[wiki/Node_Hardware/en|Node Hardware/en]]
+* [[wiki/Notes_on_Privacy|Notes on Privacy]]
+* [[wiki/Opening_channels|Opening channels]]
+* [[wiki/Opening_channels/en|Opening channels/en]]
+* [[wiki/Opening_channels/fr|Opening channels/fr]]
+* [[wiki/Plebnet_Playground|Plebnet Playground]]
+* [[wiki/Plebnet_Playground/en|Plebnet Playground/en]]
+* [[wiki/Plebnet_Playground/es|Plebnet Playground/es]]
+* [[wiki/Plebnet_logo|Plebnet logo]]
+* [[wiki/Plebnet_logo/en|Plebnet logo/en]]
+* [[wiki/Ppm|Ppm]]
+* [[wiki/Ppm/en|Ppm/en]]
+* [[wiki/Project_Ideas|Project Ideas]]
+* [[wiki/Project_Ideas/en|Project Ideas/en]]
+* [[wiki/Push_Channel_Opens|Push Channel Opens]]
+* [[wiki/Push_Channel_Opens/en|Push Channel Opens/en]]
+* [[wiki/Reduce_channel_database_size|Reduce channel database size]]
+* [[wiki/Resources|Resources]]
+* [[wiki/Resources/en|Resources/en]]
+* [[wiki/Running_A_Profitable_Routing_Node|Running A Profitable Routing Node]]
+* [[wiki/Running_A_Profitable_Routing_Node/en|Running A Profitable Routing Node/en]]
+* [[wiki/Setting_a_node_alias|Setting a node alias]]
+* [[wiki/Suez|Suez]]
+* [[wiki/Terminal_UIs|Terminal UIs]]
+* [[wiki/UPS|UPS]]
+* [[wiki/UPS/ar|UPS/ar]]
+* [[wiki/UPS/en|UPS/en]]
+* [[wiki/Umbrel_-_Installing_BoS|Umbrel - Installing BoS]]
+* [[wiki/Upgrading_Umbrel_Node|Upgrading Umbrel Node]]
+* [[wiki/Upgrading_Umbrel_Node/en|Upgrading Umbrel Node/en]]
+* [[wiki/Using_Charge-Lnd_to_Adjust_HTLC_Limits|Using Charge-Lnd to Adjust HTLC Limits]]
+* [[wiki/Watchtowers|Watchtowers]]
+* [[wiki/Welcome_to_Plebnet|Welcome to Plebnet]]
+* [[wiki/Welcome_to_Plebnet/en|Welcome to Plebnet/en]]
+* [[wiki/Welcome_to_Plebnet/es|Welcome to Plebnet/es]]
+* [[wiki/Welcome_to_Plebnet/fr|Welcome to Plebnet/fr]]
+
+
+</div>
+
+</div>

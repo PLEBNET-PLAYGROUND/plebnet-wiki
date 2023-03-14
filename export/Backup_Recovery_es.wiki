@@ -1,0 +1,141 @@
+<span id="backuprecoveryes"></span>
+= Backup/Recovery/es =
+
+<div class="mw-pt-translate-header noprint" dir="ltr" lang="en">
+
+This page is a <span class="plainlinks">[[/plebnet.wiki/index.php?title=Special:Translate&group=page-Backup%2FRecovery&action=page&filter=&language=es|translated version]]</span> of the page [[/plebnet.wiki/wiki/Backup/Recovery|Backup/Recovery]] and the translation is 50% complete.
+
+</div>
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+[[/plebnet.wiki/wiki/Backup/Recovery|English]] • ‎<span class="mw-pt-languages-selected mw-pt-progress mw-pt-progress--med" lang="es">español</span> • ‎[[/plebnet.wiki/wiki/Backup/Recovery/fr|français]]
+
+</div>
+
+</div>
+Operar un Nodo LN implica un cierto nivel de riesgo y existe la posibilidad de perder fondos. Sin embargo, siguiendo algunos pasos sencillos se puede reducir drásticamente la posibilidad de perder fondos.
+
+Veamos primero sobre backup de los canales:
+
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+<span id="static-channel-backups-scb"></span>
+=== <span id="Static_Channel_Backups_(SCB)"></span><span id="Static_Channel_Backups_.28SCB.29" class="mw-headline">Static Channel Backups (SCB)</span> ===
+
+
+</div>
+LND tiene una forma de obtener un archivo que almacena un backup de sus canales utilizando un método llamado Backup Estático de Canales o SCB (del inglés: Static Channel Backups). En lugar de intentar mantener el último estado del canal, el paquete de SCB intentará notificar a los peers remotos para que fuercen el cierre del canal. Esto evitará que los usuarios transmitan accidentalmente un estado antiguo y les permitirá cerrarlo y recibir su saldo local. Tenga en cuenta que cuando utilice un SCB recibirá sus fondos con bastante rapidez ya que el bloqueo de tiempo para los cierres forzados sólo se aplicará a los peers que inicien el cierre forzado y no al otro peer. Un archivo SCB se actualiza cuando se abre o se cierra un canal. La información del canal se añade a la SCB cuando se abre y se elimina de la SCB cuando se cierra.
+
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+An SCB file is updated when a channel is opened or closed. Channel information is added to the SCB when it's opened and is removed from the SCB when it's closed.
+
+
+</div>
+NOTA IMPORTANTE: Los SCBs no restaurarán su nodo de vuelta a la normalidad, son sólo una forma de recuperar todos los fondos en su billetera on-chain y los fondos en el lado local de sus canales (off-chain).
+
+¿Cómo se obtiene un SCB? Hay varias maneras de obtener un SCB.
+
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+There are several ways to obtain an SCB.
+
+
+</div>
+1. Utilizando el Telegram bot BOS (recomendado): https://plebnet.wiki/wiki/Umbrel_-_Installing_BoS/es
+
+BOS Telegram es una forma recomendada porque te envía automáticamente un archivo SCB a tu bot de telegram cada vez que se abre/cierra un canal, los otros métodos son un proceso manual y existe el riesgo de no mantener el último backup.
+
+RECUPERACIÓN (Escenarios):
+
+Shit happens! Si tu nodo se cae y no puedes volver a subirlo:
+
+1. Todavía tienes acceso a tu nodo: Necesitarás tu seed de 24 palabras y el SCB. Siga estas instrucciones después -&gt; https://github.com/lightningnetwork/lnd/blob/master/docs/recovery.md#recovering-using-scbs (Use lncli restorechanbackup)
+
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+You will need your 24-word cipher seed and the SCB. Follow [https://github.com/lightningnetwork/lnd/blob/master/docs/recovery.md#recovering-using-scbs these instructions] (Use lncli restorechanbackup).
+
+
+</div>
+2. Existe la posibilidad de que no tengas acceso a tu nodo (podría haber sido destruido en un ataque nuclear): En este escenario, necesitarás iniciar un nuevo nodo para recuperar los fondos. Necesitarás tu seed de 24 palabras y el SCB. Puedes configurar un nuevo nodo en modo neutrino para ahorrar tiempo, neutrino es un cliente ligero que te permite ejecutar un nodo LN sin Bitcoin core. Puedes crear un nuevo nodo neutrino siguiendo estas instrucciones de Alex Bosworth: https://github.com/alexbosworth/ln-service Estas instrucciones son para crear un nodo en AWS EC2, sin embargo, puedes crear uno en tu laptop/desktop o en una Raspberry Pi. Después de iniciar un nuevo nodo en neutrino, puedes seguir las mismas instrucciones de recuperación: https://github.com/lightningnetwork/lnd/blob/master/docs/recovery.md#recovering-using-scbs (usa lncli create -multi_file=channel.backup) Nota: Sustituye channel.backup por el nombre de tu archivo de backup.
+
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+In this scenario, for example, if your node has been destroyed in a nuclear attack, you will need to start a new node to recover funds.
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+You will need your 24-word cipher seed and the SCB. You can set up a new node in Neutrino mode to save time. Neutrino is a lightweight client that allows you to run an LN node without Bitcoin Core. You can create a new Neutrino node by following [https://github.com/alexbosworth/ln-service these instructions by Alex Bosworth]. These instructions are for creating a node on AWS EC2, however, you can create one on your laptop/desktop or on a Raspberry Pi.
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+After you start a new node on Neutrino, you can follow [https://github.com/lightningnetwork/lnd/blob/master/docs/recovery.md#recovering-using-scbs the same recovery instructions]. (Use lncli create -multi_file=channel.backup)
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+Note: Replace channel.backup with the name of your backup file.
+
+
+</div>
+3. TODA ESPERANZA SE HA PERDIDO (Sin SCB): Si no tienes un SCB y todo lo que tienes es tu seed de 24 palabras, hay una posibilidad de recuperar tus fondos (sin promesas). Primero, contacta con todos tus compañeros y pídeles que te fuercen el cierre manualmente. Después de que el cierre forzado se confirme, sigue estas instrucciones: https://github.com/guggero/chantools/blob/master/doc/chantools_genimportscript.md
+
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+If you don't have an SCB and all you have is your 24-word cipher seed, there is a possibility to recover your funds (no promises).
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+First, contact all your peers and ask them to force close on you manually.
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+After the force closure is confirmed, follow [https://github.com/guggero/chantools/blob/master/doc/chantools_genimportscript.md these instructions].
+
+
+</div>
+Escenarios de excepción:
+
+1. El nodo se cae durante un in-flight HTLC: Si había un pago in-flight que estaba siendo enrutado a través de tu nodo o pago que estabas haciendo y tu nodo se cae y no vuelve a subir, lo siento, no hay manera de recuperar los fondos que están atascados en el HTLC a partir de ahora, pero puedes recuperar todos los otros fondos on y off-chain. Este es probablemente un escenario muy extremo.
+
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+If there was a payment that was in-flight that was being routed through your node or payment you were making and your node goes down and does not come back up, sorry, there is no way to recover funds that are stuck in the HTLC as of now but you can recover all the other on-chain and off-chain funds. This is probably a very extreme scenario.
+
+
+</div>
+2. Iniciaste un cierre forzado, los fondos siguen bloqueados por time-lock: Si inicias un cierre forzado, los fondos se bloquean durante un cierto número de bloques. Si el nodo se cae durante el período de bloqueo de tiempo de un cierre forzado iniciado por usted, desafortunadamente, LND tiene un bug hoy en día que elimina los detalles del canal del último SCB antes de que el bloqueo de tiempo expire. La forma de recuperar estos fondos sería utilizar un SCB más antiguo que puedas tener antes de que los detalles del canal fueran eliminados y utilizarlo para iniciar la recuperación como se muestra en los pasos anteriores y recibirás tus fondos de vuelta a tu cartera en la cadena después de que el tiempo de bloqueo expire. El bot de BOS Telegram puede ser un verdadero salvador en este escenario porque el historial de chat con el bot tendrá SCBs más antiguos que puedes usar para recuperar los fondos. Lightning Labs dice que arreglará esto en la versión 0.14.0-beta. Si no tienes un SCB más antiguo, desafortunadamente, no hay otra manera a partir de hoy de recuperar esos fondos, esto también es un escenario extremo.
+
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+If you initiate a force closure, the funds are locked for a certain number of blocks. If the node goes down during the time-lock period of a force closure initiated by you, unfortunately, LND has a bug today which removes the channel details from the latest SCB before the time-lock expires. The way to recover these funds would be to use an older SCB that you might have before the channel details were removed and use it start the recovery as shown in the previous steps and you will receive your funds back to your on-chain wallet after the time-lock expires. BOS Telegram bot can be a real savior in this scenario because the chat history with the bot will have older SCBs that you can use to recover funds. Lightning Labs say they will be fixing this in 0.14.0-beta.
+
+
+</div>
+<div class="mw-content-ltr" lang="en" dir="ltr">
+
+If you don't have an older SCB, unfortunately, there is no other way as of today to recover those funds, this also is an extreme scenario.
+
+
+</div>
+
+</div>
