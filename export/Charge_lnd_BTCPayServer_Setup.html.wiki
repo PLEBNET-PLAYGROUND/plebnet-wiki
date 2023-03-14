@@ -1,0 +1,113 @@
+<span id="charge-lnd-btcpayserver-setup"></span>
+= Charge-lnd BTCPayServer Setup =
+
+<div class="mw-parser-output">
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#Use_the_following_systemd_service_definitions|<span class="tocnumber">1</span> <span class="toctext">Use the following systemd service definitions</span>]]
+** [[#.2Fetc.2Fsystemd.2Fsystem.2Fcharge-lnd.service|<span class="tocnumber">1.1</span> <span class="toctext">/etc/systemd/system/charge-lnd.service</span>]]
+** [[#.2Fetc.2Fsystemd.2Fsystem.2Fcharge-lnd.timer|<span class="tocnumber">1.2</span> <span class="toctext">/etc/systemd/system/charge-lnd.timer</span>]]
+** [[#Sample_fragment_to_do_this|<span class="tocnumber">1.3</span> <span class="toctext">Sample fragment to do this</span>]]
+
+
+</div>
+<span id="use-the-following-systemd-service-definitions"></span>
+== <span id="Use_the_following_systemd_service_definitions" class="mw-headline">Use the following systemd service definitions</span> ==
+
+<span id="etcsystemdsystemcharge-lnd.service"></span>
+=== <span id="/etc/systemd/system/charge-lnd.service"></span><span id=".2Fetc.2Fsystemd.2Fsystem.2Fcharge-lnd.service" class="mw-headline">/etc/systemd/system/charge-lnd.service</span> ===
+
+<pre>
+[Unit]
+Documentation=https://github.com/accumulator/charge-lnd/blob/master/README.md
+#Requires=lnd.service
+#After=lnd.service
+
+[Service]
+Type=oneshot
+
+# change /usr/local/bin and /var/lib/lnd to a path where you installed lnd
+# and a path to its datadir respectively
+ExecStart=/usr/local/bin/charge-lnd \
+    --lnddir /var/lib/docker/volumes/generated_lnd_bitcoin_datadir/_data \
+    --grpc localhost:10009 \
+    --config /etc/lnd-charge.config
+
+User=root
+Group=root
+
+# https://www.freedesktop.org/software/systemd/man/systemd.exec.html#Sandboxing
+CapabilityBoundingSet=
+LockPersonality=true
+MemoryDenyWriteExecute=true
+NoNewPrivileges=true
+PrivateDevices=true
+PrivateTmp=true
+PrivateUsers=true
+ProtectClock=true
+ProtectControlGroups=true
+ProtectHome=true
+ProtectHostname=true
+ProtectKernelLogs=true
+ProtectKernelModules=true
+ProtectKernelTunables=true
+ProtectSystem=strict
+RemoveIPC=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+RestrictNamespaces=true
+RestrictRealtime=true
+RestrictSUIDSGID=true
+SystemCallArchitectures=native
+SystemCallFilter=@system-service
+SystemCallFilter=~add_key clone3 get_mempolicy kcmp keyctl mbind move_pages name_to_handle_at personality process_vm_readv process_vm_writev request_key set_mempolicy setns unshare userfaultfd
+
+# may have to be modified if your lnd or electrum server is somewhere else than localhost
+IPAddressAllow=127.0.0.1/32 ::1/128
+IPAddressDeny=any
+ 
+</pre>
+<span id="etcsystemdsystemcharge-lnd.timer"></span>
+=== <span id="/etc/systemd/system/charge-lnd.timer"></span><span id=".2Fetc.2Fsystemd.2Fsystem.2Fcharge-lnd.timer" class="mw-headline">/etc/systemd/system/charge-lnd.timer</span> ===
+
+<pre>
+[Unit]
+Documentation=https://github.com/accumulator/charge-lnd/blob/master/README.md
+
+[Timer]
+# https://www.freedesktop.org/software/systemd/man/systemd.time.html#Calendar%20Events
+OnCalendar=*-*-* *:00:00 
+RandomizedDelaySec=10s
+Unit=charge-lnd.service
+OnBootSec=1 m
+
+[Install]
+WantedBy=multi-user.target
+
+</pre>
+<br />
+Place your charge-lnd configuration in /etc/lnd-charge.config
+
+You will need to expose port 10009 locally on LND to the host via a custom docker fragment.
+
+<span id="sample-fragment-to-do-this"></span>
+=== <span id="Sample_fragment_to_do_this" class="mw-headline">Sample fragment to do this</span> ===
+
+<pre>version: &quot;3&quot;
+
+services:
+  lnd_bitcoin:
+    ports:
+      - &quot;10009:10009&quot;
+
+</pre>
+
+</div>

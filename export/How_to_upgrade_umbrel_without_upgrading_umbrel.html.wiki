@@ -1,0 +1,68 @@
+<span id="how-to-upgrade-umbrel-without-upgrading-umbrel"></span>
+= How to upgrade umbrel without upgrading umbrel =
+
+<div class="mw-parser-output">
+
+After the recent upgrade of umbrel to 0.5, bitcoin and lightning have been moved to app structure and this has broken existing scripts and tooling for many node runners. If you would like to remain on the lower version of umbrel but want to take advantage of the newer release of lnd/tor/bitcoind and other apps you can try the following '''AT YOUR OWN RISK'''. The steps below require editing <code>docker-compose.yml</code> files on your umbrel node to use latest release of the underlying software.
+
+'''WARNING''' EDITING THESE FILES ARE RISKY AND SHOULD ONLY BE ATTEMPTED BY THOSE WHO ARE COMFORTABLE WITH SSH AND FAMILIAR WITH DEBUGGING THEIR NODE IN CASE THINGS GO WRONG. YOUR EDITS WILL BE REPLACED BY NEWER UMBREL UPGRADE WHICH CAN HAVE UNWARRANTED CONSEQUENCES.''''''
+
+If you still wish to proceed after this the rest of the procedure is simple.
+
+Step 0. Take a copy of your latest channel backup and note your seed phrase in case something goes terribly wrong.
+
+Step 1. Make copy of your docker-compose.yml <code>cd ~/umbrel; cp docker-compose.yml ~/docker-compose.yml.bak</code>
+
+In case of issues, this will be used for reverting the system to original state.
+
+<br />
+Step 2. Download the latest binaries for the subsystems you wish you upgrade. The version mentioned in the commands below needs to be updated for the latest image.
+
+'''tor proxy'''
+
+<code> cd ~/umbrel; docker pull lncm/tor:0.4.7.8</code>
+
+Do note the digest for each docker image you pull. It would look as below. It is best to copy-paste into a notepad since you will need that information later.
+
+<code>0.4.7.8: Pulling from lncm/tor Digest: sha256:aab30ebb496aa25934d6096951d8b200347c3c3ce5db3493695229efa2601f7b</code>
+
+'''bitcoind''' <code>cd ~/umbrel; docker pull lncm/bitcoind:v23.0</code>
+
+'''lnd''' <code>cd ~/umbrel; docker pull lightninglabs/lnd:v0.15.0-beta</code>
+
+<br />
+Step 3. Edit the docker-compose.yml file with the latest images
+
+<code> cd ~/umbrel; nano docker-compose.yml </code>
+
+yml files need careful editing since they do not tolerate unwanted characters. Please be careful.
+
+for each of the image to be updated, edit the yml file with the imagename@sha256 hash you got from the digest. For example
+
+<br />
+'''tor proxy'''
+
+<pre>       tor_proxy:
+                container_name: tor
+                image: lncm/tor:0.4.7.8@sha256:aab30ebb496aa25934d6096951d8b200347c3c3ce5db3493695229efa2601f7b</pre>
+<br />
+'''bitcoind'''
+
+<pre>       bitcoin:
+                container_name: bitcoin
+                image: lncm/bitcoind:v23.0@sha256:57317c90d89156a30327fe1b8e51b836e0fd1a8ba13721eb2e75e6b35a570e26</pre>
+<br />
+'''lnd'''
+
+<pre>        lnd:
+                container_name: lnd
+                image: lightninglabs/lnd:v0.15.0-beta@sha256:d227a9db0727ff56020c8d6604c8c369757123d238ab6ce679579c2dd0d0d259</pre>
+<br />
+Step 4 : Restart
+
+<code> cd ~/umbrel; sudo scripts/stop &amp;&amp; sudo scripts/start </code>
+
+Step 5 : Validate from logs that the latest version is being used. Take a copy of your latest channel backup. Done!
+
+
+</div>

@@ -1,0 +1,58 @@
+<span id="bash-aliasesen"></span>
+= Bash aliases/en =
+
+<div class="mw-pt-translate-header noprint" dir="ltr" lang="en">
+
+[[Special_Translate_amp_group_page_Bash_aliases_amp_language_en_amp_action_page_amp_filter_.html|Translate this page]]
+
+</div>
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+[[/plebnet.wiki/wiki/Bash_aliases|English]]
+
+</div>
+
+</div>
+Bash aliases are used to create shorter versions of more complex commands that would otherwise be too long and tedious to type in. In this case, we see aliases for commands that are focussed on operating a lightning node.
+
+Rather than simply adding all these aliases to your .bash_aliases, consider reading through them carefully, and testing them out first to understand what they do.
+
+WORK IN PROGRESS
+
+<div class="mw-highlight mw-highlight-lang-bash mw-content-ltr mw-highlight-lines" dir="ltr">
+
+<pre># linux default bitcoin regtest path
+alias brdir=&quot;cd ~/.bitcoin/regtest&quot;
+
+alias bc='bitcoin-cli'
+alias bt='bitcoin-cli -testnet'
+alias br='bitcoin-cli -regtest'
+alias gbinfo='bitcoin-cli getblockchaininfo'
+
+alias lnchannelcaps='lncli describegraph | jq '\''.nodes[].total_channel_capacities=0 | foreach .nodes[] as ( . ; foreach .edges[] as ( . ; if .node1_pub==.pub_key then (|.total_channel_capacities=.total_channel_capacity+(.capacity|tonumber)) else empty end; .) ; .)'\'''
+alias lnactive='lncli listchannels | jq '\''[ .channels | .[] | select(.active=true) ] | length '\'''
+alias lnchaninfo='lncli listchannels | jq '\''[ .channels | .[] | { &quot;remote_pubkey&quot; : .remote_pubkey, &quot;capacity&quot;: .capacity|tonumber, &quot;local_balance&quot;: .local_balance|tonumber, &quot;remote_balance&quot;: .remote_balance|tonumber } ]'\'''
+
+
+alias channels='lncli listchannels'
+alias channelbalance='lncli channel balance'
+alias pendingchannels='lncli pendingchannels'
+alias openchannel='lncli openchannel'
+alias connect='lncli connect'
+alias payinvoice'lncli payinvoice'
+alias addinvoie='lncli addinvoice'</pre>
+
+</div>
+[[/plebnet.wiki/wiki/File:Bash_aliases.jpeg|[[File:img/500px-Bash_aliases.jpeg|500x211px|Bash aliases.jpeg]]]]
+
+
+</div>
