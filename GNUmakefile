@@ -214,12 +214,12 @@ endif
 docs:##
 	#@echo docs
 	bash -c 'if pgrep MacDown; then pkill MacDown; fi'
-	bash -c 'cat $(PWD)/sources/HEADER.md                >  $(PWD)/README.md'
-	bash -c 'cat $(PWD)/sources/COMMANDS.md              >> $(PWD)/README.md'
-	bash -c 'cat $(PWD)/sources/FOOTER.md                >> $(PWD)/README.md'
+	bash -c 'cat $(PWD)/export/HEADER.md                >  $(PWD)/README.md'
+	bash -c 'cat $(PWD)/export/COMMANDS.md              >> $(PWD)/README.md'
+	bash -c 'cat $(PWD)/export/FOOTER.md                >> $(PWD)/README.md'
 	@if hash pandoc 2>/dev/null; then echo; fi || $(HOMEBREW) install pandoc
-	bash -c 'reload && pandoc -s README.md -o index.html'
-	git add --ignore-errors sources/*.md
+	bash -c 'pandoc -s README.md -o index.html'
+	git add --ignore-errors export/*.md
 	git add --ignore-errors *.md
 	#git ls-files -co --exclude-standard | grep '\.md/$\' | xargs git
 
