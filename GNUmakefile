@@ -27,7 +27,7 @@ export PIP
 export PIP3
 endif
 
-PYTHON_VENV                             := $(shell python -c "import sys; sys.stdout.write('1') if hasattr(sys, 'base_prefix') else sys.stdout.write('0')")
+PYTHON_VENV                             := $(shell python  -c "import sys; sys.stdout.write('1') if hasattr(sys, 'base_prefix') else sys.stdout.write('0')")
 PYTHON3_VENV                            := $(shell python3 -c "import sys; sys.stdout.write('1') if hasattr(sys, 'real_prefix') else sys.stdout.write('0')")
 export PYTHON_VENV
 export PYTHON3_VENV
@@ -146,9 +146,15 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) .
 .PHONY: init
 .ONESHELL:
 init:## 	DL pandoc & pip install requirements.txt
-	type -P curl && curl -LJO https://github.com/jgm/pandoc/releases/download/3.1/pandoc-3.1-macOS.pkg | echo ""
-	type -P curl && curl -LJO https://github.com/jgm/pandoc/releases/download/3.1/pandoc-3.1-linux-arm64.tar.gz | echo ""
-	type -P curl && curl -LJO https://github.com/jgm/pandoc/releases/download/3.1/pandoc-3.1-linux-amd64.tar.gz | echo ""
+	type -P pandoc || \
+		type -P curl && \
+		curl -LJO https://github.com/jgm/pandoc/releases/download/3.1/pandoc-3.1-macOS.pkg | echo ""
+	type -P pandoc || \
+		type -P curl && \
+		curl -LJO https://github.com/jgm/pandoc/releases/download/3.1/pandoc-3.1-linux-arm64.tar.gz | echo ""
+	type -P pandoc || \
+		type -P curl && \
+		curl -LJO https://github.com/jgm/pandoc/releases/download/3.1/pandoc-3.1-linux-amd64.tar.gz | echo ""
 	$(PYTHON3) -m pip install $(USER_FLAG) --upgrade pip
 	$(PYTHON3) -m pip install $(USER_FLAG) -r requirements.txt
 help:## 	verbose help
