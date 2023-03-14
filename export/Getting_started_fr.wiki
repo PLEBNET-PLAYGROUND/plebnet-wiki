@@ -1,0 +1,95 @@
+<span id="getting-startedfr"></span>
+= Getting started/fr =
+
+<div class="mw-pt-translate-header noprint" dir="ltr" lang="en">
+
+This page is a <span class="plainlinks">[[/plebnet.wiki/index.php?title=Special:Translate&group=page-Getting+started&action=page&filter=&language=fr|translated version]]</span> of the page [[/plebnet.wiki/wiki/Getting_started|Getting started]] and the translation is 100% complete.
+
+</div>
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+[[/plebnet.wiki/wiki/Getting_started|English]] • ‎<span class="mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="fr">français</span>
+
+</div>
+
+</div>
+Pour rejoindre PlebNet vous avez besoin d'un nœud [https://fr.wikipedia.org/wiki/Lightning_(r%C3%A9seau) Lightning] et de [https://telegram.org/fr?setln=fr Telegram] pour discuter.
+
+Si ne connaissez rien au réseau Lightning et désirez comprendre son fonctionnement avant de vous lancer, lisez [https://bitcoiner.guide/lightning/fr/ le guide pour débutants].
+
+<br />
+
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#N.C5.93ud|<span class="tocnumber">1</span> <span class="toctext">Nœud</span>]]
+* [[#Telegram|<span class="tocnumber">2</span> <span class="toctext">Telegram</span>]]
+* [[#CheeseRobot|<span class="tocnumber">3</span> <span class="toctext">CheeseRobot</span>]]
+* [[#N.C5.93ud_avec_2_canaux_ou_plus|<span class="tocnumber">4</span> <span class="toctext">Nœud avec 2 canaux ou plus</span>]]
+
+
+</div>
+<span id="nœud"></span>
+== <span id="Nœud"></span><span id="N.C5.93ud" class="mw-headline">Nœud</span> ==
+
+Il y a plusieurs options pour lancer un nœud Lightning. Certaines sont uniquement logicielles tandis que d'autres nécessitent aussi du matériel.
+
+* [https://github.com/rootzoll/raspiblitz RaspiBlitz] : super option qui tourne sur un [https://fr.wikipedia.org/wiki/Raspberry_Pi Raspberry Pi] v4+
+* [https://getumbrel.com/ Umbrel] : package orienté grand public qui tourne sur un Raspberry Pi v4+
+** [https://youtu.be/fppmhqjqh2E BTC SESSIONS] : chaîne YouTube avec plusieurs vidéos pour commencer avec un Pi et Umbrel
+** '''Note de sécurité sur Umbrel''' : ''La sécurité de votre nœud Umbrel dépend de celle de votre réseau internet (WiFi/LAN).'' Lisez attentivement les [https://github.com/getumbrel/umbrel/blob/master/SECURITY.md notes de sécurité] founries par Umbrel. Vos fonds peuvent être volés si quelqu'un dérobe votre SSD. Donc protégez votre nœud comme tous les objets de valeur de votre maison. Si vous êtes à l'aise avec la ligne de commande, vous pouvez changer le mot de passe du portefeuille puis utiliser ce mot de passé à chaque redémarrage de lnd (ou équivalent) ou durant les mises à jour (sinon, votre nœud ne va pas démarrage sans le mot de passe correct du portefeuille). Ne conservez pas le mot de passe du portefeuille identique au mot de passe du tableau de suivant (dashboard) sinon Umbrel le changement au prochain redémarrage. Par défaut, le portefeuille se déverrouille automatiquement au démarrage.
+* [https://start9.com/ Start9] : option tout-en-un qui inclue le matériel nécessaire
+* [https://www.mynodebtc.com/ myNode] : autre otion tout-en-un
+* [https://stadicus.github.io/RaspiBolt/ RaspiBolt] : guide sur comment démarrer avec un Rasperri Pi
+
+Pour plus d'information sur le matériel pour un nœud : [[/plebnet.wiki/wiki/Special:MyLanguage/Node_Hardware|Matériel pour nœud]].
+
+<br />
+
+
+<span id="telegram"></span>
+== <span id="Telegram" class="mw-headline">Telegram</span> ==
+
+Les discussions PlebNet ont lieu sur Telegram.
+
+Téléchargez [https://telegram.org/fr?setln=fr Telegram] et rejoignez le [https://t.me/plebnet groupe PlebNet].
+
+Le canal Telegram [https://t.me/plebnetlibrary PlebNet Library] contient des ressources de qualité.
+
+<br />
+
+
+<span id="cheeserobot"></span>
+== <span id="CheeseRobot" class="mw-headline">CheeseRobot</span> ==
+
+CheeseBot est un bot Telegram qui vous permet de rejoindre et d'interagir avec PlebNet.
+
+Vous devez envoyer un message privé à <code>@cheeserobot</code> pour ajouter votre nœud. Envoyez <code>/claim</code> puis suivez les instructions. Ensuite, sur le canal Telegram PlebNet, envoyez <code>/id@cheeserobot</code> pour être ajouté au graph.
+
+<br />
+
+
+<span id="nœud-avec-2-canaux-ou-plus"></span>
+== <span id="Nœud_avec_2_canaux_ou_plus"></span><span id="N.C5.93ud_avec_2_canaux_ou_plus" class="mw-headline">Nœud avec 2 canaux ou plus</span> ==
+
+Une fois que vous avez deux canaux, rejoignez le groupe privé NODE RUNNERS. Envoyez un message à [https://t.me/AEHW1 Walton] pour être ajouté au groupe.
+
+
+</div>

@@ -1,0 +1,344 @@
+<span id="main-page"></span>
+= Main Page =
+
+<div class="mw-pt-translate-header noprint nomobile" dir="ltr" lang="en">
+
+This page contains <span class="plainlinks">[[/plebnet.wiki/index.php?title=Main_Page&oldid=1902&diff=2431|changes]]</span> which are not marked for translation.
+
+</div>
+<div class="mw-parser-output">
+
+<div class="mw-pt-languages noprint" lang="en" dir="ltr">
+
+<div class="mw-pt-languages-label">
+
+Other languages:
+
+</div>
+<div class="mw-pt-languages-list">
+
+<span class="mw-pt-languages-ui mw-pt-languages-selected mw-pt-progress mw-pt-progress--complete" lang="en">English</span> • ‎[[/plebnet.wiki/wiki/Main_Page/ha|Hausa]] • ‎[[/plebnet.wiki/wiki/Main_Page/tr|Türkçe]] • ‎[[/plebnet.wiki/wiki/Main_Page/wo|Wolof]] • ‎[[/plebnet.wiki/wiki/Main_Page/yo|Yorùbá]] • ‎[[/plebnet.wiki/wiki/Main_Page/es|español]] • ‎[[/plebnet.wiki/wiki/Main_Page/fr|français]] • ‎[[/plebnet.wiki/wiki/Main_Page/ar|العربية]] • ‎[[/plebnet.wiki/wiki/Main_Page/hi|हिन्दी]]
+
+</div>
+
+</div>
+'''Welcome to PLEBNET!'''
+
+We've outlined the main 'guide' on this page. Follow the articles here in order to gain a better understanding of the steps required to join PLEBNET, and getting your node up &amp; running. If you'd like to simply browse around, you can view all our pages [[/plebnet.wiki/wiki/Special:AllPages|Special:AllPages]].
+
+<br />
+
+
+<div id="toc" class="toc" role="navigation" aria-labelledby="mw-toc-heading">
+
+<div class="toctitle" lang="en" dir="ltr">
+
+<span id="mw-toc-heading"></span>
+== Contents ==
+
+<span class="toctogglespan"></span>
+
+</div>
+* [[#To_read_first|<span class="tocnumber">1</span> <span class="toctext">To read first</span>]]
+* [[#Getting_Started|<span class="tocnumber">2</span> <span class="toctext">Getting Started</span>]]
+* [[#Claim_your_node_.5Boptional.5D|<span class="tocnumber">3</span> <span class="toctext">Claim your node [optional]</span>]]
+* [[#Opening_Channels|<span class="tocnumber">4</span> <span class="toctext">Opening Channels</span>]]
+* [[#Rebalance_Channels|<span class="tocnumber">5</span> <span class="toctext">Rebalance Channels</span>]]
+* [[#Maintaining_Proper_Node_Hygiene|<span class="tocnumber">6</span> <span class="toctext">Maintaining Proper Node Hygiene</span>]]
+* [[#Backup.2FRecovery|<span class="tocnumber">7</span> <span class="toctext">Backup/Recovery</span>]]
+* [[#Let.E2.80.99s_Get_Personal|<span class="tocnumber">8</span> <span class="toctext">Let’s Get Personal</span>]]
+* [[#Upgrades|<span class="tocnumber">9</span> <span class="toctext">Upgrades</span>]]
+* [[#Popular_Tools|<span class="tocnumber">10</span> <span class="toctext">Popular Tools</span>]]
+** [[#Balance_of_Satoshis|<span class="tocnumber">10.1</span> <span class="toctext">Balance of Satoshis</span>]]
+** [[#Lightning_Shell|<span class="tocnumber">10.2</span> <span class="toctext">Lightning Shell</span>]]
+* [[#LND_Configuration_Settings_Overview|<span class="tocnumber">11</span> <span class="toctext">LND Configuration Settings Overview</span>]]
+* [[#Running_A_Profitable_Routing_Node|<span class="tocnumber">12</span> <span class="toctext">Running A Profitable Routing Node</span>]]
+* [[#Playground_.2F_Sandbox|<span class="tocnumber">13</span> <span class="toctext">Playground / Sandbox</span>]]
+* [[#FAQ|<span class="tocnumber">14</span> <span class="toctext">FAQ</span>]]
+* [[#Resources|<span class="tocnumber">15</span> <span class="toctext">Resources</span>]]
+* [[#All_Pages|<span class="tocnumber">16</span> <span class="toctext">All Pages</span>]]
+
+
+</div>
+<span id="to-read-first"></span>
+== <span id="To_read_first" class="mw-headline">To read first</span> ==
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Welcome_to_Plebnet|Welcome to PLEBNET]]
+
+'''Please read the above link before anything else!''' Contains a useful introduction and tips.
+
+[[/plebnet.wiki/wiki/Notes_on_Privacy|Important points to consider on how to protect your privacy]]
+
+<span id="getting-started"></span>
+== <span id="Getting_Started" class="mw-headline">Getting Started</span> ==
+
+Are you brand new and perhaps don't quite understand lightning? Do you not have your own node yet? Are you not yet in the PLEBNET telegram group?
+
+Please see the [[/plebnet.wiki/wiki/Special:MyLanguage/Getting_started|Getting started]] page.
+
+<br />
+
+
+<span id="claim-your-node-optional"></span>
+== <span id="Claim_your_node_[optional]"></span><span id="Claim_your_node_.5Boptional.5D" class="mw-headline">Claim your node [optional]</span> ==
+
+Important: If you are concerned about your privacy, do not claim your node (or for that matter use telegram). There are a few things to be aware of when claiming your node on cheeserobot. CheeseRobot, a closed source software, will link your telegram handle to your node, and subsequently to UTXOs (or bitcoin public addresses) for any public channels that you establish. This may have unintended consequences of doxing your identify (and UTXOs) in case the phone number that is associated with your telegram handle is exposed. Make sure to take basic precautions if you do opt to use the cheeserobot, like making sure that your telegram phone number isn't visible by default and isn't exposed to your contacts.
+
+For telegram, DM [https://t.me/cheeserobot @cheeserobot] and then <code>/claim</code> your node (follow the instructions, you will need to sign a message with your node to prove you are owner of the node).
+
+Then, in the [https://t.me/plebnet PLEBNET] group announce your node with <code>/node</code>. If you see your own node, success. Repeat in other groups which support CheeseRobot with <code>/node</code>.
+
+Additionally, [https://amboss.space Amboss.space] is one of the best websites for looking up nodes and their basic information. People may go to Amboss to browse your node's info. You can claim your node on Amboss which will allow you personalize your node's profile and add additional information. Use these instructions: [[/plebnet.wiki/wiki/Special:MyLanguage/Claim_on_Amboss|Claim on Amboss]]
+
+<span id="opening-channels"></span>
+== <span id="Opening_Channels" class="mw-headline">Opening Channels</span> ==
+
+The first question which a pleb has after (or even before) the node is synced &quot;'''who should I open channel with'''&quot;
+
+I would say - '''with a mentor who is willing to spend time with you, teach you the ropes, mentor and guide you to be a better node runner'''
+
+Of course in the age of google, internet, and instant gratification, this thought can be frowned upon but there is no replacement for a mentor in your journey as node runner.
+
+For information relating to lightning channels, including methods to get inbound liquidity see: [[/plebnet.wiki/wiki/Special:MyLanguage/Opening_channels|Opening channels]]
+
+<span id="rebalance-channels"></span>
+== <span id="Rebalance_Channels" class="mw-headline">Rebalance Channels</span> ==
+
+Keeping your channels properly balanced is critical to your node's routing ability. Ride The Lightning and Thunderhub are good visual tools to start with. As you progress in your journey, the [https://github.com/alexbosworth/balanceofsatoshis Balance of Satoshis] is a command-line tool that provides extra flexibility to rebalance your peers. [https://github.com/itsneski/lightning-jet Lightning Jet] is a fully automated rebalancer that will automatically rebalance all of your channels. See [[/plebnet.wiki/wiki/Resources|Resources]] for links to other available tools.
+
+<span id="maintaining-proper-node-hygiene"></span>
+== <span id="Maintaining_Proper_Node_Hygiene" class="mw-headline">Maintaining Proper Node Hygiene</span> ==
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Node_Hardening|Node Hardening]]
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Maintaining_node_hygiene|Maintaining node hygiene]]
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Node_Hardware|Node Hardware]]
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/UPS|UPS]] (Uninterrupted Power Supply)
+
+[[/plebnet.wiki/wiki/Reduce_channel_database_size|Keeping Channel DB in check]]
+
+[[/plebnet.wiki/wiki/Compacting_Channel_DB|Prune and compact channel DB]]
+
+<span id="backuprecovery"></span>
+== <span id="Backup/Recovery"></span><span id="Backup.2FRecovery" class="mw-headline">Backup/Recovery</span> ==
+
+The following link contains some important information about channel backups and recovery solutions so that you have a better idea of how to keep your funds safe.
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Backup/Recovery|Backup/Recovery]]
+
+<br />
+
+
+<span id="lets-get-personal"></span>
+== <span id="Let’s_Get_Personal"></span><span id="Let.E2.80.99s_Get_Personal" class="mw-headline">Let’s Get Personal</span> ==
+
+Your node can be customized to appear as a name (alias) rather than just a bunch of random letters and numbers. You can also set a color for your node that will show up on various lightning-related websites and programs.
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Setting_a_node_alias|Setting a node alias]]
+
+<br />
+
+
+<span id="upgrades"></span>
+== <span id="Upgrades" class="mw-headline">Upgrades</span> ==
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Upgrading_Umbrel_Node|Upgrading Umbrel Node]]
+
+<br />
+
+
+<br />
+
+
+<br />
+
+
+<span id="popular-tools"></span>
+== <span id="Popular_Tools" class="mw-headline">Popular Tools</span> ==
+
+<span id="balance-of-satoshis"></span>
+=== <span id="Balance_of_Satoshis" class="mw-headline">Balance of Satoshis</span> ===
+
+Balance of Satoshis, or BoS, is a set of commands for working with LND balances. It can do similar things as interfaces like ThunderHub or Ride the Lightning. However, your options are much wider with BoS, and you will need it if you want to set up a telegram bot with your node (to get notifications whenever channels are opened/closed, whenever you forward a payment, whenever your node goes offline, and to get automatic channel backups for safety).
+
+For more information, and common BoS commands see: [[/plebnet.wiki/wiki/Special:MyLanguage/Balance_of_Satoshis|Balance of Satoshis]].
+
+[https://github.com/niteshbalusu11/BOS-Commands-Document See this excellent documentation for bos commands]
+
+Installation: process for [[/plebnet.wiki/wiki/Special:MyLanguage/Umbrel_-_Installing_BoS|Umbrel - Installing BoS]]. Includes instructions for setting up BoS telegram bot.
+
+<span id="lightning-shell"></span>
+=== <span id="Lightning_Shell" class="mw-headline">Lightning Shell</span> ===
+
+[https://lightningshell.app/ Lightning Shell] Lightning Shell is a shell for Bitcoin nodes / personal servers. Technically it’s a Docker container with ttyd and additional utilities.
+
+It can be installed [https://github.com/ibz/lightning-shell manually] or via the Umbrel/Citadel app stores
+
+Lightning shell includes many useful tools and saves you a lot of time installing them:
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Umbrel_-_Installing_BoS|Balance of Satoshis]]
+
+[https://github.com/edouardparis/lntop lntop]
+
+lncli
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Suez|Suez]]
+
+<br />
+
+
+<span id="lnd-configuration-settings-overview"></span>
+== <span id="LND_Configuration_Settings_Overview" class="mw-headline">LND Configuration Settings Overview</span> ==
+
+Click the link below for information related to setting up channel size limits, predefined fees on new channels, setting up watchtowers, and other optimization settings.
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/LND_Configuration_Settings|LND Configuration Settings]]
+
+<br />
+
+
+<span id="running-a-profitable-routing-node"></span>
+== <span id="Running_A_Profitable_Routing_Node" class="mw-headline">Running A Profitable Routing Node</span> ==
+
+Not seeing routing through your node, or your sats are only moving in one direction?
+
+Want more information about rebalancing and fees? Want to run a program that auto-adjusts your fees, or one that gives you KPIs (Key Performance Indicators)?
+
+'''Your one stop shop for tips on routing node profitability:''' [[/plebnet.wiki/wiki/Special:MyLanguage/Running_A_Profitable_Routing_Node|Running A Profitable Routing Node]]
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Fees_And_Profitability|Shortcut to auto-fee and auto-KPI instructions]]
+
+<br />
+
+
+<span id="playground-sandbox"></span>
+== <span id="Playground_/_Sandbox"></span><span id="Playground_.2F_Sandbox" class="mw-headline">Playground / Sandbox</span> ==
+
+Click the image below to get information on PLEBNET Playground, a place where you can learn and use the lightning network without risking any real money (signet).
+
+[[/plebnet.wiki/wiki/Plebnet_Playground|[[File:img/450px-PlebnetPlayground.jpg|450x356px|Plebnet Playground Logo]]]]
+
+<br />
+
+
+<span id="faq"></span>
+== <span id="FAQ" class="mw-headline">FAQ</span> ==
+
+A selection of questions frequently asked in [https://t.me/plebnet PLEBNET] groups. [[/plebnet.wiki/wiki/Special:MyLanguage/FAQ|FAQ]]
+
+<br />
+
+
+<span id="resources"></span>
+== <span id="Resources" class="mw-headline">Resources</span> ==
+
+[[/plebnet.wiki/wiki/Special:MyLanguage/Resources|Resources]]
+
+<span id="all-pages"></span>
+= <span id="All_Pages" class="mw-headline">All Pages</span> =
+
+<div class="mw-allpages-body">
+
+* [[wiki/Anonymous_edits_and_privacy|Anonymous edits and privacy]]
+* [[wiki/Anonymous_edits_and_privacy/en|Anonymous edits and privacy/en]]
+* [[wiki/Backup/Recovery|Backup/Recovery]]
+* [[wiki/Backup/Recovery/en|Backup/Recovery/en]]
+* [[wiki/Backup/Recovery/es|Backup/Recovery/es]]
+* [[wiki/Backup/Recovery/fr|Backup/Recovery/fr]]
+* [[wiki/Balance_of_Satoshis|Balance of Satoshis]]
+* [[wiki/Balance_of_Satoshis/en|Balance of Satoshis/en]]
+* [[wiki/Balancing_Nodes|Balancing Nodes]]
+* [[wiki/Balancing_Nodes/en|Balancing Nodes/en]]
+* [[wiki/Bash_aliases|Bash aliases]]
+* [[wiki/Bash_aliases/en|Bash aliases/en]]
+* [[wiki/BoS_Telegram_AutoStart|BoS Telegram AutoStart]]
+* [[wiki/BoS_Telegram_AutoStart/en|BoS Telegram AutoStart/en]]
+* [[wiki/Charge-lnd_BTCPayServer_Setup|Charge-lnd BTCPayServer Setup]]
+* [[wiki/Claim_on_Amboss|Claim on Amboss]]
+* [[wiki/Claim_on_Amboss/en|Claim on Amboss/en]]
+* [[wiki/Compacting_Channel_DB|Compacting Channel DB]]
+* [[wiki/FAQ|FAQ]]
+* [[wiki/FAQ/en|FAQ/en]]
+* [[wiki/Fees_And_Profitability|Fees And Profitability]]
+* [[wiki/Fees_And_Profitability/en|Fees And Profitability/en]]
+* [[wiki/Getting_Inbound_Liquidity|Getting Inbound Liquidity]]
+* [[wiki/Getting_started|Getting started]]
+* [[wiki/Getting_started/en|Getting started/en]]
+* [[wiki/Getting_started/fr|Getting started/fr]]
+* [[wiki/Help!_I_do_not_see_any_routing_through_my_node|Help! I do not see any routing through my node]]
+* [[wiki/Help!_I_do_not_see_any_routing_through_my_node/en|Help! I do not see any routing through my node/en]]
+* [[wiki/Help!_My_sats_are_only_moving_in_one_direction|Help! My sats are only moving in one direction]]
+* [[wiki/Help!_My_sats_are_only_moving_in_one_direction/en|Help! My sats are only moving in one direction/en]]
+* [[wiki/How_to_translate_a_page|How to translate a page]]
+* [[wiki/How_to_translate_a_page/en|How to translate a page/en]]
+* [[wiki/How_to_upgrade_umbrel_without_upgrading_umbrel|How to upgrade umbrel without upgrading umbrel]]
+* [[wiki/Iterm2|Iterm2]]
+* [[wiki/Iterm2/en|Iterm2/en]]
+* [[wiki/LND_Configuration_Settings|LND Configuration Settings]]
+* [[wiki/LND_Configuration_Settings/en|LND Configuration Settings/en]]
+* [[wiki/Lightning_Exchanges|Lightning Exchanges]]
+* [[wiki/Lightning_Exchanges/en|Lightning Exchanges/en]]
+* [[wiki/Local_PlebNet_groups|Local PlebNet groups]]
+* [[wiki/Local_PlebNet_groups/en|Local PlebNet groups/en]]
+* [[wiki/Loop|Loop]]
+* [[wiki/Loop/en|Loop/en]]
+* [[wiki/Main_Page|Main Page]]
+* [[wiki/Main_Page/ar|Main Page/ar]]
+* [[wiki/Main_Page/en|Main Page/en]]
+* [[wiki/Main_Page/es|Main Page/es]]
+* [[wiki/Main_Page/fr|Main Page/fr]]
+* [[wiki/Main_Page/ha|Main Page/ha]]
+* [[wiki/Main_Page/hi|Main Page/hi]]
+* [[wiki/Main_Page/tr|Main Page/tr]]
+* [[wiki/Main_Page/wo|Main Page/wo]]
+* [[wiki/Main_Page/yo|Main Page/yo]]
+* [[wiki/Maintaining_node_hygiene|Maintaining node hygiene]]
+* [[wiki/Maintaining_node_hygiene/en|Maintaining node hygiene/en]]
+* [[wiki/Mosh|Mosh]]
+* [[wiki/Mosh/en|Mosh/en]]
+* [[wiki/Node_Hardening|Node Hardening]]
+* [[wiki/Node_Hardening/en|Node Hardening/en]]
+* [[wiki/Node_Hardware|Node Hardware]]
+* [[wiki/Node_Hardware/en|Node Hardware/en]]
+* [[wiki/Notes_on_Privacy|Notes on Privacy]]
+* [[wiki/Opening_channels|Opening channels]]
+* [[wiki/Opening_channels/en|Opening channels/en]]
+* [[wiki/Opening_channels/fr|Opening channels/fr]]
+* [[wiki/Plebnet_Playground|Plebnet Playground]]
+* [[wiki/Plebnet_Playground/en|Plebnet Playground/en]]
+* [[wiki/Plebnet_Playground/es|Plebnet Playground/es]]
+* [[wiki/Plebnet_logo|Plebnet logo]]
+* [[wiki/Plebnet_logo/en|Plebnet logo/en]]
+* [[wiki/Ppm|Ppm]]
+* [[wiki/Ppm/en|Ppm/en]]
+* [[wiki/Project_Ideas|Project Ideas]]
+* [[wiki/Project_Ideas/en|Project Ideas/en]]
+* [[wiki/Push_Channel_Opens|Push Channel Opens]]
+* [[wiki/Push_Channel_Opens/en|Push Channel Opens/en]]
+* [[wiki/Reduce_channel_database_size|Reduce channel database size]]
+* [[wiki/Resources|Resources]]
+* [[wiki/Resources/en|Resources/en]]
+* [[wiki/Running_A_Profitable_Routing_Node|Running A Profitable Routing Node]]
+* [[wiki/Running_A_Profitable_Routing_Node/en|Running A Profitable Routing Node/en]]
+* [[wiki/Setting_a_node_alias|Setting a node alias]]
+* [[wiki/Suez|Suez]]
+* [[wiki/Terminal_UIs|Terminal UIs]]
+* [[wiki/UPS|UPS]]
+* [[wiki/UPS/ar|UPS/ar]]
+* [[wiki/UPS/en|UPS/en]]
+* [[wiki/Umbrel_-_Installing_BoS|Umbrel - Installing BoS]]
+* [[wiki/Upgrading_Umbrel_Node|Upgrading Umbrel Node]]
+* [[wiki/Upgrading_Umbrel_Node/en|Upgrading Umbrel Node/en]]
+* [[wiki/Using_Charge-Lnd_to_Adjust_HTLC_Limits|Using Charge-Lnd to Adjust HTLC Limits]]
+* [[wiki/Watchtowers|Watchtowers]]
+* [[wiki/Welcome_to_Plebnet|Welcome to Plebnet]]
+* [[wiki/Welcome_to_Plebnet/en|Welcome to Plebnet/en]]
+* [[wiki/Welcome_to_Plebnet/es|Welcome to Plebnet/es]]
+* [[wiki/Welcome_to_Plebnet/fr|Welcome to Plebnet/fr]]
+
+
+</div>
+
+</div>
